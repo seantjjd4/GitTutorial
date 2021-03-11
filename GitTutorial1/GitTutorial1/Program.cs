@@ -1,12 +1,14 @@
-﻿using System;
+﻿#include <string>
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
 
-namespace GitTutorial1
+bool Guess(int number)
 {
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Hello World!");
-        }
-    }
+    return false;
+}
+
+int main()
+{
+
 }

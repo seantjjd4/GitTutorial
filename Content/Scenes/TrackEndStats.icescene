@@ -1,0 +1,3037 @@
+<IceScene>
+  <Assets>
+    <Material name="BigHearts" location="Hud\hearts_endstats.png" />
+  </Assets>
+  <Components>
+    <MelodyEscape.SceneComponents.TrackEndStatsComponent />
+  </Components>
+  <SceneItems>
+    <CompositeEntity name="TitleTextEntity">
+      <Position>
+        <X>640</X>
+        <Y>68</Y>
+      </Position>
+      <Scale>
+        <X>1</X>
+        <Y>1</Y>
+      </Scale>
+      <Opacity>255</Opacity>
+      <Layer>2</Layer>
+      <Visible>True</Visible>
+      <CompositeEntityData>
+        <Animations>
+          <CompositeAnimation Name="Activate">
+            <SmoothInterpolation>True</SmoothInterpolation>
+            <Speed>1</Speed>
+            <LoopMax>1</LoopMax>
+            <Life>-1</Life>
+            <AutoPlay>True</AutoPlay>
+            <KeyFrames>
+              <CompositeKeyFrame Name="Default" Duration="60">
+                <BoneTransforms>
+                  <Transform>
+                    <Position>
+                      <X>0</X>
+                      <Y>-200</Y>
+                    </Position>
+                    <Opacity>0</Opacity>
+                    <Scale>
+                      <X>0</X>
+                      <Y>0</Y>
+                    </Scale>
+                    <BoneReference>Root</BoneReference>
+                  </Transform>
+                </BoneTransforms>
+              </CompositeKeyFrame>
+              <CompositeKeyFrame Name="End" Duration="1">
+                <BoneTransforms>
+                  <Transform>
+                    <Opacity>255</Opacity>
+                    <BoneReference>Root</BoneReference>
+                  </Transform>
+                </BoneTransforms>
+              </CompositeKeyFrame>
+            </KeyFrames>
+          </CompositeAnimation>
+        </Animations>
+        <SceneItemBank>
+          <SceneItemBankItem Key="text">
+            <TextItem name="text" fontSource="GLOBAL" fontRef="BigFont">
+              <Position>
+                <X>640</X>
+                <Y>68</Y>
+              </Position>
+              <Pivot>
+                <X>0.5</X>
+                <Y>0</Y>
+              </Pivot>
+              <IsPivotRelative>True</IsPivotRelative>
+              <Scale>
+                <X>1</X>
+                <Y>1</Y>
+              </Scale>
+              <Opacity>255</Opacity>
+              <Layer>2</Layer>
+              <Visible>True</Visible>
+              <Text>Text Item</Text>
+              <Scale>
+                <X>1</X>
+                <Y>1</Y>
+              </Scale>
+              <Tint>255,255,255,255</Tint>
+              <MaxWidthAutoScale>1180</MaxWidthAutoScale>
+              <Components />
+              <LinkPoints />
+              <Mounts />
+            </TextItem>
+          </SceneItemBankItem>
+        </SceneItemBank>
+        <RootBone>
+          <Name>Root</Name>
+          <SceneItem>text</SceneItem>
+          <InheritPosition>True</InheritPosition>
+          <InheritScale>True</InheritScale>
+          <InheritRotation>True</InheritRotation>
+          <InheritVisibility>True</InheritVisibility>
+          <Interpolate>True</Interpolate>
+          <ChildBones />
+        </RootBone>
+        <AutoPlay>True</AutoPlay>
+      </CompositeEntityData>
+      <Components />
+      <LinkPoints />
+      <Mounts />
+    </CompositeEntity>
+    <CompositeEntity name="ArtistTextEntity">
+      <Position>
+        <X>640</X>
+        <Y>148</Y>
+      </Position>
+      <Scale>
+        <X>1</X>
+        <Y>1</Y>
+      </Scale>
+      <Opacity>255</Opacity>
+      <Layer>2</Layer>
+      <Visible>True</Visible>
+      <CompositeEntityData>
+        <Animations>
+          <CompositeAnimation Name="Activate">
+            <SmoothInterpolation>True</SmoothInterpolation>
+            <Speed>1</Speed>
+            <LoopMax>1</LoopMax>
+            <Life>-1</Life>
+            <AutoPlay>True</AutoPlay>
+            <KeyFrames>
+              <CompositeKeyFrame Name="Default" Duration="10">
+                <BoneTransforms>
+                  <Transform>
+                    <Position>
+                      <X>0</X>
+                      <Y>-400</Y>
+                    </Position>
+                    <Opacity>0</Opacity>
+                    <BoneReference>Root</BoneReference>
+                  </Transform>
+                </BoneTransforms>
+              </CompositeKeyFrame>
+              <CompositeKeyFrame Name="Default" Duration="60">
+                <BoneTransforms>
+                  <Transform>
+                    <Position>
+                      <X>0</X>
+                      <Y>-400</Y>
+                    </Position>
+                    <Opacity>0</Opacity>
+                    <BoneReference>Root</BoneReference>
+                  </Transform>
+                </BoneTransforms>
+              </CompositeKeyFrame>
+              <CompositeKeyFrame Name="End" Duration="1">
+                <BoneTransforms>
+                  <Transform>
+                    <Opacity>255</Opacity>
+                    <BoneReference>Root</BoneReference>
+                  </Transform>
+                </BoneTransforms>
+              </CompositeKeyFrame>
+            </KeyFrames>
+          </CompositeAnimation>
+        </Animations>
+        <SceneItemBank>
+          <SceneItemBankItem Key="text">
+            <TextItem name="text" fontSource="GLOBAL" fontRef="NormalFont">
+              <Position>
+                <X>640</X>
+                <Y>148</Y>
+              </Position>
+              <Pivot>
+                <X>0.5</X>
+                <Y>0</Y>
+              </Pivot>
+              <IsPivotRelative>True</IsPivotRelative>
+              <Scale>
+                <X>1</X>
+                <Y>1</Y>
+              </Scale>
+              <Opacity>255</Opacity>
+              <Layer>2</Layer>
+              <Visible>True</Visible>
+              <Text>Text Item</Text>
+              <Scale>
+                <X>1</X>
+                <Y>1</Y>
+              </Scale>
+              <Tint>255,255,255,255</Tint>
+              <MaxWidthAutoScale>1180</MaxWidthAutoScale>
+              <Components />
+              <LinkPoints />
+              <Mounts />
+            </TextItem>
+          </SceneItemBankItem>
+        </SceneItemBank>
+        <RootBone>
+          <Name>Root</Name>
+          <SceneItem>text</SceneItem>
+          <InheritPosition>True</InheritPosition>
+          <InheritScale>True</InheritScale>
+          <InheritRotation>True</InheritRotation>
+          <InheritVisibility>True</InheritVisibility>
+          <Interpolate>True</Interpolate>
+          <ChildBones />
+        </RootBone>
+        <AutoPlay>True</AutoPlay>
+      </CompositeEntityData>
+      <Components />
+      <LinkPoints />
+      <Mounts />
+    </CompositeEntity>
+    <CompositeEntity name="ScoreTextEntity">
+      <Position>
+        <X>100</X>
+        <Y>242</Y>
+      </Position>
+      <Scale>
+        <X>1</X>
+        <Y>1</Y>
+      </Scale>
+      <Opacity>255</Opacity>
+      <Layer>2</Layer>
+      <Visible>True</Visible>
+      <CompositeEntityData>
+        <Animations>
+          <CompositeAnimation Name="Show">
+            <SmoothInterpolation>True</SmoothInterpolation>
+            <Speed>1</Speed>
+            <LoopMax>1</LoopMax>
+            <Life>-1</Life>
+            <AutoPlay>True</AutoPlay>
+            <KeyFrames>
+              <CompositeKeyFrame Name="Hidden" Duration="20">
+                <BoneTransforms>
+                  <Transform>
+                    <Position>
+                      <X>-200</X>
+                      <Y>0</Y>
+                    </Position>
+                    <Opacity>0</Opacity>
+                    <BoneReference>Label</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>240</X>
+                      <Y>0</Y>
+                    </Position>
+                    <Opacity>0</Opacity>
+                    <BoneReference>Text</BoneReference>
+                  </Transform>
+                </BoneTransforms>
+              </CompositeKeyFrame>
+              <CompositeKeyFrame Name="Off Screen" Duration="30">
+                <BoneTransforms>
+                  <Transform>
+                    <Position>
+                      <X>-200</X>
+                      <Y>0</Y>
+                    </Position>
+                    <Opacity>0</Opacity>
+                    <BoneReference>Label</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>240</X>
+                      <Y>0</Y>
+                    </Position>
+                    <Opacity>0</Opacity>
+                    <BoneReference>Text</BoneReference>
+                  </Transform>
+                </BoneTransforms>
+              </CompositeKeyFrame>
+              <CompositeKeyFrame Name="On Screen" Duration="30">
+                <BoneTransforms>
+                  <Transform>
+                    <Opacity>192</Opacity>
+                    <BoneReference>Label</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>240</X>
+                      <Y>0</Y>
+                    </Position>
+                    <Opacity>0</Opacity>
+                    <BoneReference>Text</BoneReference>
+                  </Transform>
+                </BoneTransforms>
+              </CompositeKeyFrame>
+              <CompositeKeyFrame Name="Visible" Duration="1">
+                <BoneTransforms>
+                  <Transform>
+                    <Opacity>192</Opacity>
+                    <BoneReference>Label</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>240</X>
+                      <Y>0</Y>
+                    </Position>
+                    <Opacity>255</Opacity>
+                    <BoneReference>Text</BoneReference>
+                  </Transform>
+                </BoneTransforms>
+              </CompositeKeyFrame>
+            </KeyFrames>
+          </CompositeAnimation>
+        </Animations>
+        <SceneItemBank>
+          <SceneItemBankItem Key="text">
+            <TextItem name="text" fontSource="GLOBAL" fontRef="NormalFont">
+              <Position>
+                <X>340</X>
+                <Y>242</Y>
+              </Position>
+              <IsPivotRelative>True</IsPivotRelative>
+              <Scale>
+                <X>1</X>
+                <Y>1</Y>
+              </Scale>
+              <Opacity>255</Opacity>
+              <Layer>2</Layer>
+              <Visible>True</Visible>
+              <Text>2394453</Text>
+              <Scale>
+                <X>1</X>
+                <Y>1</Y>
+              </Scale>
+              <Tint>255,255,255,255</Tint>
+              <Components />
+              <LinkPoints />
+              <Mounts />
+            </TextItem>
+          </SceneItemBankItem>
+          <SceneItemBankItem Key="label">
+            <TextItem name="label" fontSource="GLOBAL" fontRef="NormalFont">
+              <Position>
+                <X>100</X>
+                <Y>242</Y>
+              </Position>
+              <IsPivotRelative>True</IsPivotRelative>
+              <Scale>
+                <X>1</X>
+                <Y>1</Y>
+              </Scale>
+              <Opacity>192</Opacity>
+              <Layer>2</Layer>
+              <Visible>True</Visible>
+              <Text>Score: </Text>
+              <Scale>
+                <X>1</X>
+                <Y>1</Y>
+              </Scale>
+              <Tint>255,255,255,192</Tint>
+              <Components />
+              <LinkPoints />
+              <Mounts />
+            </TextItem>
+          </SceneItemBankItem>
+        </SceneItemBank>
+        <RootBone>
+          <Name>Label</Name>
+          <SceneItem>label</SceneItem>
+          <InheritPosition>True</InheritPosition>
+          <InheritScale>True</InheritScale>
+          <InheritRotation>True</InheritRotation>
+          <InheritVisibility>True</InheritVisibility>
+          <Interpolate>True</Interpolate>
+          <ChildBones>
+            <Bone>
+              <Name>Text</Name>
+              <SceneItem>text</SceneItem>
+              <InheritRotation>True</InheritRotation>
+              <InheritVisibility>True</InheritVisibility>
+              <Interpolate>True</Interpolate>
+              <ChildBones />
+            </Bone>
+          </ChildBones>
+        </RootBone>
+        <AutoPlay>True</AutoPlay>
+      </CompositeEntityData>
+      <Components />
+      <LinkPoints />
+      <Mounts />
+    </CompositeEntity>
+    <CompositeEntity name="MaxChainTextEntity">
+      <Position>
+        <X>100</X>
+        <Y>300</Y>
+      </Position>
+      <Scale>
+        <X>1</X>
+        <Y>1</Y>
+      </Scale>
+      <Opacity>255</Opacity>
+      <Layer>2</Layer>
+      <Visible>True</Visible>
+      <CompositeEntityData>
+        <Animations>
+          <CompositeAnimation Name="Show">
+            <SmoothInterpolation>True</SmoothInterpolation>
+            <Speed>1</Speed>
+            <LoopMax>1</LoopMax>
+            <Life>-1</Life>
+            <AutoPlay>True</AutoPlay>
+            <KeyFrames>
+              <CompositeKeyFrame Name="Hidden" Duration="50">
+                <BoneTransforms>
+                  <Transform>
+                    <Position>
+                      <X>-200</X>
+                      <Y>0</Y>
+                    </Position>
+                    <Opacity>0</Opacity>
+                    <BoneReference>Label</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>240</X>
+                      <Y>0</Y>
+                    </Position>
+                    <Opacity>0</Opacity>
+                    <BoneReference>Text</BoneReference>
+                  </Transform>
+                </BoneTransforms>
+              </CompositeKeyFrame>
+              <CompositeKeyFrame Name="Off Screen" Duration="30">
+                <BoneTransforms>
+                  <Transform>
+                    <Position>
+                      <X>-200</X>
+                      <Y>0</Y>
+                    </Position>
+                    <Opacity>0</Opacity>
+                    <BoneReference>Label</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>240</X>
+                      <Y>0</Y>
+                    </Position>
+                    <Opacity>0</Opacity>
+                    <BoneReference>Text</BoneReference>
+                  </Transform>
+                </BoneTransforms>
+              </CompositeKeyFrame>
+              <CompositeKeyFrame Name="On Screen" Duration="30">
+                <BoneTransforms>
+                  <Transform>
+                    <Opacity>192</Opacity>
+                    <BoneReference>Label</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>240</X>
+                      <Y>0</Y>
+                    </Position>
+                    <Opacity>0</Opacity>
+                    <BoneReference>Text</BoneReference>
+                  </Transform>
+                </BoneTransforms>
+              </CompositeKeyFrame>
+              <CompositeKeyFrame Name="Visible" Duration="1">
+                <BoneTransforms>
+                  <Transform>
+                    <Opacity>192</Opacity>
+                    <BoneReference>Label</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>240</X>
+                      <Y>0</Y>
+                    </Position>
+                    <Opacity>255</Opacity>
+                    <BoneReference>Text</BoneReference>
+                  </Transform>
+                </BoneTransforms>
+              </CompositeKeyFrame>
+            </KeyFrames>
+          </CompositeAnimation>
+        </Animations>
+        <SceneItemBank>
+          <SceneItemBankItem Key="text">
+            <TextItem name="text" fontSource="GLOBAL" fontRef="NormalFont">
+              <Position>
+                <X>340</X>
+                <Y>300</Y>
+              </Position>
+              <IsPivotRelative>True</IsPivotRelative>
+              <Scale>
+                <X>1</X>
+                <Y>1</Y>
+              </Scale>
+              <Opacity>255</Opacity>
+              <Layer>2</Layer>
+              <Visible>True</Visible>
+              <Text>2394453</Text>
+              <Scale>
+                <X>1</X>
+                <Y>1</Y>
+              </Scale>
+              <Tint>255,255,255,255</Tint>
+              <Components />
+              <LinkPoints />
+              <Mounts />
+            </TextItem>
+          </SceneItemBankItem>
+          <SceneItemBankItem Key="label">
+            <TextItem name="label" fontSource="GLOBAL" fontRef="NormalFont">
+              <Position>
+                <X>100</X>
+                <Y>300</Y>
+              </Position>
+              <IsPivotRelative>True</IsPivotRelative>
+              <Scale>
+                <X>1</X>
+                <Y>1</Y>
+              </Scale>
+              <Opacity>192</Opacity>
+              <Layer>2</Layer>
+              <Visible>True</Visible>
+              <Text>Max Chain: </Text>
+              <Scale>
+                <X>1</X>
+                <Y>1</Y>
+              </Scale>
+              <Tint>255,255,255,192</Tint>
+              <Components />
+              <LinkPoints />
+              <Mounts />
+            </TextItem>
+          </SceneItemBankItem>
+        </SceneItemBank>
+        <RootBone>
+          <Name>Label</Name>
+          <SceneItem>label</SceneItem>
+          <InheritPosition>True</InheritPosition>
+          <InheritScale>True</InheritScale>
+          <InheritRotation>True</InheritRotation>
+          <InheritVisibility>True</InheritVisibility>
+          <Interpolate>True</Interpolate>
+          <ChildBones>
+            <Bone>
+              <Name>Text</Name>
+              <SceneItem>text</SceneItem>
+              <InheritRotation>True</InheritRotation>
+              <InheritVisibility>True</InheritVisibility>
+              <Interpolate>True</Interpolate>
+              <ChildBones />
+            </Bone>
+          </ChildBones>
+        </RootBone>
+        <AutoPlay>True</AutoPlay>
+      </CompositeEntityData>
+      <Components />
+      <LinkPoints />
+      <Mounts />
+    </CompositeEntity>
+    <CompositeEntity name="HeartsScore">
+      <Position>
+        <X>1141</X>
+        <Y>294</Y>
+      </Position>
+      <Scale>
+        <X>1</X>
+        <Y>1</Y>
+      </Scale>
+      <Opacity>255</Opacity>
+      <Layer>2</Layer>
+      <Visible>True</Visible>
+      <CompositeEntityData>
+        <Animations>
+          <CompositeAnimation Name="Activate">
+            <SmoothInterpolation>True</SmoothInterpolation>
+            <Speed>1</Speed>
+            <LoopMax>1</LoopMax>
+            <Life>-1</Life>
+            <AutoPlay>True</AutoPlay>
+            <KeyFrames>
+              <CompositeKeyFrame Name="Hidden" Duration="60">
+                <BoneTransforms>
+                  <Transform>
+                    <BoneReference>Root</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>-352</X>
+                      <Y>0</Y>
+                    </Position>
+                    <Scale>
+                      <X>0</X>
+                      <Y>0</Y>
+                    </Scale>
+                    <BoneReference>Heart1</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>-264</X>
+                      <Y>0</Y>
+                    </Position>
+                    <Scale>
+                      <X>0</X>
+                      <Y>0</Y>
+                    </Scale>
+                    <BoneReference>Heart2</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>-176</X>
+                      <Y>0</Y>
+                    </Position>
+                    <Scale>
+                      <X>0</X>
+                      <Y>0</Y>
+                    </Scale>
+                    <BoneReference>Heart3</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>-88</X>
+                      <Y>0</Y>
+                    </Position>
+                    <Scale>
+                      <X>0</X>
+                      <Y>0</Y>
+                    </Scale>
+                    <BoneReference>Heart4</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Scale>
+                      <X>0</X>
+                      <Y>0</Y>
+                    </Scale>
+                    <BoneReference>Heart5</BoneReference>
+                  </Transform>
+                </BoneTransforms>
+              </CompositeKeyFrame>
+              <CompositeKeyFrame Name="Hidden" Duration="12">
+                <BoneTransforms>
+                  <Transform>
+                    <BoneReference>Root</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>-352</X>
+                      <Y>0</Y>
+                    </Position>
+                    <Scale>
+                      <X>0</X>
+                      <Y>0</Y>
+                    </Scale>
+                    <BoneReference>Heart1</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>-264</X>
+                      <Y>0</Y>
+                    </Position>
+                    <Scale>
+                      <X>0</X>
+                      <Y>0</Y>
+                    </Scale>
+                    <BoneReference>Heart2</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>-176</X>
+                      <Y>0</Y>
+                    </Position>
+                    <Scale>
+                      <X>0</X>
+                      <Y>0</Y>
+                    </Scale>
+                    <BoneReference>Heart3</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>-88</X>
+                      <Y>0</Y>
+                    </Position>
+                    <Scale>
+                      <X>0</X>
+                      <Y>0</Y>
+                    </Scale>
+                    <BoneReference>Heart4</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Scale>
+                      <X>0</X>
+                      <Y>0</Y>
+                    </Scale>
+                    <BoneReference>Heart5</BoneReference>
+                  </Transform>
+                </BoneTransforms>
+              </CompositeKeyFrame>
+              <CompositeKeyFrame Name="1" Duration="12">
+                <BoneTransforms>
+                  <Transform>
+                    <BoneReference>Root</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>-352</X>
+                      <Y>0</Y>
+                    </Position>
+                    <Scale>
+                      <X>1.5</X>
+                      <Y>1.5</Y>
+                    </Scale>
+                    <BoneReference>Heart1</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>-264</X>
+                      <Y>0</Y>
+                    </Position>
+                    <Scale>
+                      <X>0</X>
+                      <Y>0</Y>
+                    </Scale>
+                    <BoneReference>Heart2</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>-176</X>
+                      <Y>0</Y>
+                    </Position>
+                    <Scale>
+                      <X>0</X>
+                      <Y>0</Y>
+                    </Scale>
+                    <BoneReference>Heart3</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>-88</X>
+                      <Y>0</Y>
+                    </Position>
+                    <Scale>
+                      <X>0</X>
+                      <Y>0</Y>
+                    </Scale>
+                    <BoneReference>Heart4</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Scale>
+                      <X>0</X>
+                      <Y>0</Y>
+                    </Scale>
+                    <BoneReference>Heart5</BoneReference>
+                  </Transform>
+                </BoneTransforms>
+              </CompositeKeyFrame>
+              <CompositeKeyFrame Name="2" Duration="12">
+                <BoneTransforms>
+                  <Transform>
+                    <BoneReference>Root</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>-352</X>
+                      <Y>0</Y>
+                    </Position>
+                    <BoneReference>Heart1</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>-264</X>
+                      <Y>0</Y>
+                    </Position>
+                    <Scale>
+                      <X>1.5</X>
+                      <Y>1.5</Y>
+                    </Scale>
+                    <BoneReference>Heart2</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>-176</X>
+                      <Y>0</Y>
+                    </Position>
+                    <Scale>
+                      <X>0</X>
+                      <Y>0</Y>
+                    </Scale>
+                    <BoneReference>Heart3</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>-88</X>
+                      <Y>0</Y>
+                    </Position>
+                    <Scale>
+                      <X>0</X>
+                      <Y>0</Y>
+                    </Scale>
+                    <BoneReference>Heart4</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Scale>
+                      <X>0</X>
+                      <Y>0</Y>
+                    </Scale>
+                    <BoneReference>Heart5</BoneReference>
+                  </Transform>
+                </BoneTransforms>
+              </CompositeKeyFrame>
+              <CompositeKeyFrame Name="3" Duration="12">
+                <BoneTransforms>
+                  <Transform>
+                    <BoneReference>Root</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>-352</X>
+                      <Y>0</Y>
+                    </Position>
+                    <BoneReference>Heart1</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>-264</X>
+                      <Y>0</Y>
+                    </Position>
+                    <BoneReference>Heart2</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>-176</X>
+                      <Y>0</Y>
+                    </Position>
+                    <Scale>
+                      <X>1.5</X>
+                      <Y>1.5</Y>
+                    </Scale>
+                    <BoneReference>Heart3</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>-88</X>
+                      <Y>0</Y>
+                    </Position>
+                    <Scale>
+                      <X>0</X>
+                      <Y>0</Y>
+                    </Scale>
+                    <BoneReference>Heart4</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Scale>
+                      <X>0</X>
+                      <Y>0</Y>
+                    </Scale>
+                    <BoneReference>Heart5</BoneReference>
+                  </Transform>
+                </BoneTransforms>
+              </CompositeKeyFrame>
+              <CompositeKeyFrame Name="4" Duration="12">
+                <BoneTransforms>
+                  <Transform>
+                    <BoneReference>Root</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>-352</X>
+                      <Y>0</Y>
+                    </Position>
+                    <BoneReference>Heart1</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>-264</X>
+                      <Y>0</Y>
+                    </Position>
+                    <BoneReference>Heart2</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>-176</X>
+                      <Y>0</Y>
+                    </Position>
+                    <BoneReference>Heart3</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>-88</X>
+                      <Y>0</Y>
+                    </Position>
+                    <Scale>
+                      <X>1.5</X>
+                      <Y>1.5</Y>
+                    </Scale>
+                    <BoneReference>Heart4</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Scale>
+                      <X>0</X>
+                      <Y>0</Y>
+                    </Scale>
+                    <BoneReference>Heart5</BoneReference>
+                  </Transform>
+                </BoneTransforms>
+              </CompositeKeyFrame>
+              <CompositeKeyFrame Name="5" Duration="12">
+                <BoneTransforms>
+                  <Transform>
+                    <BoneReference>Root</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>-352</X>
+                      <Y>0</Y>
+                    </Position>
+                    <BoneReference>Heart1</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>-264</X>
+                      <Y>0</Y>
+                    </Position>
+                    <BoneReference>Heart2</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>-176</X>
+                      <Y>0</Y>
+                    </Position>
+                    <BoneReference>Heart3</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>-88</X>
+                      <Y>0</Y>
+                    </Position>
+                    <BoneReference>Heart4</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Scale>
+                      <X>1.5</X>
+                      <Y>1.5</Y>
+                    </Scale>
+                    <BoneReference>Heart5</BoneReference>
+                  </Transform>
+                </BoneTransforms>
+              </CompositeKeyFrame>
+              <CompositeKeyFrame Name="End" Duration="1">
+                <BoneTransforms>
+                  <Transform>
+                    <BoneReference>Root</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>-352</X>
+                      <Y>0</Y>
+                    </Position>
+                    <BoneReference>Heart1</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>-264</X>
+                      <Y>0</Y>
+                    </Position>
+                    <BoneReference>Heart2</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>-176</X>
+                      <Y>0</Y>
+                    </Position>
+                    <BoneReference>Heart3</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>-88</X>
+                      <Y>0</Y>
+                    </Position>
+                    <BoneReference>Heart4</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <BoneReference>Heart5</BoneReference>
+                  </Transform>
+                </BoneTransforms>
+              </CompositeKeyFrame>
+            </KeyFrames>
+          </CompositeAnimation>
+          <CompositeAnimation Name="Perfect">
+            <SmoothInterpolation>True</SmoothInterpolation>
+            <Speed>1</Speed>
+            <LoopMax>1</LoopMax>
+            <Life>-1</Life>
+            <AutoPlay>True</AutoPlay>
+            <KeyFrames>
+              <CompositeKeyFrame Name="All" Duration="12">
+                <BoneTransforms>
+                  <Transform>
+                    <BoneReference>Root</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>-352</X>
+                      <Y>0</Y>
+                    </Position>
+                    <BoneReference>Heart1</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>-264</X>
+                      <Y>0</Y>
+                    </Position>
+                    <BoneReference>Heart2</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>-176</X>
+                      <Y>0</Y>
+                    </Position>
+                    <BoneReference>Heart3</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>-88</X>
+                      <Y>0</Y>
+                    </Position>
+                    <BoneReference>Heart4</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <BoneReference>Heart5</BoneReference>
+                  </Transform>
+                </BoneTransforms>
+              </CompositeKeyFrame>
+              <CompositeKeyFrame Name="All" Duration="1">
+                <BoneTransforms>
+                  <Transform>
+                    <BoneReference>Root</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>-352</X>
+                      <Y>0</Y>
+                    </Position>
+                    <BoneReference>Heart1</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>-264</X>
+                      <Y>0</Y>
+                    </Position>
+                    <BoneReference>Heart2</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>-176</X>
+                      <Y>0</Y>
+                    </Position>
+                    <BoneReference>Heart3</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>-88</X>
+                      <Y>0</Y>
+                    </Position>
+                    <BoneReference>Heart4</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <BoneReference>Heart5</BoneReference>
+                  </Transform>
+                </BoneTransforms>
+              </CompositeKeyFrame>
+              <CompositeKeyFrame Name="Pulse" Duration="12">
+                <BoneTransforms>
+                  <Transform>
+                    <BoneReference>Root</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>-352</X>
+                      <Y>0</Y>
+                    </Position>
+                    <Scale>
+                      <X>1.2</X>
+                      <Y>1.2</Y>
+                    </Scale>
+                    <BoneReference>Heart1</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>-264</X>
+                      <Y>0</Y>
+                    </Position>
+                    <Scale>
+                      <X>1.2</X>
+                      <Y>1.2</Y>
+                    </Scale>
+                    <BoneReference>Heart2</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>-176</X>
+                      <Y>0</Y>
+                    </Position>
+                    <Scale>
+                      <X>1.2</X>
+                      <Y>1.2</Y>
+                    </Scale>
+                    <BoneReference>Heart3</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>-88</X>
+                      <Y>0</Y>
+                    </Position>
+                    <Scale>
+                      <X>1.2</X>
+                      <Y>1.2</Y>
+                    </Scale>
+                    <BoneReference>Heart4</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Scale>
+                      <X>1.2</X>
+                      <Y>1.2</Y>
+                    </Scale>
+                    <BoneReference>Heart5</BoneReference>
+                  </Transform>
+                </BoneTransforms>
+              </CompositeKeyFrame>
+              <CompositeKeyFrame Name="All" Duration="1">
+                <BoneTransforms>
+                  <Transform>
+                    <BoneReference>Root</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>-352</X>
+                      <Y>0</Y>
+                    </Position>
+                    <BoneReference>Heart1</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>-264</X>
+                      <Y>0</Y>
+                    </Position>
+                    <BoneReference>Heart2</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>-176</X>
+                      <Y>0</Y>
+                    </Position>
+                    <BoneReference>Heart3</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>-88</X>
+                      <Y>0</Y>
+                    </Position>
+                    <BoneReference>Heart4</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <BoneReference>Heart5</BoneReference>
+                  </Transform>
+                </BoneTransforms>
+              </CompositeKeyFrame>
+            </KeyFrames>
+          </CompositeAnimation>
+        </Animations>
+        <SceneItemBank>
+          <SceneItemBankItem Key="Root">
+            <Sprite name="Root" materialSource="GLOBAL" materialRef="PixelTransparent">
+              <Position>
+                <X>1141</X>
+                <Y>294</Y>
+              </Position>
+              <Pivot>
+                <X>0.5</X>
+                <Y>0.5</Y>
+              </Pivot>
+              <IsPivotRelative>True</IsPivotRelative>
+              <Scale>
+                <X>1</X>
+                <Y>1</Y>
+              </Scale>
+              <Opacity>255</Opacity>
+              <Layer>2</Layer>
+              <Visible>True</Visible>
+              <Tint>255,255,255,255</Tint>
+              <BlendingType>Alpha</BlendingType>
+              <Components />
+              <LinkPoints />
+              <Mounts />
+            </Sprite>
+          </SceneItemBankItem>
+          <SceneItemBankItem Key="Heart1">
+            <Sprite name="Heart1" materialSource="LOCAL" materialRef="BigHearts">
+              <Position>
+                <X>789</X>
+                <Y>294</Y>
+              </Position>
+              <Pivot>
+                <X>0.5</X>
+                <Y>0.5</Y>
+              </Pivot>
+              <IsPivotRelative>True</IsPivotRelative>
+              <Scale>
+                <X>1.188079</X>
+                <Y>1.188079</Y>
+              </Scale>
+              <Opacity>255</Opacity>
+              <Layer>2</Layer>
+              <Visible>True</Visible>
+              <SourceRectangle X="0" Y="0" Width="100" Height="100" />
+              <Tint>255,255,255,255</Tint>
+              <BlendingType>Alpha</BlendingType>
+              <Components />
+              <LinkPoints />
+              <Mounts />
+            </Sprite>
+          </SceneItemBankItem>
+          <SceneItemBankItem Key="Heart3">
+            <Sprite name="Heart3" materialSource="LOCAL" materialRef="BigHearts">
+              <Position>
+                <X>965</X>
+                <Y>294</Y>
+              </Position>
+              <Pivot>
+                <X>0.5</X>
+                <Y>0.5</Y>
+              </Pivot>
+              <IsPivotRelative>True</IsPivotRelative>
+              <Opacity>255</Opacity>
+              <Layer>2</Layer>
+              <Visible>True</Visible>
+              <SourceRectangle X="0" Y="0" Width="100" Height="100" />
+              <Tint>255,255,255,255</Tint>
+              <BlendingType>Alpha</BlendingType>
+              <Components />
+              <LinkPoints />
+              <Mounts />
+            </Sprite>
+          </SceneItemBankItem>
+          <SceneItemBankItem Key="Heart4">
+            <Sprite name="Heart4" materialSource="LOCAL" materialRef="BigHearts">
+              <Position>
+                <X>1053</X>
+                <Y>294</Y>
+              </Position>
+              <Pivot>
+                <X>0.5</X>
+                <Y>0.5</Y>
+              </Pivot>
+              <IsPivotRelative>True</IsPivotRelative>
+              <Opacity>255</Opacity>
+              <Layer>2</Layer>
+              <Visible>True</Visible>
+              <SourceRectangle X="0" Y="0" Width="100" Height="100" />
+              <Tint>255,255,255,255</Tint>
+              <BlendingType>Alpha</BlendingType>
+              <Components />
+              <LinkPoints />
+              <Mounts />
+            </Sprite>
+          </SceneItemBankItem>
+          <SceneItemBankItem Key="Heart5">
+            <Sprite name="Heart5" materialSource="LOCAL" materialRef="BigHearts">
+              <Position>
+                <X>1141</X>
+                <Y>294</Y>
+              </Position>
+              <Pivot>
+                <X>0.5</X>
+                <Y>0.5</Y>
+              </Pivot>
+              <IsPivotRelative>True</IsPivotRelative>
+              <Opacity>255</Opacity>
+              <Layer>2</Layer>
+              <Visible>True</Visible>
+              <SourceRectangle X="0" Y="0" Width="100" Height="100" />
+              <Tint>255,255,255,255</Tint>
+              <BlendingType>Alpha</BlendingType>
+              <Components />
+              <LinkPoints />
+              <Mounts />
+            </Sprite>
+          </SceneItemBankItem>
+          <SceneItemBankItem Key="Heart2">
+            <Sprite name="Heart2" materialSource="LOCAL" materialRef="BigHearts">
+              <Position>
+                <X>877</X>
+                <Y>294</Y>
+              </Position>
+              <Pivot>
+                <X>0.5</X>
+                <Y>0.5</Y>
+              </Pivot>
+              <IsPivotRelative>True</IsPivotRelative>
+              <Scale>
+                <X>0.9357638</X>
+                <Y>0.9357638</Y>
+              </Scale>
+              <Opacity>255</Opacity>
+              <Layer>2</Layer>
+              <Visible>True</Visible>
+              <SourceRectangle X="0" Y="0" Width="100" Height="100" />
+              <Tint>255,255,255,255</Tint>
+              <BlendingType>Alpha</BlendingType>
+              <Components />
+              <LinkPoints />
+              <Mounts />
+            </Sprite>
+          </SceneItemBankItem>
+        </SceneItemBank>
+        <RootBone>
+          <Name>Root</Name>
+          <SceneItem>Root</SceneItem>
+          <InheritPosition>True</InheritPosition>
+          <InheritScale>True</InheritScale>
+          <InheritRotation>True</InheritRotation>
+          <InheritVisibility>True</InheritVisibility>
+          <Interpolate>True</Interpolate>
+          <ChildBones>
+            <Bone>
+              <Name>Heart1</Name>
+              <SceneItem>Heart1</SceneItem>
+              <InheritPosition>True</InheritPosition>
+              <InheritScale>True</InheritScale>
+              <InheritRotation>True</InheritRotation>
+              <InheritVisibility>True</InheritVisibility>
+              <Interpolate>True</Interpolate>
+              <ChildBones />
+            </Bone>
+            <Bone>
+              <Name>Heart2</Name>
+              <SceneItem>Heart2</SceneItem>
+              <InheritPosition>True</InheritPosition>
+              <InheritScale>True</InheritScale>
+              <InheritRotation>True</InheritRotation>
+              <InheritVisibility>True</InheritVisibility>
+              <Interpolate>True</Interpolate>
+              <ChildBones />
+            </Bone>
+            <Bone>
+              <Name>Heart3</Name>
+              <SceneItem>Heart3</SceneItem>
+              <InheritPosition>True</InheritPosition>
+              <InheritScale>True</InheritScale>
+              <InheritRotation>True</InheritRotation>
+              <InheritVisibility>True</InheritVisibility>
+              <Interpolate>True</Interpolate>
+              <ChildBones />
+            </Bone>
+            <Bone>
+              <Name>Heart4</Name>
+              <SceneItem>Heart4</SceneItem>
+              <InheritPosition>True</InheritPosition>
+              <InheritScale>True</InheritScale>
+              <InheritRotation>True</InheritRotation>
+              <InheritVisibility>True</InheritVisibility>
+              <Interpolate>True</Interpolate>
+              <ChildBones />
+            </Bone>
+            <Bone>
+              <Name>Heart5</Name>
+              <SceneItem>Heart5</SceneItem>
+              <InheritPosition>True</InheritPosition>
+              <InheritScale>True</InheritScale>
+              <InheritRotation>True</InheritRotation>
+              <InheritVisibility>True</InheritVisibility>
+              <Interpolate>True</Interpolate>
+              <ChildBones />
+            </Bone>
+          </ChildBones>
+        </RootBone>
+        <AutoPlay>True</AutoPlay>
+      </CompositeEntityData>
+      <Components />
+      <LinkPoints />
+      <Mounts />
+    </CompositeEntity>
+    <CompositeEntity name="ScorePerfectTextEntity">
+      <Position>
+        <X>120</X>
+        <Y>450</Y>
+      </Position>
+      <Scale>
+        <X>1</X>
+        <Y>1</Y>
+      </Scale>
+      <Opacity>255</Opacity>
+      <Layer>2</Layer>
+      <Visible>True</Visible>
+      <CompositeEntityData>
+        <Animations>
+          <CompositeAnimation Name="Show">
+            <SmoothInterpolation>True</SmoothInterpolation>
+            <Speed>1</Speed>
+            <LoopMax>1</LoopMax>
+            <Life>-1</Life>
+            <AutoPlay>True</AutoPlay>
+            <KeyFrames>
+              <CompositeKeyFrame Name="Hidden" Duration="60">
+                <BoneTransforms>
+                  <Transform>
+                    <Position>
+                      <X>-200</X>
+                      <Y>0</Y>
+                    </Position>
+                    <Opacity>0</Opacity>
+                    <BoneReference>Label</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>204</X>
+                      <Y>0</Y>
+                    </Position>
+                    <Opacity>0</Opacity>
+                    <BoneReference>Text</BoneReference>
+                  </Transform>
+                </BoneTransforms>
+              </CompositeKeyFrame>
+              <CompositeKeyFrame Name="Off Screen" Duration="30">
+                <BoneTransforms>
+                  <Transform>
+                    <Position>
+                      <X>-200</X>
+                      <Y>0</Y>
+                    </Position>
+                    <Opacity>0</Opacity>
+                    <BoneReference>Label</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>204</X>
+                      <Y>0</Y>
+                    </Position>
+                    <Opacity>0</Opacity>
+                    <BoneReference>Text</BoneReference>
+                  </Transform>
+                </BoneTransforms>
+              </CompositeKeyFrame>
+              <CompositeKeyFrame Name="On Screen" Duration="30">
+                <BoneTransforms>
+                  <Transform>
+                    <Opacity>192</Opacity>
+                    <BoneReference>Label</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>204</X>
+                      <Y>0</Y>
+                    </Position>
+                    <Opacity>0</Opacity>
+                    <BoneReference>Text</BoneReference>
+                  </Transform>
+                </BoneTransforms>
+              </CompositeKeyFrame>
+              <CompositeKeyFrame Name="Visible" Duration="1">
+                <BoneTransforms>
+                  <Transform>
+                    <Opacity>192</Opacity>
+                    <BoneReference>Label</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>204</X>
+                      <Y>0</Y>
+                    </Position>
+                    <Opacity>255</Opacity>
+                    <BoneReference>Text</BoneReference>
+                  </Transform>
+                </BoneTransforms>
+              </CompositeKeyFrame>
+            </KeyFrames>
+          </CompositeAnimation>
+        </Animations>
+        <SceneItemBank>
+          <SceneItemBankItem Key="text">
+            <TextItem name="text" fontSource="GLOBAL" fontRef="SmallFont">
+              <Position>
+                <X>324</X>
+                <Y>450</Y>
+              </Position>
+              <Pivot>
+                <X>1</X>
+                <Y>0</Y>
+              </Pivot>
+              <IsPivotRelative>True</IsPivotRelative>
+              <Scale>
+                <X>1</X>
+                <Y>1</Y>
+              </Scale>
+              <Opacity>255</Opacity>
+              <Layer>2</Layer>
+              <Visible>True</Visible>
+              <Text>x56</Text>
+              <Scale>
+                <X>1</X>
+                <Y>1</Y>
+              </Scale>
+              <Tint>255,255,255,255</Tint>
+              <Components />
+              <LinkPoints />
+              <Mounts />
+            </TextItem>
+          </SceneItemBankItem>
+          <SceneItemBankItem Key="label">
+            <TextItem name="label" fontSource="GLOBAL" fontRef="SmallFont">
+              <Position>
+                <X>120</X>
+                <Y>450</Y>
+              </Position>
+              <IsPivotRelative>True</IsPivotRelative>
+              <Scale>
+                <X>1</X>
+                <Y>1</Y>
+              </Scale>
+              <Opacity>192</Opacity>
+              <Layer>2</Layer>
+              <Visible>True</Visible>
+              <Text>Perfect: </Text>
+              <Scale>
+                <X>1</X>
+                <Y>1</Y>
+              </Scale>
+              <Tint>255,255,255,192</Tint>
+              <Components />
+              <LinkPoints />
+              <Mounts />
+            </TextItem>
+          </SceneItemBankItem>
+        </SceneItemBank>
+        <RootBone>
+          <Name>Label</Name>
+          <SceneItem>label</SceneItem>
+          <InheritPosition>True</InheritPosition>
+          <InheritScale>True</InheritScale>
+          <InheritRotation>True</InheritRotation>
+          <InheritVisibility>True</InheritVisibility>
+          <Interpolate>True</Interpolate>
+          <ChildBones>
+            <Bone>
+              <Name>Text</Name>
+              <SceneItem>text</SceneItem>
+              <InheritRotation>True</InheritRotation>
+              <InheritVisibility>True</InheritVisibility>
+              <Interpolate>True</Interpolate>
+              <ChildBones />
+            </Bone>
+          </ChildBones>
+        </RootBone>
+        <AutoPlay>True</AutoPlay>
+      </CompositeEntityData>
+      <Components />
+      <LinkPoints />
+      <Mounts />
+    </CompositeEntity>
+    <CompositeEntity name="ScoreGoodTextEntity">
+      <Position>
+        <X>120</X>
+        <Y>480</Y>
+      </Position>
+      <Scale>
+        <X>1</X>
+        <Y>1</Y>
+      </Scale>
+      <Opacity>255</Opacity>
+      <Layer>2</Layer>
+      <Visible>True</Visible>
+      <CompositeEntityData>
+        <Animations>
+          <CompositeAnimation Name="Show">
+            <SmoothInterpolation>True</SmoothInterpolation>
+            <Speed>1</Speed>
+            <LoopMax>1</LoopMax>
+            <Life>-1</Life>
+            <AutoPlay>True</AutoPlay>
+            <KeyFrames>
+              <CompositeKeyFrame Name="Hidden" Duration="70">
+                <BoneTransforms>
+                  <Transform>
+                    <Position>
+                      <X>-200</X>
+                      <Y>0</Y>
+                    </Position>
+                    <Opacity>0</Opacity>
+                    <BoneReference>Label</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>204</X>
+                      <Y>0</Y>
+                    </Position>
+                    <Opacity>0</Opacity>
+                    <BoneReference>Text</BoneReference>
+                  </Transform>
+                </BoneTransforms>
+              </CompositeKeyFrame>
+              <CompositeKeyFrame Name="Off Screen" Duration="30">
+                <BoneTransforms>
+                  <Transform>
+                    <Position>
+                      <X>-200</X>
+                      <Y>0</Y>
+                    </Position>
+                    <Opacity>0</Opacity>
+                    <BoneReference>Label</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>204</X>
+                      <Y>0</Y>
+                    </Position>
+                    <Opacity>0</Opacity>
+                    <BoneReference>Text</BoneReference>
+                  </Transform>
+                </BoneTransforms>
+              </CompositeKeyFrame>
+              <CompositeKeyFrame Name="On Screen" Duration="30">
+                <BoneTransforms>
+                  <Transform>
+                    <Opacity>192</Opacity>
+                    <BoneReference>Label</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>204</X>
+                      <Y>0</Y>
+                    </Position>
+                    <Opacity>0</Opacity>
+                    <BoneReference>Text</BoneReference>
+                  </Transform>
+                </BoneTransforms>
+              </CompositeKeyFrame>
+              <CompositeKeyFrame Name="Visible" Duration="1">
+                <BoneTransforms>
+                  <Transform>
+                    <Opacity>192</Opacity>
+                    <BoneReference>Label</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>204</X>
+                      <Y>0</Y>
+                    </Position>
+                    <Opacity>255</Opacity>
+                    <BoneReference>Text</BoneReference>
+                  </Transform>
+                </BoneTransforms>
+              </CompositeKeyFrame>
+            </KeyFrames>
+          </CompositeAnimation>
+        </Animations>
+        <SceneItemBank>
+          <SceneItemBankItem Key="text">
+            <TextItem name="text" fontSource="GLOBAL" fontRef="SmallFont">
+              <Position>
+                <X>324</X>
+                <Y>480</Y>
+              </Position>
+              <Pivot>
+                <X>1</X>
+                <Y>0</Y>
+              </Pivot>
+              <IsPivotRelative>True</IsPivotRelative>
+              <Scale>
+                <X>1</X>
+                <Y>1</Y>
+              </Scale>
+              <Opacity>255</Opacity>
+              <Layer>2</Layer>
+              <Visible>True</Visible>
+              <Text>x56</Text>
+              <Scale>
+                <X>1</X>
+                <Y>1</Y>
+              </Scale>
+              <Tint>255,255,255,255</Tint>
+              <Components />
+              <LinkPoints />
+              <Mounts />
+            </TextItem>
+          </SceneItemBankItem>
+          <SceneItemBankItem Key="label">
+            <TextItem name="label" fontSource="GLOBAL" fontRef="SmallFont">
+              <Position>
+                <X>120</X>
+                <Y>480</Y>
+              </Position>
+              <IsPivotRelative>True</IsPivotRelative>
+              <Scale>
+                <X>1</X>
+                <Y>1</Y>
+              </Scale>
+              <Opacity>192</Opacity>
+              <Layer>2</Layer>
+              <Visible>True</Visible>
+              <Text>Good: </Text>
+              <Scale>
+                <X>1</X>
+                <Y>1</Y>
+              </Scale>
+              <Tint>255,255,255,192</Tint>
+              <Components />
+              <LinkPoints />
+              <Mounts />
+            </TextItem>
+          </SceneItemBankItem>
+        </SceneItemBank>
+        <RootBone>
+          <Name>Label</Name>
+          <SceneItem>label</SceneItem>
+          <InheritPosition>True</InheritPosition>
+          <InheritScale>True</InheritScale>
+          <InheritRotation>True</InheritRotation>
+          <InheritVisibility>True</InheritVisibility>
+          <Interpolate>True</Interpolate>
+          <ChildBones>
+            <Bone>
+              <Name>Text</Name>
+              <SceneItem>text</SceneItem>
+              <InheritRotation>True</InheritRotation>
+              <InheritVisibility>True</InheritVisibility>
+              <Interpolate>True</Interpolate>
+              <ChildBones />
+            </Bone>
+          </ChildBones>
+        </RootBone>
+        <AutoPlay>True</AutoPlay>
+      </CompositeEntityData>
+      <Components />
+      <LinkPoints />
+      <Mounts />
+    </CompositeEntity>
+    <CompositeEntity name="ScoreOKTextEntity">
+      <Position>
+        <X>120</X>
+        <Y>510</Y>
+      </Position>
+      <Scale>
+        <X>1</X>
+        <Y>1</Y>
+      </Scale>
+      <Opacity>255</Opacity>
+      <Layer>2</Layer>
+      <Visible>True</Visible>
+      <CompositeEntityData>
+        <Animations>
+          <CompositeAnimation Name="Show">
+            <SmoothInterpolation>True</SmoothInterpolation>
+            <Speed>1</Speed>
+            <LoopMax>1</LoopMax>
+            <Life>-1</Life>
+            <AutoPlay>True</AutoPlay>
+            <KeyFrames>
+              <CompositeKeyFrame Name="Hidden" Duration="80">
+                <BoneTransforms>
+                  <Transform>
+                    <Position>
+                      <X>-200</X>
+                      <Y>0</Y>
+                    </Position>
+                    <Opacity>0</Opacity>
+                    <BoneReference>Label</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>204</X>
+                      <Y>0</Y>
+                    </Position>
+                    <Opacity>0</Opacity>
+                    <BoneReference>Text</BoneReference>
+                  </Transform>
+                </BoneTransforms>
+              </CompositeKeyFrame>
+              <CompositeKeyFrame Name="Off Screen" Duration="30">
+                <BoneTransforms>
+                  <Transform>
+                    <Position>
+                      <X>-200</X>
+                      <Y>0</Y>
+                    </Position>
+                    <Opacity>0</Opacity>
+                    <BoneReference>Label</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>204</X>
+                      <Y>0</Y>
+                    </Position>
+                    <Opacity>0</Opacity>
+                    <BoneReference>Text</BoneReference>
+                  </Transform>
+                </BoneTransforms>
+              </CompositeKeyFrame>
+              <CompositeKeyFrame Name="On Screen" Duration="30">
+                <BoneTransforms>
+                  <Transform>
+                    <Opacity>192</Opacity>
+                    <BoneReference>Label</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>204</X>
+                      <Y>0</Y>
+                    </Position>
+                    <Opacity>0</Opacity>
+                    <BoneReference>Text</BoneReference>
+                  </Transform>
+                </BoneTransforms>
+              </CompositeKeyFrame>
+              <CompositeKeyFrame Name="Visible" Duration="1">
+                <BoneTransforms>
+                  <Transform>
+                    <Opacity>192</Opacity>
+                    <BoneReference>Label</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>204</X>
+                      <Y>0</Y>
+                    </Position>
+                    <Opacity>255</Opacity>
+                    <BoneReference>Text</BoneReference>
+                  </Transform>
+                </BoneTransforms>
+              </CompositeKeyFrame>
+            </KeyFrames>
+          </CompositeAnimation>
+        </Animations>
+        <SceneItemBank>
+          <SceneItemBankItem Key="text">
+            <TextItem name="text" fontSource="GLOBAL" fontRef="SmallFont">
+              <Position>
+                <X>324</X>
+                <Y>510</Y>
+              </Position>
+              <Pivot>
+                <X>1</X>
+                <Y>0</Y>
+              </Pivot>
+              <IsPivotRelative>True</IsPivotRelative>
+              <Scale>
+                <X>1</X>
+                <Y>1</Y>
+              </Scale>
+              <Opacity>255</Opacity>
+              <Layer>2</Layer>
+              <Visible>True</Visible>
+              <Text>x56</Text>
+              <Scale>
+                <X>1</X>
+                <Y>1</Y>
+              </Scale>
+              <Tint>255,255,255,255</Tint>
+              <Components />
+              <LinkPoints />
+              <Mounts />
+            </TextItem>
+          </SceneItemBankItem>
+          <SceneItemBankItem Key="label">
+            <TextItem name="label" fontSource="GLOBAL" fontRef="SmallFont">
+              <Position>
+                <X>120</X>
+                <Y>510</Y>
+              </Position>
+              <IsPivotRelative>True</IsPivotRelative>
+              <Scale>
+                <X>1</X>
+                <Y>1</Y>
+              </Scale>
+              <Opacity>192</Opacity>
+              <Layer>2</Layer>
+              <Visible>True</Visible>
+              <Text>OK: </Text>
+              <Scale>
+                <X>1</X>
+                <Y>1</Y>
+              </Scale>
+              <Tint>255,255,255,192</Tint>
+              <Components />
+              <LinkPoints />
+              <Mounts />
+            </TextItem>
+          </SceneItemBankItem>
+        </SceneItemBank>
+        <RootBone>
+          <Name>Label</Name>
+          <SceneItem>label</SceneItem>
+          <InheritPosition>True</InheritPosition>
+          <InheritScale>True</InheritScale>
+          <InheritRotation>True</InheritRotation>
+          <InheritVisibility>True</InheritVisibility>
+          <Interpolate>True</Interpolate>
+          <ChildBones>
+            <Bone>
+              <Name>Text</Name>
+              <SceneItem>text</SceneItem>
+              <InheritRotation>True</InheritRotation>
+              <InheritVisibility>True</InheritVisibility>
+              <Interpolate>True</Interpolate>
+              <ChildBones />
+            </Bone>
+          </ChildBones>
+        </RootBone>
+        <AutoPlay>True</AutoPlay>
+      </CompositeEntityData>
+      <Components />
+      <LinkPoints />
+      <Mounts />
+    </CompositeEntity>
+    <CompositeEntity name="ScoreMissedTextEntity">
+      <Position>
+        <X>120</X>
+        <Y>540</Y>
+      </Position>
+      <Scale>
+        <X>1</X>
+        <Y>1</Y>
+      </Scale>
+      <Opacity>255</Opacity>
+      <Layer>2</Layer>
+      <Visible>True</Visible>
+      <CompositeEntityData>
+        <Animations>
+          <CompositeAnimation Name="Show">
+            <SmoothInterpolation>True</SmoothInterpolation>
+            <Speed>1</Speed>
+            <LoopMax>1</LoopMax>
+            <Life>-1</Life>
+            <AutoPlay>True</AutoPlay>
+            <KeyFrames>
+              <CompositeKeyFrame Name="Hidden" Duration="90">
+                <BoneTransforms>
+                  <Transform>
+                    <Position>
+                      <X>-200</X>
+                      <Y>0</Y>
+                    </Position>
+                    <Opacity>0</Opacity>
+                    <BoneReference>Label</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>204</X>
+                      <Y>0</Y>
+                    </Position>
+                    <Opacity>0</Opacity>
+                    <BoneReference>Text</BoneReference>
+                  </Transform>
+                </BoneTransforms>
+              </CompositeKeyFrame>
+              <CompositeKeyFrame Name="Off Screen" Duration="30">
+                <BoneTransforms>
+                  <Transform>
+                    <Position>
+                      <X>-200</X>
+                      <Y>0</Y>
+                    </Position>
+                    <Opacity>0</Opacity>
+                    <BoneReference>Label</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>204</X>
+                      <Y>0</Y>
+                    </Position>
+                    <Opacity>0</Opacity>
+                    <BoneReference>Text</BoneReference>
+                  </Transform>
+                </BoneTransforms>
+              </CompositeKeyFrame>
+              <CompositeKeyFrame Name="On Screen" Duration="30">
+                <BoneTransforms>
+                  <Transform>
+                    <Opacity>192</Opacity>
+                    <BoneReference>Label</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>204</X>
+                      <Y>0</Y>
+                    </Position>
+                    <Opacity>0</Opacity>
+                    <BoneReference>Text</BoneReference>
+                  </Transform>
+                </BoneTransforms>
+              </CompositeKeyFrame>
+              <CompositeKeyFrame Name="Visible" Duration="1">
+                <BoneTransforms>
+                  <Transform>
+                    <Opacity>192</Opacity>
+                    <BoneReference>Label</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>204</X>
+                      <Y>0</Y>
+                    </Position>
+                    <Opacity>255</Opacity>
+                    <BoneReference>Text</BoneReference>
+                  </Transform>
+                </BoneTransforms>
+              </CompositeKeyFrame>
+            </KeyFrames>
+          </CompositeAnimation>
+        </Animations>
+        <SceneItemBank>
+          <SceneItemBankItem Key="text">
+            <TextItem name="text" fontSource="GLOBAL" fontRef="SmallFont">
+              <Position>
+                <X>324</X>
+                <Y>540</Y>
+              </Position>
+              <Pivot>
+                <X>1</X>
+                <Y>0</Y>
+              </Pivot>
+              <IsPivotRelative>True</IsPivotRelative>
+              <Scale>
+                <X>1</X>
+                <Y>1</Y>
+              </Scale>
+              <Opacity>255</Opacity>
+              <Layer>2</Layer>
+              <Visible>True</Visible>
+              <Text>x56</Text>
+              <Scale>
+                <X>1</X>
+                <Y>1</Y>
+              </Scale>
+              <Tint>255,255,255,255</Tint>
+              <Components />
+              <LinkPoints />
+              <Mounts />
+            </TextItem>
+          </SceneItemBankItem>
+          <SceneItemBankItem Key="label">
+            <TextItem name="label" fontSource="GLOBAL" fontRef="SmallFont">
+              <Position>
+                <X>120</X>
+                <Y>540</Y>
+              </Position>
+              <IsPivotRelative>True</IsPivotRelative>
+              <Scale>
+                <X>1</X>
+                <Y>1</Y>
+              </Scale>
+              <Opacity>192</Opacity>
+              <Layer>2</Layer>
+              <Visible>True</Visible>
+              <Text>Missed: </Text>
+              <Scale>
+                <X>1</X>
+                <Y>1</Y>
+              </Scale>
+              <Tint>255,255,255,192</Tint>
+              <Components />
+              <LinkPoints />
+              <Mounts />
+            </TextItem>
+          </SceneItemBankItem>
+        </SceneItemBank>
+        <RootBone>
+          <Name>Label</Name>
+          <SceneItem>label</SceneItem>
+          <InheritPosition>True</InheritPosition>
+          <InheritScale>True</InheritScale>
+          <InheritRotation>True</InheritRotation>
+          <InheritVisibility>True</InheritVisibility>
+          <Interpolate>True</Interpolate>
+          <ChildBones>
+            <Bone>
+              <Name>Text</Name>
+              <SceneItem>text</SceneItem>
+              <InheritRotation>True</InheritRotation>
+              <InheritVisibility>True</InheritVisibility>
+              <Interpolate>True</Interpolate>
+              <ChildBones />
+            </Bone>
+          </ChildBones>
+        </RootBone>
+        <AutoPlay>True</AutoPlay>
+      </CompositeEntityData>
+      <Components />
+      <LinkPoints />
+      <Mounts />
+    </CompositeEntity>
+    <CompositeEntity name="NewHighScoreTextEntity">
+      <Position>
+        <X>539</X>
+        <Y>254</Y>
+      </Position>
+      <Scale>
+        <X>1</X>
+        <Y>1</Y>
+      </Scale>
+      <Opacity>255</Opacity>
+      <Layer>2</Layer>
+      <Visible>True</Visible>
+      <CompositeEntityData>
+        <Animations>
+          <CompositeAnimation Name="Activate">
+            <Speed>1</Speed>
+            <LoopMax>1</LoopMax>
+            <Life>-1</Life>
+            <AutoPlay>True</AutoPlay>
+            <KeyFrames>
+              <CompositeKeyFrame Name="Off" Duration="90">
+                <BoneTransforms>
+                  <Transform>
+                    <Opacity>0</Opacity>
+                    <BoneReference>Root</BoneReference>
+                  </Transform>
+                </BoneTransforms>
+              </CompositeKeyFrame>
+              <CompositeKeyFrame Name="Off" Duration="12">
+                <BoneTransforms>
+                  <Transform>
+                    <Opacity>0</Opacity>
+                    <BoneReference>Root</BoneReference>
+                  </Transform>
+                </BoneTransforms>
+              </CompositeKeyFrame>
+              <CompositeKeyFrame Name="On" Duration="12">
+                <BoneTransforms>
+                  <Transform>
+                    <Opacity>255</Opacity>
+                    <BoneReference>Root</BoneReference>
+                  </Transform>
+                </BoneTransforms>
+              </CompositeKeyFrame>
+            </KeyFrames>
+          </CompositeAnimation>
+          <CompositeAnimation Name="Idle">
+            <LerpLastFrameWithFirst>True</LerpLastFrameWithFirst>
+            <SmoothInterpolation>True</SmoothInterpolation>
+            <Speed>1</Speed>
+            <Life>-1</Life>
+            <AutoPlay>True</AutoPlay>
+            <KeyFrames>
+              <CompositeKeyFrame Name="On" Duration="12">
+                <BoneTransforms>
+                  <Transform>
+                    <Opacity>255</Opacity>
+                    <BoneReference>Root</BoneReference>
+                  </Transform>
+                </BoneTransforms>
+              </CompositeKeyFrame>
+              <CompositeKeyFrame Name="Off" Duration="12">
+                <BoneTransforms>
+                  <Transform>
+                    <Opacity>128</Opacity>
+                    <BoneReference>Root</BoneReference>
+                  </Transform>
+                </BoneTransforms>
+              </CompositeKeyFrame>
+            </KeyFrames>
+          </CompositeAnimation>
+        </Animations>
+        <SceneItemBank>
+          <SceneItemBankItem Key="text">
+            <TextItem name="text" fontSource="GLOBAL" fontRef="SmallFont">
+              <Position>
+                <X>539</X>
+                <Y>254</Y>
+              </Position>
+              <Pivot>
+                <X>0</X>
+                <Y>0.5</Y>
+              </Pivot>
+              <IsPivotRelative>True</IsPivotRelative>
+              <Scale>
+                <X>1</X>
+                <Y>1</Y>
+              </Scale>
+              <Opacity>255</Opacity>
+              <Layer>2</Layer>
+              <Visible>True</Visible>
+              <Text>new high score</Text>
+              <Scale>
+                <X>1</X>
+                <Y>1</Y>
+              </Scale>
+              <Tint>255,192,30,255</Tint>
+              <Components />
+              <LinkPoints />
+              <Mounts />
+            </TextItem>
+          </SceneItemBankItem>
+        </SceneItemBank>
+        <RootBone>
+          <Name>Root</Name>
+          <SceneItem>text</SceneItem>
+          <InheritPosition>True</InheritPosition>
+          <InheritScale>True</InheritScale>
+          <InheritRotation>True</InheritRotation>
+          <InheritVisibility>True</InheritVisibility>
+          <Interpolate>True</Interpolate>
+          <ChildBones />
+        </RootBone>
+        <AutoPlay>True</AutoPlay>
+      </CompositeEntityData>
+      <Components />
+      <LinkPoints />
+      <Mounts />
+    </CompositeEntity>
+    <CompositeEntity name="PerfectChainTextEntity">
+      <Position>
+        <X>539</X>
+        <Y>312</Y>
+      </Position>
+      <Scale>
+        <X>1</X>
+        <Y>1</Y>
+      </Scale>
+      <Opacity>255</Opacity>
+      <Layer>2</Layer>
+      <Visible>True</Visible>
+      <CompositeEntityData>
+        <Animations>
+          <CompositeAnimation Name="Activate">
+            <Speed>1</Speed>
+            <LoopMax>1</LoopMax>
+            <Life>-1</Life>
+            <AutoPlay>True</AutoPlay>
+            <KeyFrames>
+              <CompositeKeyFrame Name="Off" Duration="90">
+                <BoneTransforms>
+                  <Transform>
+                    <Opacity>0</Opacity>
+                    <BoneReference>Root</BoneReference>
+                  </Transform>
+                </BoneTransforms>
+              </CompositeKeyFrame>
+              <CompositeKeyFrame Name="Off" Duration="12">
+                <BoneTransforms>
+                  <Transform>
+                    <Opacity>0</Opacity>
+                    <BoneReference>Root</BoneReference>
+                  </Transform>
+                </BoneTransforms>
+              </CompositeKeyFrame>
+              <CompositeKeyFrame Name="On" Duration="12">
+                <BoneTransforms>
+                  <Transform>
+                    <Opacity>255</Opacity>
+                    <BoneReference>Root</BoneReference>
+                  </Transform>
+                </BoneTransforms>
+              </CompositeKeyFrame>
+            </KeyFrames>
+          </CompositeAnimation>
+          <CompositeAnimation Name="Idle">
+            <LerpLastFrameWithFirst>True</LerpLastFrameWithFirst>
+            <SmoothInterpolation>True</SmoothInterpolation>
+            <Speed>1</Speed>
+            <Life>-1</Life>
+            <AutoPlay>True</AutoPlay>
+            <KeyFrames>
+              <CompositeKeyFrame Name="On" Duration="12">
+                <BoneTransforms>
+                  <Transform>
+                    <Opacity>255</Opacity>
+                    <BoneReference>Root</BoneReference>
+                  </Transform>
+                </BoneTransforms>
+              </CompositeKeyFrame>
+              <CompositeKeyFrame Name="Off" Duration="12">
+                <BoneTransforms>
+                  <Transform>
+                    <Opacity>128</Opacity>
+                    <BoneReference>Root</BoneReference>
+                  </Transform>
+                </BoneTransforms>
+              </CompositeKeyFrame>
+            </KeyFrames>
+          </CompositeAnimation>
+        </Animations>
+        <SceneItemBank>
+          <SceneItemBankItem Key="text">
+            <TextItem name="text" fontSource="GLOBAL" fontRef="SmallFont">
+              <Position>
+                <X>539</X>
+                <Y>312</Y>
+              </Position>
+              <Pivot>
+                <X>0</X>
+                <Y>0.5</Y>
+              </Pivot>
+              <IsPivotRelative>True</IsPivotRelative>
+              <Scale>
+                <X>1</X>
+                <Y>1</Y>
+              </Scale>
+              <Opacity>255</Opacity>
+              <Layer>2</Layer>
+              <Visible>True</Visible>
+              <Text>perfect</Text>
+              <Scale>
+                <X>1</X>
+                <Y>1</Y>
+              </Scale>
+              <Tint>255,192,30,255</Tint>
+              <Components />
+              <LinkPoints />
+              <Mounts />
+            </TextItem>
+          </SceneItemBankItem>
+        </SceneItemBank>
+        <RootBone>
+          <Name>Root</Name>
+          <SceneItem>text</SceneItem>
+          <InheritPosition>True</InheritPosition>
+          <InheritScale>True</InheritScale>
+          <InheritRotation>True</InheritRotation>
+          <InheritVisibility>True</InheritVisibility>
+          <Interpolate>True</Interpolate>
+          <ChildBones />
+        </RootBone>
+        <AutoPlay>True</AutoPlay>
+      </CompositeEntityData>
+      <Components />
+      <LinkPoints />
+      <Mounts />
+    </CompositeEntity>
+    <CompositeEntity name="TimingLabelEntity">
+      <Position>
+        <X>100</X>
+        <Y>403</Y>
+      </Position>
+      <Scale>
+        <X>1</X>
+        <Y>1</Y>
+      </Scale>
+      <Opacity>255</Opacity>
+      <Layer>2</Layer>
+      <Visible>True</Visible>
+      <CompositeEntityData>
+        <Animations>
+          <CompositeAnimation Name="Show">
+            <SmoothInterpolation>True</SmoothInterpolation>
+            <Speed>1</Speed>
+            <LoopMax>1</LoopMax>
+            <Life>-1</Life>
+            <AutoPlay>True</AutoPlay>
+            <KeyFrames>
+              <CompositeKeyFrame Name="Hidden" Duration="80">
+                <BoneTransforms>
+                  <Transform>
+                    <Opacity>0</Opacity>
+                    <BoneReference>Label</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>0</X>
+                      <Y>32</Y>
+                    </Position>
+                    <Opacity>0</Opacity>
+                    <Scale>
+                      <X>2</X>
+                      <Y>148</Y>
+                    </Scale>
+                    <BoneReference>left</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>241</X>
+                      <Y>34</Y>
+                    </Position>
+                    <Opacity>0</Opacity>
+                    <Scale>
+                      <X>2</X>
+                      <Y>146</Y>
+                    </Scale>
+                    <BoneReference>right</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>2</X>
+                      <Y>32</Y>
+                    </Position>
+                    <Opacity>0</Opacity>
+                    <Scale>
+                      <X>241</X>
+                      <Y>2</Y>
+                    </Scale>
+                    <BoneReference>top</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>0</X>
+                      <Y>180</Y>
+                    </Position>
+                    <Opacity>0</Opacity>
+                    <Scale>
+                      <X>243</X>
+                      <Y>2</Y>
+                    </Scale>
+                    <BoneReference>bot</BoneReference>
+                  </Transform>
+                </BoneTransforms>
+              </CompositeKeyFrame>
+              <CompositeKeyFrame Name="Off Screen" Duration="30">
+                <BoneTransforms>
+                  <Transform>
+                    <Opacity>0</Opacity>
+                    <BoneReference>Label</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>0</X>
+                      <Y>32</Y>
+                    </Position>
+                    <Opacity>0</Opacity>
+                    <Scale>
+                      <X>2</X>
+                      <Y>148</Y>
+                    </Scale>
+                    <BoneReference>left</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>241</X>
+                      <Y>34</Y>
+                    </Position>
+                    <Opacity>0</Opacity>
+                    <Scale>
+                      <X>2</X>
+                      <Y>146</Y>
+                    </Scale>
+                    <BoneReference>right</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>2</X>
+                      <Y>32</Y>
+                    </Position>
+                    <Opacity>0</Opacity>
+                    <Scale>
+                      <X>241</X>
+                      <Y>2</Y>
+                    </Scale>
+                    <BoneReference>top</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>0</X>
+                      <Y>180</Y>
+                    </Position>
+                    <Opacity>0</Opacity>
+                    <Scale>
+                      <X>243</X>
+                      <Y>2</Y>
+                    </Scale>
+                    <BoneReference>bot</BoneReference>
+                  </Transform>
+                </BoneTransforms>
+              </CompositeKeyFrame>
+              <CompositeKeyFrame Name="On Screen" Duration="30">
+                <BoneTransforms>
+                  <Transform>
+                    <Opacity>220</Opacity>
+                    <BoneReference>Label</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>0</X>
+                      <Y>32</Y>
+                    </Position>
+                    <Opacity>128</Opacity>
+                    <Scale>
+                      <X>2</X>
+                      <Y>148</Y>
+                    </Scale>
+                    <BoneReference>left</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>241</X>
+                      <Y>34</Y>
+                    </Position>
+                    <Opacity>128</Opacity>
+                    <Scale>
+                      <X>2</X>
+                      <Y>146</Y>
+                    </Scale>
+                    <BoneReference>right</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>2</X>
+                      <Y>32</Y>
+                    </Position>
+                    <Opacity>128</Opacity>
+                    <Scale>
+                      <X>241</X>
+                      <Y>2</Y>
+                    </Scale>
+                    <BoneReference>top</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>0</X>
+                      <Y>180</Y>
+                    </Position>
+                    <Opacity>128</Opacity>
+                    <Scale>
+                      <X>243</X>
+                      <Y>2</Y>
+                    </Scale>
+                    <BoneReference>bot</BoneReference>
+                  </Transform>
+                </BoneTransforms>
+              </CompositeKeyFrame>
+              <CompositeKeyFrame Name="Visible" Duration="1">
+                <BoneTransforms>
+                  <Transform>
+                    <Opacity>220</Opacity>
+                    <BoneReference>Label</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>0</X>
+                      <Y>32</Y>
+                    </Position>
+                    <Opacity>128</Opacity>
+                    <Scale>
+                      <X>2</X>
+                      <Y>148</Y>
+                    </Scale>
+                    <BoneReference>left</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>241</X>
+                      <Y>34</Y>
+                    </Position>
+                    <Opacity>128</Opacity>
+                    <Scale>
+                      <X>2</X>
+                      <Y>146</Y>
+                    </Scale>
+                    <BoneReference>right</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>2</X>
+                      <Y>32</Y>
+                    </Position>
+                    <Opacity>128</Opacity>
+                    <Scale>
+                      <X>241</X>
+                      <Y>2</Y>
+                    </Scale>
+                    <BoneReference>top</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>0</X>
+                      <Y>180</Y>
+                    </Position>
+                    <Opacity>128</Opacity>
+                    <Scale>
+                      <X>243</X>
+                      <Y>2</Y>
+                    </Scale>
+                    <BoneReference>bot</BoneReference>
+                  </Transform>
+                </BoneTransforms>
+              </CompositeKeyFrame>
+            </KeyFrames>
+          </CompositeAnimation>
+        </Animations>
+        <SceneItemBank>
+          <SceneItemBankItem Key="text">
+            <TextItem name="text" fontSource="GLOBAL" fontRef="SmallFont">
+              <Position>
+                <X>100</X>
+                <Y>403</Y>
+              </Position>
+              <IsPivotRelative>True</IsPivotRelative>
+              <Scale>
+                <X>1</X>
+                <Y>1</Y>
+              </Scale>
+              <Opacity>220</Opacity>
+              <Layer>2</Layer>
+              <Visible>True</Visible>
+              <Text>Timing</Text>
+              <Scale>
+                <X>1</X>
+                <Y>1</Y>
+              </Scale>
+              <Tint>255,255,255,220</Tint>
+              <Components />
+              <LinkPoints />
+              <Mounts />
+            </TextItem>
+          </SceneItemBankItem>
+          <SceneItemBankItem Key="left">
+            <Sprite name="left" materialSource="GLOBAL" materialRef="Pixel">
+              <Position>
+                <X>100</X>
+                <Y>435</Y>
+              </Position>
+              <Scale>
+                <X>2</X>
+                <Y>148</Y>
+              </Scale>
+              <Opacity>128</Opacity>
+              <Layer>2</Layer>
+              <Visible>True</Visible>
+              <Tint>255,255,255,128</Tint>
+              <BlendingType>Alpha</BlendingType>
+              <Components />
+              <LinkPoints />
+              <Mounts />
+            </Sprite>
+          </SceneItemBankItem>
+          <SceneItemBankItem Key="right">
+            <Sprite name="right" materialSource="GLOBAL" materialRef="Pixel">
+              <Position>
+                <X>341</X>
+                <Y>437</Y>
+              </Position>
+              <Scale>
+                <X>2</X>
+                <Y>146</Y>
+              </Scale>
+              <Opacity>128</Opacity>
+              <Layer>2</Layer>
+              <Visible>True</Visible>
+              <Tint>255,255,255,128</Tint>
+              <BlendingType>Alpha</BlendingType>
+              <Components />
+              <LinkPoints />
+              <Mounts />
+            </Sprite>
+          </SceneItemBankItem>
+          <SceneItemBankItem Key="top">
+            <Sprite name="top" materialSource="GLOBAL" materialRef="Pixel">
+              <Position>
+                <X>102</X>
+                <Y>435</Y>
+              </Position>
+              <Scale>
+                <X>241</X>
+                <Y>2</Y>
+              </Scale>
+              <Opacity>128</Opacity>
+              <Layer>2</Layer>
+              <Visible>True</Visible>
+              <Tint>255,255,255,128</Tint>
+              <BlendingType>Alpha</BlendingType>
+              <Components />
+              <LinkPoints />
+              <Mounts />
+            </Sprite>
+          </SceneItemBankItem>
+          <SceneItemBankItem Key="bot">
+            <Sprite name="bot" materialSource="GLOBAL" materialRef="Pixel">
+              <Position>
+                <X>100</X>
+                <Y>583</Y>
+              </Position>
+              <Scale>
+                <X>243</X>
+                <Y>2</Y>
+              </Scale>
+              <Opacity>128</Opacity>
+              <Layer>2</Layer>
+              <Visible>True</Visible>
+              <Tint>255,255,255,128</Tint>
+              <BlendingType>Alpha</BlendingType>
+              <Components />
+              <LinkPoints />
+              <Mounts />
+            </Sprite>
+          </SceneItemBankItem>
+        </SceneItemBank>
+        <RootBone>
+          <Name>Label</Name>
+          <SceneItem>text</SceneItem>
+          <InheritPosition>True</InheritPosition>
+          <InheritScale>True</InheritScale>
+          <InheritRotation>True</InheritRotation>
+          <InheritVisibility>True</InheritVisibility>
+          <Interpolate>True</Interpolate>
+          <ChildBones>
+            <Bone>
+              <Name>left</Name>
+              <SceneItem>left</SceneItem>
+              <InheritPosition>True</InheritPosition>
+              <InheritScale>True</InheritScale>
+              <InheritRotation>True</InheritRotation>
+              <InheritVisibility>True</InheritVisibility>
+              <Interpolate>True</Interpolate>
+              <ChildBones />
+            </Bone>
+            <Bone>
+              <Name>right</Name>
+              <SceneItem>right</SceneItem>
+              <InheritPosition>True</InheritPosition>
+              <InheritScale>True</InheritScale>
+              <InheritRotation>True</InheritRotation>
+              <InheritVisibility>True</InheritVisibility>
+              <Interpolate>True</Interpolate>
+              <ChildBones />
+            </Bone>
+            <Bone>
+              <Name>top</Name>
+              <SceneItem>top</SceneItem>
+              <InheritPosition>True</InheritPosition>
+              <InheritScale>True</InheritScale>
+              <InheritRotation>True</InheritRotation>
+              <InheritVisibility>True</InheritVisibility>
+              <Interpolate>True</Interpolate>
+              <ChildBones />
+            </Bone>
+            <Bone>
+              <Name>bot</Name>
+              <SceneItem>bot</SceneItem>
+              <InheritPosition>True</InheritPosition>
+              <InheritScale>True</InheritScale>
+              <InheritRotation>True</InheritRotation>
+              <InheritVisibility>True</InheritVisibility>
+              <Interpolate>True</Interpolate>
+              <ChildBones />
+            </Bone>
+          </ChildBones>
+        </RootBone>
+        <AutoPlay>True</AutoPlay>
+      </CompositeEntityData>
+      <Components />
+      <LinkPoints />
+      <Mounts />
+    </CompositeEntity>
+    <CompositeEntity name="ContinueTextEntity">
+      <Position>
+        <X>640</X>
+        <Y>665</Y>
+      </Position>
+      <Scale>
+        <X>1</X>
+        <Y>1</Y>
+      </Scale>
+      <Opacity>255</Opacity>
+      <Layer>2</Layer>
+      <Visible>True</Visible>
+      <CompositeEntityData>
+        <Animations>
+          <CompositeAnimation Name="Show">
+            <SmoothInterpolation>True</SmoothInterpolation>
+            <Speed>1</Speed>
+            <LoopMax>1</LoopMax>
+            <Life>-1</Life>
+            <AutoPlay>True</AutoPlay>
+            <KeyFrames>
+              <CompositeKeyFrame Name="Hidden" Duration="80">
+                <BoneTransforms>
+                  <Transform>
+                    <Position>
+                      <X>0</X>
+                      <Y>200</Y>
+                    </Position>
+                    <Opacity>0</Opacity>
+                    <BoneReference>Label</BoneReference>
+                  </Transform>
+                </BoneTransforms>
+              </CompositeKeyFrame>
+              <CompositeKeyFrame Name="Off Screen" Duration="30">
+                <BoneTransforms>
+                  <Transform>
+                    <Position>
+                      <X>0</X>
+                      <Y>200</Y>
+                    </Position>
+                    <Opacity>0</Opacity>
+                    <BoneReference>Label</BoneReference>
+                  </Transform>
+                </BoneTransforms>
+              </CompositeKeyFrame>
+              <CompositeKeyFrame Name="Visible" Duration="1">
+                <BoneTransforms>
+                  <Transform>
+                    <Opacity>128</Opacity>
+                    <BoneReference>Label</BoneReference>
+                  </Transform>
+                </BoneTransforms>
+              </CompositeKeyFrame>
+            </KeyFrames>
+          </CompositeAnimation>
+          <CompositeAnimation Name="Idle">
+            <LerpLastFrameWithFirst>True</LerpLastFrameWithFirst>
+            <SmoothInterpolation>True</SmoothInterpolation>
+            <Speed>1</Speed>
+            <Life>-1</Life>
+            <AutoPlay>True</AutoPlay>
+            <KeyFrames>
+              <CompositeKeyFrame Name="Off" Duration="16">
+                <BoneTransforms>
+                  <Transform>
+                    <Opacity>128</Opacity>
+                    <BoneReference>Label</BoneReference>
+                  </Transform>
+                </BoneTransforms>
+              </CompositeKeyFrame>
+              <CompositeKeyFrame Name="On" Duration="16">
+                <BoneTransforms>
+                  <Transform>
+                    <Opacity>255</Opacity>
+                    <BoneReference>Label</BoneReference>
+                  </Transform>
+                </BoneTransforms>
+              </CompositeKeyFrame>
+            </KeyFrames>
+          </CompositeAnimation>
+        </Animations>
+        <SceneItemBank>
+          <SceneItemBankItem Key="text">
+            <TextItem name="text" fontSource="GLOBAL" fontRef="SmallFont">
+              <Position>
+                <X>640</X>
+                <Y>665</Y>
+              </Position>
+              <Pivot>
+                <X>0.5</X>
+                <Y>1</Y>
+              </Pivot>
+              <IsPivotRelative>True</IsPivotRelative>
+              <Scale>
+                <X>1</X>
+                <Y>1</Y>
+              </Scale>
+              <Opacity>128</Opacity>
+              <Layer>2</Layer>
+              <Visible>True</Visible>
+              <Text>[ press a key/button to continue ]</Text>
+              <Scale>
+                <X>1</X>
+                <Y>1</Y>
+              </Scale>
+              <Tint>255,255,255,128</Tint>
+              <Components />
+              <LinkPoints />
+              <Mounts />
+            </TextItem>
+          </SceneItemBankItem>
+        </SceneItemBank>
+        <RootBone>
+          <Name>Label</Name>
+          <SceneItem>text</SceneItem>
+          <InheritPosition>True</InheritPosition>
+          <InheritScale>True</InheritScale>
+          <InheritRotation>True</InheritRotation>
+          <InheritVisibility>True</InheritVisibility>
+          <Interpolate>True</Interpolate>
+          <ChildBones />
+        </RootBone>
+        <AutoPlay>True</AutoPlay>
+      </CompositeEntityData>
+      <Components />
+      <LinkPoints />
+      <Mounts />
+    </CompositeEntity>
+    <CompositeEntity name="DifficultyTextEntity">
+      <Position>
+        <X>750</X>
+        <Y>400</Y>
+      </Position>
+      <Scale>
+        <X>1</X>
+        <Y>1</Y>
+      </Scale>
+      <Opacity>255</Opacity>
+      <Layer>2</Layer>
+      <Visible>True</Visible>
+      <CompositeEntityData>
+        <Animations>
+          <CompositeAnimation Name="Show">
+            <SmoothInterpolation>True</SmoothInterpolation>
+            <Speed>1</Speed>
+            <LoopMax>1</LoopMax>
+            <Life>-1</Life>
+            <AutoPlay>True</AutoPlay>
+            <KeyFrames>
+              <CompositeKeyFrame Name="Hidden" Duration="60">
+                <BoneTransforms>
+                  <Transform>
+                    <Position>
+                      <X>200</X>
+                      <Y>0</Y>
+                    </Position>
+                    <Opacity>0</Opacity>
+                    <BoneReference>Label</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>211</X>
+                      <Y>0</Y>
+                    </Position>
+                    <Opacity>0</Opacity>
+                    <BoneReference>Text</BoneReference>
+                  </Transform>
+                </BoneTransforms>
+              </CompositeKeyFrame>
+              <CompositeKeyFrame Name="Off Screen" Duration="30">
+                <BoneTransforms>
+                  <Transform>
+                    <Position>
+                      <X>200</X>
+                      <Y>0</Y>
+                    </Position>
+                    <Opacity>0</Opacity>
+                    <BoneReference>Label</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>211</X>
+                      <Y>0</Y>
+                    </Position>
+                    <Opacity>0</Opacity>
+                    <BoneReference>Text</BoneReference>
+                  </Transform>
+                </BoneTransforms>
+              </CompositeKeyFrame>
+              <CompositeKeyFrame Name="On Screen" Duration="30">
+                <BoneTransforms>
+                  <Transform>
+                    <Opacity>192</Opacity>
+                    <BoneReference>Label</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>211</X>
+                      <Y>0</Y>
+                    </Position>
+                    <Opacity>0</Opacity>
+                    <BoneReference>Text</BoneReference>
+                  </Transform>
+                </BoneTransforms>
+              </CompositeKeyFrame>
+              <CompositeKeyFrame Name="Visible" Duration="1">
+                <BoneTransforms>
+                  <Transform>
+                    <Opacity>192</Opacity>
+                    <BoneReference>Label</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>211</X>
+                      <Y>0</Y>
+                    </Position>
+                    <Opacity>255</Opacity>
+                    <BoneReference>Text</BoneReference>
+                  </Transform>
+                </BoneTransforms>
+              </CompositeKeyFrame>
+            </KeyFrames>
+          </CompositeAnimation>
+        </Animations>
+        <SceneItemBank>
+          <SceneItemBankItem Key="text">
+            <TextItem name="text" fontSource="GLOBAL" fontRef="NormalFont">
+              <Position>
+                <X>961</X>
+                <Y>400</Y>
+              </Position>
+              <IsPivotRelative>True</IsPivotRelative>
+              <Scale>
+                <X>1</X>
+                <Y>1</Y>
+              </Scale>
+              <Opacity>255</Opacity>
+              <Layer>2</Layer>
+              <Visible>True</Visible>
+              <Text>Intense</Text>
+              <Scale>
+                <X>1</X>
+                <Y>1</Y>
+              </Scale>
+              <Tint>255,255,255,255</Tint>
+              <Components />
+              <LinkPoints />
+              <Mounts />
+            </TextItem>
+          </SceneItemBankItem>
+          <SceneItemBankItem Key="label">
+            <TextItem name="label" fontSource="GLOBAL" fontRef="NormalFont">
+              <Position>
+                <X>750</X>
+                <Y>400</Y>
+              </Position>
+              <IsPivotRelative>True</IsPivotRelative>
+              <Scale>
+                <X>1</X>
+                <Y>1</Y>
+              </Scale>
+              <Opacity>192</Opacity>
+              <Layer>2</Layer>
+              <Visible>True</Visible>
+              <Text>Difficulty: </Text>
+              <Scale>
+                <X>1</X>
+                <Y>1</Y>
+              </Scale>
+              <Tint>255,255,255,192</Tint>
+              <Components />
+              <LinkPoints />
+              <Mounts />
+            </TextItem>
+          </SceneItemBankItem>
+        </SceneItemBank>
+        <RootBone>
+          <Name>Label</Name>
+          <SceneItem>label</SceneItem>
+          <InheritPosition>True</InheritPosition>
+          <InheritScale>True</InheritScale>
+          <InheritRotation>True</InheritRotation>
+          <InheritVisibility>True</InheritVisibility>
+          <Interpolate>True</Interpolate>
+          <ChildBones>
+            <Bone>
+              <Name>Text</Name>
+              <SceneItem>text</SceneItem>
+              <InheritRotation>True</InheritRotation>
+              <InheritVisibility>True</InheritVisibility>
+              <Interpolate>True</Interpolate>
+              <ChildBones />
+            </Bone>
+          </ChildBones>
+        </RootBone>
+        <AutoPlay>True</AutoPlay>
+      </CompositeEntityData>
+      <Components />
+      <LinkPoints />
+      <Mounts />
+    </CompositeEntity>
+  </SceneItems>
+  <Templates />
+</IceScene>

@@ -1,0 +1,55 @@
+<IceScene>
+  <Assets />
+  <Components>
+    <MelodyEscape.SceneComponents.CreditsMenuComponent />
+  </Components>
+  <SceneItems />
+  <Templates>
+    <TextItem name="CreditLabel" fontSource="GLOBAL" fontRef="SmallFont">
+      <Position>
+        <X>100</X>
+        <Y>100</Y>
+      </Position>
+      <Scale>
+        <X>1</X>
+        <Y>1</Y>
+      </Scale>
+      <Opacity>255</Opacity>
+      <IsTemplate>True</IsTemplate>
+      <Layer>5</Layer>
+      <Visible>True</Visible>
+      <Text>Text Item</Text>
+      <Scale>
+        <X>1</X>
+        <Y>1</Y>
+      </Scale>
+      <Tint>255,255,255,255</Tint>
+      <Components />
+      <LinkPoints />
+      <Mounts />
+    </TextItem>
+    <TextItem name="CreditContributor" fontSource="GLOBAL" fontRef="SmallFont">
+      <Position>
+        <X>100</X>
+        <Y>100</Y>
+      </Position>
+      <Scale>
+        <X>1</X>
+        <Y>1</Y>
+      </Scale>
+      <Opacity>170</Opacity>
+      <IsTemplate>True</IsTemplate>
+      <Layer>5</Layer>
+      <Visible>True</Visible>
+      <Text>Text Item</Text>
+      <Scale>
+        <X>1</X>
+        <Y>1</Y>
+      </Scale>
+      <Tint>255,255,255,192</Tint>
+      <Components />
+      <LinkPoints />
+      <Mounts />
+    </TextItem>
+  </Templates>
+</IceScene>

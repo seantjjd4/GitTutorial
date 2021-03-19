@@ -1,0 +1,90 @@
+<IceScene>
+  <Assets />
+  <Components>
+    <MelodyEscape.SceneComponents.CalibrationMenuComponent />
+  </Components>
+  <SceneItems>
+    <TextItem name="Title" fontSource="GLOBAL" fontRef="BigFont">
+      <Position>
+        <X>640</X>
+        <Y>20</Y>
+      </Position>
+      <Pivot>
+        <X>0.5</X>
+        <Y>0</Y>
+      </Pivot>
+      <IsPivotRelative>True</IsPivotRelative>
+      <Scale>
+        <X>1</X>
+        <Y>1</Y>
+      </Scale>
+      <Opacity>255</Opacity>
+      <Layer>2</Layer>
+      <Visible>True</Visible>
+      <Text>Title</Text>
+      <Scale>
+        <X>1</X>
+        <Y>1</Y>
+      </Scale>
+      <Tint>255,255,255,255</Tint>
+      <Components />
+      <LinkPoints />
+      <Mounts />
+    </TextItem>
+    <TextItem name="InputInfo" fontSource="GLOBAL" fontRef="NormalFont">
+      <Position>
+        <X>640</X>
+        <Y>530</Y>
+      </Position>
+      <Pivot>
+        <X>0.5</X>
+        <Y>0</Y>
+      </Pivot>
+      <IsPivotRelative>True</IsPivotRelative>
+      <Scale>
+        <X>1</X>
+        <Y>1</Y>
+      </Scale>
+      <Opacity>255</Opacity>
+      <Layer>2</Layer>
+      <Visible>True</Visible>
+      <Text>Input</Text>
+      <Scale>
+        <X>1</X>
+        <Y>1</Y>
+      </Scale>
+      <Tint>255,255,255,255</Tint>
+      <Components />
+      <LinkPoints />
+      <Mounts />
+    </TextItem>
+    <TextItem name="SkipInfo" fontSource="GLOBAL" fontRef="SmallFont">
+      <Position>
+        <X>640</X>
+        <Y>660</Y>
+      </Position>
+      <Pivot>
+        <X>0.5</X>
+        <Y>0</Y>
+      </Pivot>
+      <IsPivotRelative>True</IsPivotRelative>
+      <Scale>
+        <X>1</X>
+        <Y>1</Y>
+      </Scale>
+      <Opacity>255</Opacity>
+      <Layer>2</Layer>
+      <Visible>True</Visible>
+      <Text>Skip</Text>
+      <Scale>
+        <X>1</X>
+        <Y>1</Y>
+      </Scale>
+      <Tint>255,255,255,255</Tint>
+      <Components />
+      <LinkPoints />
+      <Mounts />
+    </TextItem>
+  </SceneItems>
+  <Templates />
+</IceScene>

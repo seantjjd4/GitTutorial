@@ -1,0 +1,300 @@
+<IceScene>
+  <Assets>
+    <Material name="Spin" location="Hud\spin.png" />
+  </Assets>
+  <Components>
+    <MelodyEscape.SceneComponents.ModUploadComponent />
+  </Components>
+  <SceneItems>
+    <CompositeEntity name="Spin">
+      <Position>
+        <X>1190</X>
+        <Y>471</Y>
+      </Position>
+      <Scale>
+        <X>0.66</X>
+        <Y>0.66</Y>
+      </Scale>
+      <Opacity>255</Opacity>
+      <Layer>1</Layer>
+      <Visible>True</Visible>
+      <CompositeEntityData>
+        <Animations>
+          <CompositeAnimation Name="Spin">
+            <Speed>1</Speed>
+            <Life>-1</Life>
+            <AutoPlay>True</AutoPlay>
+            <KeyFrames>
+              <CompositeKeyFrame Name="Start" Duration="60">
+                <BoneTransforms>
+                  <Transform>
+                    <BoneReference>Light</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <BoneReference>Circle</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <BoneReference>Orb</BoneReference>
+                  </Transform>
+                </BoneTransforms>
+              </CompositeKeyFrame>
+              <CompositeKeyFrame Name="End" Duration="1">
+                <BoneTransforms>
+                  <Transform>
+                    <Rotation>6.283185</Rotation>
+                    <BoneReference>Light</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <BoneReference>Circle</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <BoneReference>Orb</BoneReference>
+                  </Transform>
+                </BoneTransforms>
+              </CompositeKeyFrame>
+            </KeyFrames>
+          </CompositeAnimation>
+        </Animations>
+        <SceneItemBank>
+          <SceneItemBankItem Key="Orb">
+            <Sprite name="Orb" materialSource="LOCAL" materialRef="Spin">
+              <Position>
+                <X>1190</X>
+                <Y>471</Y>
+              </Position>
+              <Pivot>
+                <X>0.5</X>
+                <Y>0.5</Y>
+              </Pivot>
+              <IsPivotRelative>True</IsPivotRelative>
+              <Rotation>1.570796</Rotation>
+              <Scale>
+                <X>0.66</X>
+                <Y>0.66</Y>
+              </Scale>
+              <Opacity>255</Opacity>
+              <Layer>2</Layer>
+              <Visible>True</Visible>
+              <SourceRectangle X="17" Y="31" Width="13" Height="13" />
+              <Tint>0,0,0,255</Tint>
+              <BlendingType>Alpha</BlendingType>
+              <Components />
+              <LinkPoints />
+              <Mounts />
+            </Sprite>
+          </SceneItemBankItem>
+          <SceneItemBankItem Key="Light">
+            <Sprite name="Light" materialSource="LOCAL" materialRef="Spin">
+              <Position>
+                <X>1190</X>
+                <Y>471</Y>
+              </Position>
+              <Pivot>
+                <X>0.5</X>
+                <Y>1</Y>
+              </Pivot>
+              <IsPivotRelative>True</IsPivotRelative>
+              <Rotation>1.570796</Rotation>
+              <Scale>
+                <X>0.66</X>
+                <Y>0.66</Y>
+              </Scale>
+              <Opacity>255</Opacity>
+              <Layer>2</Layer>
+              <Visible>True</Visible>
+              <SourceRectangle X="5" Y="5" Width="35" Height="19" />
+              <Tint>255,255,255,255</Tint>
+              <BlendingType>Alpha</BlendingType>
+              <Components />
+              <LinkPoints />
+              <Mounts />
+            </Sprite>
+          </SceneItemBankItem>
+          <SceneItemBankItem Key="Circle">
+            <Sprite name="Circle" materialSource="LOCAL" materialRef="Spin">
+              <Position>
+                <X>1190</X>
+                <Y>471</Y>
+              </Position>
+              <Pivot>
+                <X>0.5</X>
+                <Y>0.5</Y>
+              </Pivot>
+              <IsPivotRelative>True</IsPivotRelative>
+              <Scale>
+                <X>0.66</X>
+                <Y>0.66</Y>
+              </Scale>
+              <Opacity>255</Opacity>
+              <Layer>2</Layer>
+              <Visible>True</Visible>
+              <SourceRectangle X="50" Y="3" Width="40" Height="40" />
+              <Tint>0,0,0,255</Tint>
+              <BlendingType>Alpha</BlendingType>
+              <Components />
+              <LinkPoints />
+              <Mounts />
+            </Sprite>
+          </SceneItemBankItem>
+        </SceneItemBank>
+        <RootBone>
+          <Name>Circle</Name>
+          <SceneItem>Circle</SceneItem>
+          <InheritPosition>True</InheritPosition>
+          <InheritScale>True</InheritScale>
+          <InheritRotation>True</InheritRotation>
+          <InheritVisibility>True</InheritVisibility>
+          <Interpolate>True</Interpolate>
+          <ChildBones>
+            <Bone>
+              <Name>Light</Name>
+              <SceneItem>Light</SceneItem>
+              <InheritPosition>True</InheritPosition>
+              <InheritScale>True</InheritScale>
+              <InheritRotation>True</InheritRotation>
+              <InheritVisibility>True</InheritVisibility>
+              <Interpolate>True</Interpolate>
+              <ChildBones>
+                <Bone>
+                  <Name>Orb</Name>
+                  <SceneItem>Orb</SceneItem>
+                  <InheritPosition>True</InheritPosition>
+                  <InheritScale>True</InheritScale>
+                  <InheritRotation>True</InheritRotation>
+                  <InheritVisibility>True</InheritVisibility>
+                  <Interpolate>True</Interpolate>
+                  <ChildBones />
+                </Bone>
+              </ChildBones>
+            </Bone>
+          </ChildBones>
+        </RootBone>
+        <AutoPlay>True</AutoPlay>
+      </CompositeEntityData>
+      <Components />
+      <LinkPoints />
+      <Mounts />
+    </CompositeEntity>
+  </SceneItems>
+  <Templates>
+    <CompositeEntity name="GUIModInfoText">
+      <Position>
+        <X>100</X>
+        <Y>100</Y>
+      </Position>
+      <Scale>
+        <X>1</X>
+        <Y>1</Y>
+      </Scale>
+      <Opacity>255</Opacity>
+      <IsTemplate>True</IsTemplate>
+      <Layer>2</Layer>
+      <Visible>True</Visible>
+      <CompositeEntityData>
+        <Animations>
+          <CompositeAnimation Name="Idle">
+            <LerpLastFrameWithFirst>True</LerpLastFrameWithFirst>
+            <Speed>1</Speed>
+            <Life>-1</Life>
+            <AutoPlay>True</AutoPlay>
+            <KeyFrames>
+              <CompositeKeyFrame Name="Default" Duration="100">
+                <BoneTransforms>
+                  <Transform>
+                    <Opacity>150</Opacity>
+                    <Scale>
+                      <X>0.75</X>
+                      <Y>0.75</Y>
+                    </Scale>
+                    <BoneReference>Label</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>0</X>
+                      <Y>20</Y>
+                    </Position>
+                    <Scale>
+                      <X>0.75</X>
+                      <Y>0.75</Y>
+                    </Scale>
+                    <BoneReference>Text</BoneReference>
+                  </Transform>
+                </BoneTransforms>
+              </CompositeKeyFrame>
+            </KeyFrames>
+          </CompositeAnimation>
+        </Animations>
+        <SceneItemBank>
+          <SceneItemBankItem Key="label">
+            <TextItem name="label" fontSource="GLOBAL" fontRef="SmallFont">
+              <IsPivotRelative>True</IsPivotRelative>
+              <Scale>
+                <X>0.75</X>
+                <Y>0.75</Y>
+              </Scale>
+              <Opacity>150</Opacity>
+              <Layer>1</Layer>
+              <Visible>True</Visible>
+              <Text>Text Item</Text>
+              <Scale>
+                <X>0.75</X>
+                <Y>0.75</Y>
+              </Scale>
+              <Tint>255,255,255,150</Tint>
+              <Components />
+              <LinkPoints />
+              <Mounts />
+            </TextItem>
+          </SceneItemBankItem>
+          <SceneItemBankItem Key="text">
+            <TextItem name="text" fontSource="GLOBAL" fontRef="SmallFont">
+              <Position>
+                <X>1.224606E-15</X>
+                <Y>20</Y>
+              </Position>
+              <IsPivotRelative>True</IsPivotRelative>
+              <Scale>
+                <X>0.75</X>
+                <Y>0.75</Y>
+              </Scale>
+              <Opacity>255</Opacity>
+              <Layer>1</Layer>
+              <Visible>True</Visible>
+              <Text>Text Item</Text>
+              <Scale>
+                <X>0.75</X>
+                <Y>0.75</Y>
+              </Scale>
+              <Tint>255,255,255,255</Tint>
+              <Components />
+              <LinkPoints />
+              <Mounts />
+            </TextItem>
+          </SceneItemBankItem>
+        </SceneItemBank>
+        <RootBone>
+          <Name>Label</Name>
+          <SceneItem>label</SceneItem>
+          <InheritPosition>True</InheritPosition>
+          <InheritScale>True</InheritScale>
+          <InheritRotation>True</InheritRotation>
+          <InheritVisibility>True</InheritVisibility>
+          <Interpolate>True</Interpolate>
+          <ChildBones>
+            <Bone>
+              <Name>Text</Name>
+              <SceneItem>text</SceneItem>
+              <InheritPosition>True</InheritPosition>
+              <Interpolate>True</Interpolate>
+              <ChildBones />
+            </Bone>
+          </ChildBones>
+        </RootBone>
+        <AutoPlay>True</AutoPlay>
+      </CompositeEntityData>
+      <Components />
+      <LinkPoints />
+      <Mounts />
+    </CompositeEntity>
+  </Templates>
+</IceScene>

@@ -1,0 +1,114 @@
+<IceScene>
+  <Assets>
+    <Material name="LogoLoic" location="Hud/icetesy_logo.png" />
+  </Assets>
+  <Components />
+  <SceneItems>
+    <Sprite name="Back" materialSource="GLOBAL" materialRef="Pixel">
+      <Scale>
+        <X>1280</X>
+        <Y>720</Y>
+      </Scale>
+      <Opacity>255</Opacity>
+      <Layer>3</Layer>
+      <Visible>True</Visible>
+      <Tint>77,77,77,255</Tint>
+      <BlendingType>Alpha</BlendingType>
+      <Components />
+      <LinkPoints />
+      <Mounts />
+    </Sprite>
+    <CompositeEntity name="LogoEntity">
+      <Position>
+        <X>640</X>
+        <Y>350</Y>
+      </Position>
+      <Scale>
+        <X>1</X>
+        <Y>1</Y>
+      </Scale>
+      <Opacity>255</Opacity>
+      <Layer>2</Layer>
+      <Visible>True</Visible>
+      <CompositeEntityData>
+        <Animations>
+          <CompositeAnimation Name="Appear">
+            <SmoothInterpolation>True</SmoothInterpolation>
+            <Speed>1</Speed>
+            <LoopMax>1</LoopMax>
+            <Life>-1</Life>
+            <AutoPlay>True</AutoPlay>
+            <KeyFrames>
+              <CompositeKeyFrame Name="Off" Duration="20">
+                <BoneTransforms>
+                  <Transform>
+                    <Opacity>0</Opacity>
+                    <BoneReference>Root</BoneReference>
+                  </Transform>
+                </BoneTransforms>
+              </CompositeKeyFrame>
+              <CompositeKeyFrame Name="Off" Duration="60">
+                <BoneTransforms>
+                  <Transform>
+                    <Opacity>0</Opacity>
+                    <BoneReference>Root</BoneReference>
+                  </Transform>
+                </BoneTransforms>
+              </CompositeKeyFrame>
+              <CompositeKeyFrame Name="On" Duration="120">
+                <BoneTransforms>
+                  <Transform>
+                    <Opacity>255</Opacity>
+                    <BoneReference>Root</BoneReference>
+                  </Transform>
+                </BoneTransforms>
+              </CompositeKeyFrame>
+            </KeyFrames>
+          </CompositeAnimation>
+        </Animations>
+        <SceneItemBank>
+          <SceneItemBankItem Key="logo">
+            <Sprite name="logo" materialSource="LOCAL" materialRef="LogoLoic">
+              <Position>
+                <X>640</X>
+                <Y>360</Y>
+              </Position>
+              <Pivot>
+                <X>0.5</X>
+                <Y>0.5</Y>
+              </Pivot>
+              <IsPivotRelative>True</IsPivotRelative>
+              <Scale>
+                <X>0.75</X>
+                <Y>0.75</Y>
+              </Scale>
+              <Opacity>0</Opacity>
+              <Layer>2</Layer>
+              <Visible>True</Visible>
+              <Tint>255,255,255,255</Tint>
+              <BlendingType>Alpha</BlendingType>
+              <Components />
+              <LinkPoints />
+              <Mounts />
+            </Sprite>
+          </SceneItemBankItem>
+        </SceneItemBank>
+        <RootBone>
+          <Name>Root</Name>
+          <SceneItem>logo</SceneItem>
+          <InheritPosition>True</InheritPosition>
+          <InheritScale>True</InheritScale>
+          <InheritRotation>True</InheritRotation>
+          <InheritVisibility>True</InheritVisibility>
+          <Interpolate>True</Interpolate>
+          <ChildBones />
+        </RootBone>
+        <AutoPlay>True</AutoPlay>
+      </CompositeEntityData>
+      <Components />
+      <LinkPoints />
+      <Mounts />
+    </CompositeEntity>
+  </SceneItems>
+  <Templates />
+</IceScene>

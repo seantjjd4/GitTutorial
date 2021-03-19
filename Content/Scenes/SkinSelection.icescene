@@ -1,0 +1,8 @@
+<IceScene>
+  <Assets />
+  <Components>
+    <MelodyEscape.SceneComponents.SkinsSelectionMenuComponent />
+  </Components>
+  <SceneItems />
+  <Templates />
+</IceScene>

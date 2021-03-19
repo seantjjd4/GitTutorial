@@ -1,0 +1,172 @@
+<IceScene>
+  <Assets />
+  <Components>
+    <MelodyEscape.SceneComponents.ModLoadingComponent />
+  </Components>
+  <SceneItems>
+    <CompositeEntity name="LoadingTextEntity">
+      <Position>
+        <X>640</X>
+        <Y>350</Y>
+      </Position>
+      <Scale>
+        <X>1</X>
+        <Y>1</Y>
+      </Scale>
+      <Opacity>255</Opacity>
+      <Layer>2</Layer>
+      <Visible>True</Visible>
+      <CompositeEntityData>
+        <Animations>
+          <CompositeAnimation Name="Idle">
+            <LerpLastFrameWithFirst>True</LerpLastFrameWithFirst>
+            <SmoothInterpolation>True</SmoothInterpolation>
+            <Speed>1</Speed>
+            <Life>-1</Life>
+            <AutoPlay>True</AutoPlay>
+            <KeyFrames>
+              <CompositeKeyFrame Name="New keyFrame" Duration="46">
+                <BoneTransforms>
+                  <Transform>
+                    <Opacity>255</Opacity>
+                    <BoneReference>Root</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <IsVisible>False</IsVisible>
+                    <Opacity>255</Opacity>
+                    <Scale>
+                      <X>0</X>
+                      <Y>0</Y>
+                    </Scale>
+                    <BoneReference>Circle</BoneReference>
+                  </Transform>
+                </BoneTransforms>
+              </CompositeKeyFrame>
+              <CompositeKeyFrame Name="New keyFrame" Duration="46">
+                <BoneTransforms>
+                  <Transform>
+                    <Opacity>32</Opacity>
+                    <BoneReference>Root</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <IsVisible>False</IsVisible>
+                    <Opacity>0</Opacity>
+                    <Scale>
+                      <X>8</X>
+                      <Y>8</Y>
+                    </Scale>
+                    <BoneReference>Circle</BoneReference>
+                  </Transform>
+                </BoneTransforms>
+              </CompositeKeyFrame>
+            </KeyFrames>
+          </CompositeAnimation>
+        </Animations>
+        <SceneItemBank>
+          <SceneItemBankItem Key="LoadingText">
+            <TextItem name="LoadingText" fontSource="GLOBAL" fontRef="NormalFont">
+              <Position>
+                <X>640</X>
+                <Y>350</Y>
+              </Position>
+              <Pivot>
+                <X>0.5</X>
+                <Y>0.5</Y>
+              </Pivot>
+              <IsPivotRelative>True</IsPivotRelative>
+              <Scale>
+                <X>1</X>
+                <Y>1</Y>
+              </Scale>
+              <Opacity>64</Opacity>
+              <Layer>2</Layer>
+              <Visible>True</Visible>
+              <Text>CHECKING WORKSHOP ITEMS</Text>
+              <Scale>
+                <X>1</X>
+                <Y>1</Y>
+              </Scale>
+              <Tint>255,255,255,64</Tint>
+              <Components />
+              <LinkPoints />
+              <Mounts />
+            </TextItem>
+          </SceneItemBankItem>
+          <SceneItemBankItem Key="Circle">
+            <Sprite name="Circle" materialSource="GLOBAL" materialRef="BlurredDotParticle">
+              <Pivot>
+                <X>0.5</X>
+                <Y>0.5</Y>
+              </Pivot>
+              <IsPivotRelative>True</IsPivotRelative>
+              <Scale>
+                <X>8</X>
+                <Y>8</Y>
+              </Scale>
+              <Opacity>0</Opacity>
+              <Layer>3</Layer>
+              <Tint>255,255,255,0</Tint>
+              <BlendingType>Alpha</BlendingType>
+              <Components />
+              <LinkPoints />
+              <Mounts />
+            </Sprite>
+          </SceneItemBankItem>
+        </SceneItemBank>
+        <RootBone>
+          <Name>Root</Name>
+          <SceneItem>LoadingText</SceneItem>
+          <InheritPosition>True</InheritPosition>
+          <InheritScale>True</InheritScale>
+          <InheritRotation>True</InheritRotation>
+          <InheritVisibility>True</InheritVisibility>
+          <Interpolate>True</Interpolate>
+          <ChildBones>
+            <Bone>
+              <Name>Circle</Name>
+              <SceneItem>Circle</SceneItem>
+              <InheritPosition>True</InheritPosition>
+              <InheritScale>True</InheritScale>
+              <InheritRotation>True</InheritRotation>
+              <InheritVisibility>True</InheritVisibility>
+              <Interpolate>True</Interpolate>
+              <ChildBones />
+            </Bone>
+          </ChildBones>
+        </RootBone>
+        <AutoPlay>True</AutoPlay>
+      </CompositeEntityData>
+      <Components />
+      <LinkPoints />
+      <Mounts />
+    </CompositeEntity>
+    <TextItem name="StatusText" fontSource="GLOBAL" fontRef="SmallFont">
+      <Position>
+        <X>640</X>
+        <Y>400</Y>
+      </Position>
+      <Pivot>
+        <X>0.5</X>
+        <Y>0.5</Y>
+      </Pivot>
+      <IsPivotRelative>True</IsPivotRelative>
+      <Scale>
+        <X>1</X>
+        <Y>1</Y>
+      </Scale>
+      <Opacity>192</Opacity>
+      <Layer>2</Layer>
+      <Visible>True</Visible>
+      <Text>Text Item</Text>
+      <Scale>
+        <X>1</X>
+        <Y>1</Y>
+      </Scale>
+      <Tint>255,255,255,192</Tint>
+      <Components />
+      <LinkPoints />
+      <Mounts />
+    </TextItem>
+  </SceneItems>
+  <Templates />
+</IceScene>

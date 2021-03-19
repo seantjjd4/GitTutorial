@@ -1,0 +1,1495 @@
+<IceScene>
+  <Assets>
+    <Material name="BigMelodySprites" location="big_melody_sprites.png" areas_definition="big_melody_sprites.xml" />
+    <Material name="TextLogo" location="Hud\text_logo.png" />
+    <Material name="TextLogoBlur" location="Hud\text_logo_blur.png" />
+  </Assets>
+  <Components>
+    <MelodyEscape.SceneComponents.MainMenuComponent />
+  </Components>
+  <SceneItems>
+    <CompositeEntity name="BigMelody">
+      <Position>
+        <X>300</X>
+        <Y>292</Y>
+      </Position>
+      <Scale>
+        <X>1.15</X>
+        <Y>1.15</Y>
+      </Scale>
+      <Opacity>255</Opacity>
+      <Layer>5</Layer>
+      <Visible>True</Visible>
+      <CompositeEntityData>
+        <Animations>
+          <CompositeAnimation Name="Idle">
+            <LerpLastFrameWithFirst>True</LerpLastFrameWithFirst>
+            <SmoothInterpolation>True</SmoothInterpolation>
+            <Speed>1</Speed>
+            <Life>-1</Life>
+            <AutoPlay>True</AutoPlay>
+            <KeyFrames>
+              <CompositeKeyFrame Name="1" Duration="18">
+                <BoneTransforms>
+                  <Transform>
+                    <BoneReference>Root</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>-19</X>
+                      <Y>103</Y>
+                    </Position>
+                    <BoneReference>LockBackA</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>0</X>
+                      <Y>164</Y>
+                    </Position>
+                    <BoneReference>LockBackChildB</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>7</X>
+                      <Y>188</Y>
+                    </Position>
+                    <Rotation>0.2</Rotation>
+                    <BoneReference>LockBackChildC</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>121</X>
+                      <Y>249</Y>
+                    </Position>
+                    <Rotation>0.04</Rotation>
+                    <BoneReference>LockBackD</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>117</X>
+                      <Y>256</Y>
+                    </Position>
+                    <BoneReference>LockBackE</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>-83</X>
+                      <Y>-130</Y>
+                    </Position>
+                    <Rotation>0.5</Rotation>
+                    <BoneReference>ShoulderRight</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>-158</X>
+                      <Y>19</Y>
+                    </Position>
+                    <Rotation>0.02</Rotation>
+                    <BoneReference>ArmRight</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>-73</X>
+                      <Y>2</Y>
+                    </Position>
+                    <BoneReference>HPBack</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>13</X>
+                      <Y>-84</Y>
+                    </Position>
+                    <Rotation>0.32</Rotation>
+                    <BoneReference>Torso</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>5</X>
+                      <Y>-11</Y>
+                    </Position>
+                    <BoneReference>Belly</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <BoneReference>Pelvis</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>-20</X>
+                      <Y>-182</Y>
+                    </Position>
+                    <BoneReference>Neck</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>-20</X>
+                      <Y>-86</Y>
+                    </Position>
+                    <Rotation>-0.1</Rotation>
+                    <BoneReference>Head</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>48</X>
+                      <Y>-158</Y>
+                    </Position>
+                    <Rotation>-0.6</Rotation>
+                    <BoneReference>ShoulderLeft</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>18</X>
+                      <Y>214</Y>
+                    </Position>
+                    <Rotation>0.2</Rotation>
+                    <BoneReference>ArmLeft</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>-24</X>
+                      <Y>-71</Y>
+                    </Position>
+                    <BoneReference>HairsMain</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>-101</X>
+                      <Y>21</Y>
+                    </Position>
+                    <Rotation>-0.04</Rotation>
+                    <Opacity>255</Opacity>
+                    <BoneReference>LockFrontA</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>5</X>
+                      <Y>111</Y>
+                    </Position>
+                    <Rotation>-0.1</Rotation>
+                    <BoneReference>LockFrontChildB</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>61</X>
+                      <Y>119</Y>
+                    </Position>
+                    <Rotation>-0.02</Rotation>
+                    <BoneReference>LockFrontC</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>62</X>
+                      <Y>100</Y>
+                    </Position>
+                    <Rotation>-0.02</Rotation>
+                    <BoneReference>LockFrontD</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>80</X>
+                      <Y>111</Y>
+                    </Position>
+                    <BoneReference>LockFrontE</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>27</X>
+                      <Y>-25</Y>
+                    </Position>
+                    <BoneReference>HPFront</BoneReference>
+                  </Transform>
+                </BoneTransforms>
+              </CompositeKeyFrame>
+              <CompositeKeyFrame Name="1" Duration="22">
+                <BoneTransforms>
+                  <Transform>
+                    <BoneReference>Root</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>-19</X>
+                      <Y>103</Y>
+                    </Position>
+                    <Rotation>0.12</Rotation>
+                    <BoneReference>LockBackA</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>0</X>
+                      <Y>164</Y>
+                    </Position>
+                    <BoneReference>LockBackChildB</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>7</X>
+                      <Y>188</Y>
+                    </Position>
+                    <Rotation>0.14</Rotation>
+                    <BoneReference>LockBackChildC</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>121</X>
+                      <Y>249</Y>
+                    </Position>
+                    <Rotation>0.18</Rotation>
+                    <BoneReference>LockBackD</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>117</X>
+                      <Y>256</Y>
+                    </Position>
+                    <Rotation>0.2</Rotation>
+                    <BoneReference>LockBackE</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>-83</X>
+                      <Y>-130</Y>
+                    </Position>
+                    <Rotation>0.45</Rotation>
+                    <BoneReference>ShoulderRight</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>-157</X>
+                      <Y>29</Y>
+                    </Position>
+                    <Rotation>0.02</Rotation>
+                    <BoneReference>ArmRight</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>-73</X>
+                      <Y>2</Y>
+                    </Position>
+                    <BoneReference>HPBack</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>13</X>
+                      <Y>-84</Y>
+                    </Position>
+                    <Rotation>0.32</Rotation>
+                    <BoneReference>Torso</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>5</X>
+                      <Y>-6</Y>
+                    </Position>
+                    <BoneReference>Belly</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>0</X>
+                      <Y>3</Y>
+                    </Position>
+                    <BoneReference>Pelvis</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>-20</X>
+                      <Y>-182</Y>
+                    </Position>
+                    <BoneReference>Neck</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>-20</X>
+                      <Y>-82</Y>
+                    </Position>
+                    <Rotation>-0.2</Rotation>
+                    <BoneReference>Head</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>50</X>
+                      <Y>-158</Y>
+                    </Position>
+                    <Rotation>-0.66</Rotation>
+                    <BoneReference>ShoulderLeft</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>18</X>
+                      <Y>214</Y>
+                    </Position>
+                    <Rotation>0.1</Rotation>
+                    <BoneReference>ArmLeft</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>-24</X>
+                      <Y>-71</Y>
+                    </Position>
+                    <BoneReference>HairsMain</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>-101</X>
+                      <Y>21</Y>
+                    </Position>
+                    <Rotation>0.02</Rotation>
+                    <Opacity>255</Opacity>
+                    <BoneReference>LockFrontA</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>5</X>
+                      <Y>111</Y>
+                    </Position>
+                    <Rotation>-0.06</Rotation>
+                    <BoneReference>LockFrontChildB</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>62</X>
+                      <Y>119</Y>
+                    </Position>
+                    <Rotation>0.12</Rotation>
+                    <BoneReference>LockFrontC</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>62</X>
+                      <Y>100</Y>
+                    </Position>
+                    <Rotation>0.08</Rotation>
+                    <BoneReference>LockFrontD</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>80</X>
+                      <Y>111</Y>
+                    </Position>
+                    <Rotation>0.08</Rotation>
+                    <BoneReference>LockFrontE</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>27</X>
+                      <Y>-25</Y>
+                    </Position>
+                    <BoneReference>HPFront</BoneReference>
+                  </Transform>
+                </BoneTransforms>
+              </CompositeKeyFrame>
+            </KeyFrames>
+          </CompositeAnimation>          
+        </Animations>
+        <SceneItemBank>
+          <SceneItemBankItem Key="root">
+            <Sprite name="root" materialSource="GLOBAL" materialRef="PixelTransparent">
+              <Position>
+                <X>300</X>
+                <Y>292</Y>
+              </Position>
+              <Pivot>
+                <X>0.5</X>
+                <Y>0.5</Y>
+              </Pivot>
+              <IsPivotRelative>True</IsPivotRelative>
+              <Scale>
+                <X>1.15</X>
+                <Y>1.15</Y>
+              </Scale>
+              <Opacity>255</Opacity>
+              <Layer>5</Layer>
+              <Visible>True</Visible>
+              <Tint>255,255,255,255</Tint>
+              <BlendingType>Alpha</BlendingType>
+              <Components />
+              <LinkPoints />
+              <Mounts />
+            </Sprite>
+          </SceneItemBankItem>
+          <SceneItemBankItem Key="pelvis">
+            <Sprite name="pelvis" materialSource="LOCAL" materialRef="BigMelodySprites" materialArea="pelvis">
+              <Position>
+                <X>300</X>
+                <Y>292.2556</Y>
+              </Position>
+              <Pivot>
+                <X>82</X>
+                <Y>48</Y>
+              </Pivot>
+              <Scale>
+                <X>1.15</X>
+                <Y>1.15</Y>
+              </Scale>
+              <Opacity>255</Opacity>
+              <Layer>5</Layer>
+              <Visible>True</Visible>
+              <Tint>255,255,255,255</Tint>
+              <BlendingType>Alpha</BlendingType>
+              <Components />
+              <LinkPoints />
+              <Mounts />
+            </Sprite>
+          </SceneItemBankItem>
+          <SceneItemBankItem Key="head">
+            <Sprite name="head" materialSource="LOCAL" materialRef="BigMelodySprites" materialArea="head">
+              <Position>
+                <X>373.8774</X>
+                <Y>-123.2695</Y>
+              </Position>
+              <Pivot>
+                <X>140</X>
+                <Y>133</Y>
+              </Pivot>
+              <Rotation>0.2125926</Rotation>
+              <Scale>
+                <X>1.15</X>
+                <Y>1.15</Y>
+              </Scale>
+              <Opacity>255</Opacity>
+              <Layer>5</Layer>
+              <Visible>True</Visible>
+              <Tint>255,255,255,255</Tint>
+              <BlendingType>Alpha</BlendingType>
+              <Components />
+              <LinkPoints />
+              <Mounts />
+            </Sprite>
+          </SceneItemBankItem>
+          <SceneItemBankItem Key="belly">
+            <Sprite name="belly" materialSource="LOCAL" materialRef="BigMelodySprites" materialArea="belly">
+              <Position>
+                <X>305.75</X>
+                <Y>280.0315</Y>
+              </Position>
+              <Pivot>
+                <X>86</X>
+                <Y>108</Y>
+              </Pivot>
+              <Scale>
+                <X>1.15</X>
+                <Y>1.15</Y>
+              </Scale>
+              <Opacity>255</Opacity>
+              <Layer>5</Layer>
+              <Visible>True</Visible>
+              <Tint>255,255,255,255</Tint>
+              <BlendingType>Alpha</BlendingType>
+              <Components />
+              <LinkPoints />
+              <Mounts />
+            </Sprite>
+          </SceneItemBankItem>
+          <SceneItemBankItem Key="torso">
+            <Sprite name="torso" materialSource="LOCAL" materialRef="BigMelodySprites" materialArea="torso">
+              <Position>
+                <X>320.7</X>
+                <Y>183.4315</Y>
+              </Position>
+              <Pivot>
+                <X>112</X>
+                <Y>201</Y>
+              </Pivot>
+              <Rotation>0.32</Rotation>
+              <Scale>
+                <X>1.15</X>
+                <Y>1.15</Y>
+              </Scale>
+              <Opacity>255</Opacity>
+              <Layer>5</Layer>
+              <Visible>True</Visible>
+              <Tint>255,255,255,255</Tint>
+              <BlendingType>Alpha</BlendingType>
+              <Components />
+              <LinkPoints />
+              <Mounts />
+            </Sprite>
+          </SceneItemBankItem>
+          <SceneItemBankItem Key="neck">
+            <Sprite name="neck" materialSource="LOCAL" materialRef="BigMelodySprites" materialArea="neck">
+              <Position>
+                <X>364.7064</X>
+                <Y>-22.47855</Y>
+              </Position>
+              <Pivot>
+                <X>62</X>
+                <Y>88</Y>
+              </Pivot>
+              <Rotation>0.32</Rotation>
+              <Scale>
+                <X>1.15</X>
+                <Y>1.15</Y>
+              </Scale>
+              <Opacity>255</Opacity>
+              <Layer>5</Layer>
+              <Visible>True</Visible>
+              <Tint>255,255,255,255</Tint>
+              <BlendingType>Alpha</BlendingType>
+              <Components />
+              <LinkPoints />
+              <Mounts />
+            </Sprite>
+          </SceneItemBankItem>
+          <SceneItemBankItem Key="hp_front">
+            <Sprite name="hp_front" materialSource="LOCAL" materialRef="BigMelodySprites" materialArea="headphones_front">
+              <Position>
+                <X>410.2945</X>
+                <Y>-144.8209</Y>
+              </Position>
+              <Pivot>
+                <X>146</X>
+                <Y>122</Y>
+              </Pivot>
+              <Rotation>0.2125926</Rotation>
+              <Scale>
+                <X>1.15</X>
+                <Y>1.15</Y>
+              </Scale>
+              <Opacity>255</Opacity>
+              <Layer>5</Layer>
+              <Visible>True</Visible>
+              <Tint>255,255,255,255</Tint>
+              <BlendingType>Alpha</BlendingType>
+              <Components />
+              <LinkPoints />
+              <Mounts />
+            </Sprite>
+          </SceneItemBankItem>
+          <SceneItemBankItem Key="hp_back">
+            <Sprite name="hp_back" materialSource="LOCAL" materialRef="BigMelodySprites" materialArea="headphones_back">
+              <Position>
+                <X>291.3321</X>
+                <Y>-138.7343</Y>
+              </Position>
+              <Pivot>
+                <X>60</X>
+                <Y>52</Y>
+              </Pivot>
+              <Rotation>0.2125926</Rotation>
+              <Scale>
+                <X>1.15</X>
+                <Y>1.15</Y>
+              </Scale>
+              <Opacity>255</Opacity>
+              <Layer>5</Layer>
+              <Visible>True</Visible>
+              <Tint>255,255,255,255</Tint>
+              <BlendingType>Alpha</BlendingType>
+              <Components />
+              <LinkPoints />
+              <Mounts />
+            </Sprite>
+          </SceneItemBankItem>
+          <SceneItemBankItem Key="shoulder_right">
+            <Sprite name="shoulder_right" materialSource="LOCAL" materialRef="BigMelodySprites" materialArea="shoulder_right">
+              <Position>
+                <X>277.1232</X>
+                <Y>11.49539</Y>
+              </Position>
+              <Pivot>
+                <X>42</X>
+                <Y>42</Y>
+              </Pivot>
+              <Rotation>0.8162963</Rotation>
+              <Scale>
+                <X>1.15</X>
+                <Y>1.15</Y>
+              </Scale>
+              <Opacity>255</Opacity>
+              <Layer>5</Layer>
+              <Visible>True</Visible>
+              <Tint>255,255,255,255</Tint>
+              <BlendingType>Alpha</BlendingType>
+              <Components />
+              <LinkPoints />
+              <Mounts />
+            </Sprite>
+          </SceneItemBankItem>
+          <SceneItemBankItem Key="arm_right">
+            <Sprite name="arm_right" materialSource="LOCAL" materialRef="BigMelodySprites" materialArea="arm_right">
+              <Position>
+                <X>141.1636</X>
+                <Y>147.8509</Y>
+              </Position>
+              <Pivot>
+                <X>40</X>
+                <Y>308</Y>
+              </Pivot>
+              <Rotation>0.34</Rotation>
+              <Scale>
+                <X>1.15</X>
+                <Y>1.15</Y>
+              </Scale>
+              <Opacity>255</Opacity>
+              <Layer>5</Layer>
+              <Visible>True</Visible>
+              <Tint>255,255,255,255</Tint>
+              <BlendingType>Alpha</BlendingType>
+              <Components />
+              <LinkPoints />
+              <Mounts />
+            </Sprite>
+          </SceneItemBankItem>
+          <SceneItemBankItem Key="shoulder_left">
+            <Sprite name="shoulder_left" materialSource="LOCAL" materialRef="BigMelodySprites" materialArea="shoulder_left">
+              <Position>
+                <X>430.4163</X>
+                <Y>28.37308</Y>
+              </Position>
+              <Pivot>
+                <X>47</X>
+                <Y>42</Y>
+              </Pivot>
+              <Rotation>-0.2844445</Rotation>
+              <Scale>
+                <X>1.15</X>
+                <Y>1.15</Y>
+              </Scale>
+              <Opacity>255</Opacity>
+              <Layer>5</Layer>
+              <Visible>True</Visible>
+              <Tint>255,255,255,255</Tint>
+              <BlendingType>Alpha</BlendingType>
+              <Components />
+              <LinkPoints />
+              <Mounts />
+            </Sprite>
+          </SceneItemBankItem>
+          <SceneItemBankItem Key="arm_left">
+            <Sprite name="arm_left" materialSource="LOCAL" materialRef="BigMelodySprites" materialArea="arm_left">
+              <Position>
+                <X>519.3461</X>
+                <Y>258.7753</Y>
+              </Position>
+              <Pivot>
+                <X>38</X>
+                <Y>26</Y>
+              </Pivot>
+              <Rotation>-0.09185186</Rotation>
+              <Scale>
+                <X>1.15</X>
+                <Y>1.15</Y>
+              </Scale>
+              <Opacity>255</Opacity>
+              <Layer>5</Layer>
+              <Visible>True</Visible>
+              <Tint>255,255,255,255</Tint>
+              <BlendingType>Alpha</BlendingType>
+              <Components />
+              <LinkPoints />
+              <Mounts />
+            </Sprite>
+          </SceneItemBankItem>
+          <SceneItemBankItem Key="hair_main">
+            <Sprite name="hair_main" materialSource="LOCAL" materialRef="BigMelodySprites" materialArea="hair_main">
+              <Position>
+                <X>364.1265</X>
+                <Y>-208.9048</Y>
+              </Position>
+              <Pivot>
+                <X>133</X>
+                <Y>80</Y>
+              </Pivot>
+              <Rotation>0.2125926</Rotation>
+              <Scale>
+                <X>1.15</X>
+                <Y>1.15</Y>
+              </Scale>
+              <Opacity>255</Opacity>
+              <Layer>5</Layer>
+              <Visible>True</Visible>
+              <Tint>41,163,228,255</Tint>
+              <BlendingType>Alpha</BlendingType>
+              <Components />
+              <LinkPoints />
+              <Mounts />
+            </Sprite>
+          </SceneItemBankItem>
+          <SceneItemBankItem Key="hair_lock_front_A">
+            <Sprite name="hair_lock_front_A" materialSource="LOCAL" materialRef="BigMelodySprites" materialArea="hair_lock_front_A">
+              <Position>
+                <X>245.4958</X>
+                <Y>-209.8055</Y>
+              </Position>
+              <Pivot>
+                <X>40</X>
+                <Y>26</Y>
+              </Pivot>
+              <Rotation>0.177037</Rotation>
+              <Scale>
+                <X>1.15</X>
+                <Y>1.15</Y>
+              </Scale>
+              <Opacity>255</Opacity>
+              <Layer>5</Layer>
+              <Visible>True</Visible>
+              <Tint>41,163,228,255</Tint>
+              <BlendingType>Alpha</BlendingType>
+              <Components />
+              <LinkPoints />
+              <Mounts />
+            </Sprite>
+          </SceneItemBankItem>
+          <SceneItemBankItem Key="hair_lock_front_B">
+            <Sprite name="hair_lock_front_B" materialSource="LOCAL" materialRef="BigMelodySprites" materialArea="hair_lock_front_B">
+              <Position>
+                <X>228.675</X>
+                <Y>-83.13806</Y>
+              </Position>
+              <Pivot>
+                <X>26</X>
+                <Y>20</Y>
+              </Pivot>
+              <Rotation>0.07999999</Rotation>
+              <Scale>
+                <X>1.15</X>
+                <Y>1.15</Y>
+              </Scale>
+              <Opacity>255</Opacity>
+              <Layer>5</Layer>
+              <Visible>True</Visible>
+              <Tint>41,163,228,255</Tint>
+              <BlendingType>Alpha</BlendingType>
+              <Components />
+              <LinkPoints />
+              <Mounts />
+            </Sprite>
+          </SceneItemBankItem>
+          <SceneItemBankItem Key="hair_lock_front_C">
+            <Sprite name="hair_lock_front_C" materialSource="LOCAL" materialRef="BigMelodySprites" materialArea="hair_lock_front_C">
+              <Position>
+                <X>403.9058</X>
+                <Y>-60.31641</Y>
+              </Position>
+              <Pivot>
+                <X>36</X>
+                <Y>39</Y>
+              </Pivot>
+              <Rotation>0.202963</Rotation>
+              <Scale>
+                <X>1.15</X>
+                <Y>1.15</Y>
+              </Scale>
+              <Opacity>255</Opacity>
+              <Layer>5</Layer>
+              <Visible>True</Visible>
+              <Tint>41,163,228,255</Tint>
+              <BlendingType>Alpha</BlendingType>
+              <Components />
+              <LinkPoints />
+              <Mounts />
+            </Sprite>
+          </SceneItemBankItem>
+          <SceneItemBankItem Key="hair_lock_front_D">
+            <Sprite name="hair_lock_front_D" materialSource="LOCAL" materialRef="BigMelodySprites" materialArea="hair_lock_front_D">
+              <Position>
+                <X>409.5569</X>
+                <Y>-81.44983</Y>
+              </Position>
+              <Pivot>
+                <X>44</X>
+                <Y>45</Y>
+              </Pivot>
+              <Rotation>0.2</Rotation>
+              <Scale>
+                <X>1.15</X>
+                <Y>1.15</Y>
+              </Scale>
+              <Opacity>255</Opacity>
+              <Layer>5</Layer>
+              <Visible>True</Visible>
+              <Tint>41,163,228,255</Tint>
+              <BlendingType>Alpha</BlendingType>
+              <Components />
+              <LinkPoints />
+              <Mounts />
+            </Sprite>
+          </SceneItemBankItem>
+          <SceneItemBankItem Key="hair_lock_front_E">
+            <Sprite name="hair_lock_front_E" materialSource="LOCAL" materialRef="BigMelodySprites" materialArea="hair_lock_front_E">
+              <Position>
+                <X>427.1218</X>
+                <Y>-64.71704</Y>
+              </Position>
+              <Pivot>
+                <X>43</X>
+                <Y>43</Y>
+              </Pivot>
+              <Rotation>0.2185185</Rotation>
+              <Scale>
+                <X>1.15</X>
+                <Y>1.15</Y>
+              </Scale>
+              <Opacity>255</Opacity>
+              <Layer>5</Layer>
+              <Visible>True</Visible>
+              <Tint>41,163,228,255</Tint>
+              <BlendingType>Alpha</BlendingType>
+              <Components />
+              <LinkPoints />
+              <Mounts />
+            </Sprite>
+          </SceneItemBankItem>
+          <SceneItemBankItem Key="hair_lock_back_A">
+            <Sprite name="hair_lock_back_A" materialSource="LOCAL" materialRef="BigMelodySprites" materialArea="hair_lock_back_A">
+              <Position>
+                <X>317.7761</X>
+                <Y>-97.73166</Y>
+              </Position>
+              <Pivot>
+                <X>49</X>
+                <Y>36</Y>
+              </Pivot>
+              <Rotation>0.2214815</Rotation>
+              <Scale>
+                <X>1.15</X>
+                <Y>1.15</Y>
+              </Scale>
+              <Opacity>255</Opacity>
+              <Layer>5</Layer>
+              <Visible>True</Visible>
+              <Tint>41,163,228,255</Tint>
+              <BlendingType>Alpha</BlendingType>
+              <Components />
+              <LinkPoints />
+              <Mounts />
+            </Sprite>
+          </SceneItemBankItem>
+          <SceneItemBankItem Key="hair_lock_back_B">
+            <Sprite name="hair_lock_back_B" materialSource="LOCAL" materialRef="BigMelodySprites" materialArea="hair_lock_back_B">
+              <Position>
+                <X>276.3453</X>
+                <Y>86.26141</Y>
+              </Position>
+              <Pivot>
+                <X>60</X>
+                <Y>23</Y>
+              </Pivot>
+              <Rotation>0.2214815</Rotation>
+              <Scale>
+                <X>1.15</X>
+                <Y>1.15</Y>
+              </Scale>
+              <Opacity>255</Opacity>
+              <Layer>5</Layer>
+              <Visible>True</Visible>
+              <Tint>41,163,228,255</Tint>
+              <BlendingType>Alpha</BlendingType>
+              <Components />
+              <LinkPoints />
+              <Mounts />
+            </Sprite>
+          </SceneItemBankItem>
+          <SceneItemBankItem Key="hair_lock_back_C">
+            <Sprite name="hair_lock_back_C" materialSource="LOCAL" materialRef="BigMelodySprites" materialArea="hair_lock_back_C">
+              <Position>
+                <X>278.1357</X>
+                <Y>114.9556</Y>
+              </Position>
+              <Pivot>
+                <X>36</X>
+                <Y>28</Y>
+              </Pivot>
+              <Rotation>0.417037</Rotation>
+              <Scale>
+                <X>1.15</X>
+                <Y>1.15</Y>
+              </Scale>
+              <Opacity>255</Opacity>
+              <Layer>5</Layer>
+              <Visible>True</Visible>
+              <Tint>41,163,228,255</Tint>
+              <BlendingType>Alpha</BlendingType>
+              <Components />
+              <LinkPoints />
+              <Mounts />
+            </Sprite>
+          </SceneItemBankItem>
+          <SceneItemBankItem Key="hair_lock_back_D">
+            <Sprite name="hair_lock_back_D" materialSource="LOCAL" materialRef="BigMelodySprites" materialArea="hair_lock_back_D">
+              <Position>
+                <X>439.7254</X>
+                <Y>100.3586</Y>
+              </Position>
+              <Pivot>
+                <X>42</X>
+                <Y>30</Y>
+              </Pivot>
+              <Rotation>0.262963</Rotation>
+              <Scale>
+                <X>1.15</X>
+                <Y>1.15</Y>
+              </Scale>
+              <Opacity>255</Opacity>
+              <Layer>5</Layer>
+              <Visible>True</Visible>
+              <Tint>41,163,228,255</Tint>
+              <BlendingType>Alpha</BlendingType>
+              <Components />
+              <LinkPoints />
+              <Mounts />
+            </Sprite>
+          </SceneItemBankItem>
+          <SceneItemBankItem Key="hair_lock_back_E">
+            <Sprite name="hair_lock_back_E" materialSource="LOCAL" materialRef="BigMelodySprites" materialArea="hair_lock_back_E">
+              <Position>
+                <X>433.5305</X>
+                <Y>107.2568</Y>
+              </Position>
+              <Pivot>
+                <X>41</X>
+                <Y>34</Y>
+              </Pivot>
+              <Rotation>0.2274074</Rotation>
+              <Scale>
+                <X>1.15</X>
+                <Y>1.15</Y>
+              </Scale>
+              <Opacity>255</Opacity>
+              <Layer>5</Layer>
+              <Visible>True</Visible>
+              <Tint>41,163,228,255</Tint>
+              <BlendingType>Alpha</BlendingType>
+              <Components />
+              <LinkPoints />
+              <Mounts />
+            </Sprite>
+          </SceneItemBankItem>
+        </SceneItemBank>
+        <RootBone>
+          <Name>Root</Name>
+          <SceneItem>root</SceneItem>
+          <InheritPosition>True</InheritPosition>
+          <InheritScale>True</InheritScale>
+          <InheritRotation>True</InheritRotation>
+          <InheritVisibility>True</InheritVisibility>
+          <Interpolate>True</Interpolate>
+          <ChildBones>
+            <Bone>
+              <Name>Pelvis</Name>
+              <SceneItem>pelvis</SceneItem>
+              <InheritPosition>True</InheritPosition>
+              <InheritScale>True</InheritScale>
+              <InheritRotation>True</InheritRotation>
+              <InheritVisibility>True</InheritVisibility>
+              <Interpolate>True</Interpolate>
+              <ChildBones>
+                <Bone>
+                  <Name>Belly</Name>
+                  <SceneItem>belly</SceneItem>
+                  <InheritPosition>True</InheritPosition>
+                  <InheritScale>True</InheritScale>
+                  <InheritRotation>True</InheritRotation>
+                  <InheritVisibility>True</InheritVisibility>
+                  <Interpolate>True</Interpolate>
+                  <ChildBones>
+                    <Bone>
+                      <Name>Torso</Name>
+                      <SceneItem>torso</SceneItem>
+                      <InheritPosition>True</InheritPosition>
+                      <InheritScale>True</InheritScale>
+                      <InheritRotation>True</InheritRotation>
+                      <InheritVisibility>True</InheritVisibility>
+                      <Interpolate>True</Interpolate>
+                      <ChildBones>
+                        <Bone>
+                          <Name>Neck</Name>
+                          <SceneItem>neck</SceneItem>
+                          <InheritPosition>True</InheritPosition>
+                          <InheritScale>True</InheritScale>
+                          <InheritRotation>True</InheritRotation>
+                          <InheritVisibility>True</InheritVisibility>
+                          <Interpolate>True</Interpolate>
+                          <ChildBones>
+                            <Bone>
+                              <Name>Head</Name>
+                              <SceneItem>head</SceneItem>
+                              <InheritPosition>True</InheritPosition>
+                              <InheritScale>True</InheritScale>
+                              <InheritRotation>True</InheritRotation>
+                              <InheritVisibility>True</InheritVisibility>
+                              <Interpolate>True</Interpolate>
+                              <ChildBones>
+                                <Bone>
+                                  <Name>HPFront</Name>
+                                  <SceneItem>hp_front</SceneItem>
+                                  <InheritPosition>True</InheritPosition>
+                                  <InheritScale>True</InheritScale>
+                                  <InheritRotation>True</InheritRotation>
+                                  <InheritVisibility>True</InheritVisibility>
+                                  <Interpolate>True</Interpolate>
+                                  <ChildBones />
+                                </Bone>
+                                <Bone>
+                                  <Name>HPBack</Name>
+                                  <SceneItem>hp_back</SceneItem>
+                                  <InheritPosition>True</InheritPosition>
+                                  <InheritScale>True</InheritScale>
+                                  <InheritRotation>True</InheritRotation>
+                                  <InheritVisibility>True</InheritVisibility>
+                                  <Interpolate>True</Interpolate>
+                                  <ChildBones />
+                                </Bone>
+                                <Bone>
+                                  <Name>HairsMain</Name>
+                                  <SceneItem>hair_main</SceneItem>
+                                  <InheritPosition>True</InheritPosition>
+                                  <InheritScale>True</InheritScale>
+                                  <InheritRotation>True</InheritRotation>
+                                  <InheritVisibility>True</InheritVisibility>
+                                  <Interpolate>True</Interpolate>
+                                  <ChildBones>
+                                    <Bone>
+                                      <Name>LockFrontA</Name>
+                                      <SceneItem>hair_lock_front_A</SceneItem>
+                                      <InheritPosition>True</InheritPosition>
+                                      <InheritScale>True</InheritScale>
+                                      <InheritRotation>True</InheritRotation>
+                                      <InheritVisibility>True</InheritVisibility>
+                                      <Interpolate>True</Interpolate>
+                                      <ChildBones>
+                                        <Bone>
+                                          <Name>LockFrontChildB</Name>
+                                          <SceneItem>hair_lock_front_B</SceneItem>
+                                          <InheritPosition>True</InheritPosition>
+                                          <InheritScale>True</InheritScale>
+                                          <InheritRotation>True</InheritRotation>
+                                          <InheritVisibility>True</InheritVisibility>
+                                          <Interpolate>True</Interpolate>
+                                          <ChildBones />
+                                        </Bone>
+                                      </ChildBones>
+                                    </Bone>
+                                    <Bone>
+                                      <Name>LockFrontC</Name>
+                                      <SceneItem>hair_lock_front_C</SceneItem>
+                                      <InheritPosition>True</InheritPosition>
+                                      <InheritScale>True</InheritScale>
+                                      <InheritRotation>True</InheritRotation>
+                                      <InheritVisibility>True</InheritVisibility>
+                                      <Interpolate>True</Interpolate>
+                                      <ChildBones />
+                                    </Bone>
+                                    <Bone>
+                                      <Name>LockFrontD</Name>
+                                      <SceneItem>hair_lock_front_D</SceneItem>
+                                      <InheritPosition>True</InheritPosition>
+                                      <InheritScale>True</InheritScale>
+                                      <InheritRotation>True</InheritRotation>
+                                      <InheritVisibility>True</InheritVisibility>
+                                      <Interpolate>True</Interpolate>
+                                      <ChildBones />
+                                    </Bone>
+                                    <Bone>
+                                      <Name>LockFrontE</Name>
+                                      <SceneItem>hair_lock_front_E</SceneItem>
+                                      <InheritPosition>True</InheritPosition>
+                                      <InheritScale>True</InheritScale>
+                                      <InheritRotation>True</InheritRotation>
+                                      <InheritVisibility>True</InheritVisibility>
+                                      <Interpolate>True</Interpolate>
+                                      <ChildBones />
+                                    </Bone>
+                                    <Bone>
+                                      <Name>LockBackA</Name>
+                                      <SceneItem>hair_lock_back_A</SceneItem>
+                                      <InheritPosition>True</InheritPosition>
+                                      <InheritScale>True</InheritScale>
+                                      <InheritRotation>True</InheritRotation>
+                                      <InheritVisibility>True</InheritVisibility>
+                                      <Interpolate>True</Interpolate>
+                                      <ChildBones>
+                                        <Bone>
+                                          <Name>LockBackChildB</Name>
+                                          <SceneItem>hair_lock_back_B</SceneItem>
+                                          <InheritPosition>True</InheritPosition>
+                                          <InheritScale>True</InheritScale>
+                                          <InheritRotation>True</InheritRotation>
+                                          <InheritVisibility>True</InheritVisibility>
+                                          <Interpolate>True</Interpolate>
+                                          <ChildBones />
+                                        </Bone>
+                                        <Bone>
+                                          <Name>LockBackChildC</Name>
+                                          <SceneItem>hair_lock_back_C</SceneItem>
+                                          <InheritPosition>True</InheritPosition>
+                                          <InheritScale>True</InheritScale>
+                                          <InheritRotation>True</InheritRotation>
+                                          <InheritVisibility>True</InheritVisibility>
+                                          <Interpolate>True</Interpolate>
+                                          <ChildBones />
+                                        </Bone>
+                                      </ChildBones>
+                                    </Bone>
+                                    <Bone>
+                                      <Name>LockBackD</Name>
+                                      <SceneItem>hair_lock_back_D</SceneItem>
+                                      <InheritPosition>True</InheritPosition>
+                                      <InheritScale>True</InheritScale>
+                                      <InheritRotation>True</InheritRotation>
+                                      <InheritVisibility>True</InheritVisibility>
+                                      <Interpolate>True</Interpolate>
+                                      <ChildBones />
+                                    </Bone>
+                                    <Bone>
+                                      <Name>LockBackE</Name>
+                                      <SceneItem>hair_lock_back_E</SceneItem>
+                                      <InheritPosition>True</InheritPosition>
+                                      <InheritScale>True</InheritScale>
+                                      <InheritRotation>True</InheritRotation>
+                                      <InheritVisibility>True</InheritVisibility>
+                                      <Interpolate>True</Interpolate>
+                                      <ChildBones />
+                                    </Bone>
+                                  </ChildBones>
+                                </Bone>
+                              </ChildBones>
+                            </Bone>
+                          </ChildBones>
+                        </Bone>
+                        <Bone>
+                          <Name>ArmRight</Name>
+                          <SceneItem>arm_right</SceneItem>
+                          <InheritPosition>True</InheritPosition>
+                          <InheritScale>True</InheritScale>
+                          <InheritRotation>True</InheritRotation>
+                          <InheritVisibility>True</InheritVisibility>
+                          <Interpolate>True</Interpolate>
+                          <ChildBones />
+                        </Bone>
+                        <Bone>
+                          <Name>ShoulderRight</Name>
+                          <SceneItem>shoulder_right</SceneItem>
+                          <InheritPosition>True</InheritPosition>
+                          <InheritScale>True</InheritScale>
+                          <InheritRotation>True</InheritRotation>
+                          <InheritVisibility>True</InheritVisibility>
+                          <Interpolate>True</Interpolate>
+                          <ChildBones />
+                        </Bone>
+                        <Bone>
+                          <Name>ShoulderLeft</Name>
+                          <SceneItem>shoulder_left</SceneItem>
+                          <InheritPosition>True</InheritPosition>
+                          <InheritScale>True</InheritScale>
+                          <InheritRotation>True</InheritRotation>
+                          <InheritVisibility>True</InheritVisibility>
+                          <Interpolate>True</Interpolate>
+                          <ChildBones>
+                            <Bone>
+                              <Name>ArmLeft</Name>
+                              <SceneItem>arm_left</SceneItem>
+                              <InheritPosition>True</InheritPosition>
+                              <InheritScale>True</InheritScale>
+                              <InheritRotation>True</InheritRotation>
+                              <InheritVisibility>True</InheritVisibility>
+                              <Interpolate>True</Interpolate>
+                              <ChildBones />
+                            </Bone>
+                          </ChildBones>
+                        </Bone>
+                      </ChildBones>
+                    </Bone>
+                  </ChildBones>
+                </Bone>
+              </ChildBones>
+            </Bone>
+          </ChildBones>
+        </RootBone>
+        <AutoPlay>True</AutoPlay>
+      </CompositeEntityData>
+      <Components />
+      <LinkPoints />
+      <Mounts />
+    </CompositeEntity>
+    <Sprite name="BackgroundSquare" materialSource="GLOBAL" materialRef="Pixel">
+      <Position>
+        <X>-80</X>
+        <Y>-360</Y>
+      </Position>
+      <Scale>
+        <X>720</X>
+        <Y>720</Y>
+      </Scale>
+      <Opacity>255</Opacity>
+      <Layer>7</Layer>
+      <Visible>True</Visible>
+      <Tint>33,33,33,255</Tint>
+      <BlendingType>Alpha</BlendingType>
+      <Components />
+      <LinkPoints />
+      <Mounts />
+    </Sprite>
+    <CompositeEntity name="logo">
+      <Position>
+        <X>0</X>
+        <Y>-40</Y>
+      </Position>
+      <Scale>
+        <X>1</X>
+        <Y>1</Y>
+      </Scale>
+      <Opacity>255</Opacity>
+      <Layer>3</Layer>
+      <Visible>True</Visible>
+      <CompositeEntityData>
+        <Animations>
+          <CompositeAnimation Name="Idle">
+            <LerpLastFrameWithFirst>True</LerpLastFrameWithFirst>
+            <SmoothInterpolation>True</SmoothInterpolation>
+            <Speed>1</Speed>
+            <Life>-1</Life>
+            <AutoPlay>True</AutoPlay>
+            <KeyFrames>
+              <CompositeKeyFrame Name="Off" Duration="18">
+                <BoneTransforms>
+                  <Transform>
+                    <Opacity>0</Opacity>
+                    <BoneReference>Blur</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Opacity>255</Opacity>
+                    <BoneReference>Root</BoneReference>
+                  </Transform>
+                </BoneTransforms>
+              </CompositeKeyFrame>
+              <CompositeKeyFrame Name="On" Duration="22">
+                <BoneTransforms>
+                  <Transform>
+                    <Opacity>255</Opacity>
+                    <BoneReference>Blur</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Opacity>255</Opacity>
+                    <BoneReference>Root</BoneReference>
+                  </Transform>
+                </BoneTransforms>
+              </CompositeKeyFrame>
+            </KeyFrames>
+          </CompositeAnimation>
+        </Animations>
+        <SceneItemBank>
+          <SceneItemBankItem Key="root">
+            <Sprite name="root" materialSource="LOCAL" materialRef="TextLogo">
+              <Position>
+                <X>0</X>
+                <Y>-40</Y>
+              </Position>
+              <Scale>
+                <X>1</X>
+                <Y>1</Y>
+              </Scale>
+              <Opacity>255</Opacity>
+              <Layer>3</Layer>
+              <Visible>True</Visible>
+              <Tint>255,255,255,255</Tint>
+              <BlendingType>Alpha</BlendingType>
+              <Components />
+              <LinkPoints />
+              <Mounts />
+            </Sprite>
+          </SceneItemBankItem>
+          <SceneItemBankItem Key="blur">
+            <Sprite name="blur" materialSource="LOCAL" materialRef="TextLogoBlur">
+              <Position>
+                <X>0</X>
+                <Y>-40</Y>
+              </Position>
+              <Scale>
+                <X>1</X>
+                <Y>1</Y>
+              </Scale>
+              <Opacity>5</Opacity>
+              <Layer>3</Layer>
+              <Visible>True</Visible>
+              <Tint>255,255,255,5</Tint>
+              <BlendingType>BackgroundAdditive</BlendingType>
+              <Components />
+              <LinkPoints />
+              <Mounts />
+            </Sprite>
+          </SceneItemBankItem>
+        </SceneItemBank>
+        <RootBone>
+          <Name>Root</Name>
+          <SceneItem>root</SceneItem>
+          <InheritPosition>True</InheritPosition>
+          <InheritScale>True</InheritScale>
+          <InheritRotation>True</InheritRotation>
+          <InheritVisibility>True</InheritVisibility>
+          <Interpolate>True</Interpolate>
+          <ChildBones>
+            <Bone>
+              <Name>Blur</Name>
+              <SceneItem>blur</SceneItem>
+              <InheritPosition>True</InheritPosition>
+              <InheritScale>True</InheritScale>
+              <InheritRotation>True</InheritRotation>
+              <InheritVisibility>True</InheritVisibility>
+              <Interpolate>True</Interpolate>
+              <ChildBones />
+            </Bone>
+          </ChildBones>
+        </RootBone>
+        <AutoPlay>True</AutoPlay>
+      </CompositeEntityData>
+      <Components />
+      <LinkPoints />
+      <Mounts />
+    </CompositeEntity>
+    <PostProcessAnimation name="Blur" effectSource="EMBEDDED" effectRef="GaussianBlurEffect" effectType="MelodyEngine.Drawing.IceEffects.GaussianBlurEffect">
+      <Position>
+        <X>100</X>
+        <Y>100</Y>
+      </Position>
+      <Scale>
+        <X>1</X>
+        <Y>1</Y>
+      </Scale>
+      <Opacity>255</Opacity>
+      <Layer>5</Layer>
+      <Visible>True</Visible>
+      <Life>46</Life>
+      <AutoPlay>True</AutoPlay>
+      <HideWhenStopped>True</HideWhenStopped>
+      <Properties>
+        <Property>
+          <Description>Blur Radius</Description>
+          <LowerBound>0</LowerBound>
+          <UpperBound>2</UpperBound>
+          <Values>
+            <Value>
+              <X>0</X>
+              <Y>1.4</Y>
+            </Value>
+          </Values>
+        </Property>
+        <Property>
+          <Description>Parameter 1</Description>
+          <LowerBound>0</LowerBound>
+          <UpperBound>10</UpperBound>
+          <Values>
+            <Value>
+              <X>0</X>
+              <Y>1</Y>
+            </Value>
+          </Values>
+        </Property>
+        <Property>
+          <Description>Parameter 2</Description>
+          <LowerBound>0</LowerBound>
+          <UpperBound>10</UpperBound>
+          <Values>
+            <Value>
+              <X>0</X>
+              <Y>1</Y>
+            </Value>
+          </Values>
+        </Property>
+        <Property>
+          <Description>Parameter 3</Description>
+          <LowerBound>0</LowerBound>
+          <UpperBound>10</UpperBound>
+          <Values>
+            <Value>
+              <X>0</X>
+              <Y>1</Y>
+            </Value>
+          </Values>
+        </Property>
+        <Property>
+          <Description>Parameter 4</Description>
+          <LowerBound>0</LowerBound>
+          <UpperBound>10</UpperBound>
+          <Values>
+            <Value>
+              <X>0</X>
+              <Y>1</Y>
+            </Value>
+          </Values>
+        </Property>
+        <Property>
+          <Description>Parameter 5</Description>
+          <LowerBound>0</LowerBound>
+          <UpperBound>10</UpperBound>
+          <Values>
+            <Value>
+              <X>0</X>
+              <Y>1</Y>
+            </Value>
+          </Values>
+        </Property>
+        <Property>
+          <Description>Parameter 6</Description>
+          <LowerBound>0</LowerBound>
+          <UpperBound>10</UpperBound>
+          <Values>
+            <Value>
+              <X>0</X>
+              <Y>1</Y>
+            </Value>
+          </Values>
+        </Property>
+        <Property>
+          <Description>Parameter 7</Description>
+          <LowerBound>0</LowerBound>
+          <UpperBound>10</UpperBound>
+          <Values>
+            <Value>
+              <X>0</X>
+              <Y>1</Y>
+            </Value>
+          </Values>
+        </Property>
+      </Properties>
+      <Components />
+      <LinkPoints />
+      <Mounts />
+    </PostProcessAnimation>
+    <TextItem name="Version" fontSource="GLOBAL" fontRef="SmallFont">
+      <Position>
+        <X>1270</X>
+        <Y>7</Y>
+      </Position>
+      <Pivot>
+        <X>1</X>
+        <Y>0</Y>
+      </Pivot>
+      <IsPivotRelative>True</IsPivotRelative>
+      <Scale>
+        <X>0.66</X>
+        <Y>0.66</Y>
+      </Scale>
+      <Opacity>128</Opacity>
+      <Layer>2</Layer>
+      <Visible>True</Visible>
+      <Text>v0.1</Text>      
+      <Tint>255,255,255,128</Tint>
+      <Components />
+      <LinkPoints />
+      <Mounts />
+    </TextItem>
+    <TextItem name="Copyright" fontSource="GLOBAL" fontRef="SmallFont">
+      <Position>
+        <X>100</X>
+        <Y>710</Y>
+      </Position>
+      <Pivot>
+        <X>0</X>
+        <Y>1</Y>
+      </Pivot>
+      <IsPivotRelative>True</IsPivotRelative>      
+      <Opacity>128</Opacity>
+      <Layer>2</Layer>
+      <Visible>True</Visible>
+      <Text>©2014 Icetesy SPRL</Text>
+      <Scale>
+        <X>0.66</X>
+        <Y>0.66</Y>
+      </Scale>
+      <Tint>255,255,255,128</Tint>
+      <Components />
+      <LinkPoints />
+      <Mounts />
+    </TextItem>
+  </SceneItems>
+  <Templates />
+</IceScene>

@@ -1,0 +1,9 @@
+<IceScene>
+  <Assets />
+  <Components>
+    <MelodyEscape.SceneComponents.LowFPSMenuComponent />
+  </Components>
+  <SceneItems>    
+  </SceneItems>
+  <Templates />
+</IceScene>

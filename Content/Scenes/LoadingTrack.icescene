@@ -1,0 +1,731 @@
+<IceScene>
+  <Assets />
+  <Components />
+  <SceneItems>
+    <CompositeEntity name="LoadingTextEntity">
+      <Position>
+        <X>640</X>
+        <Y>667</Y>
+      </Position>
+      <Scale>
+        <X>1</X>
+        <Y>1</Y>
+      </Scale>
+      <Opacity>255</Opacity>
+      <Layer>3</Layer>
+      <Visible>True</Visible>
+      <CompositeEntityData>
+        <Animations>
+          <CompositeAnimation Name="Idle">
+            <LerpLastFrameWithFirst>True</LerpLastFrameWithFirst>
+            <SmoothInterpolation>True</SmoothInterpolation>
+            <Speed>1</Speed>
+            <Life>-1</Life>
+            <AutoPlay>True</AutoPlay>
+            <KeyFrames>
+              <CompositeKeyFrame Name="New keyFrame" Duration="30">
+                <BoneTransforms>
+                  <Transform>
+                    <Opacity>255</Opacity>
+                    <BoneReference>Root</BoneReference>
+                  </Transform>
+                </BoneTransforms>
+              </CompositeKeyFrame>
+              <CompositeKeyFrame Name="New keyFrame" Duration="30">
+                <BoneTransforms>
+                  <Transform>
+                    <Opacity>0</Opacity>
+                    <BoneReference>Root</BoneReference>
+                  </Transform>
+                </BoneTransforms>
+              </CompositeKeyFrame>
+            </KeyFrames>
+          </CompositeAnimation>
+          <CompositeAnimation Name="Ready">
+            <LerpLastFrameWithFirst>True</LerpLastFrameWithFirst>
+            <SmoothInterpolation>True</SmoothInterpolation>
+            <Speed>1</Speed>
+            <Life>-1</Life>
+            <AutoPlay>True</AutoPlay>
+            <KeyFrames>
+              <CompositeKeyFrame Name="Visible" Duration="100">
+                <BoneTransforms>
+                  <Transform>
+                    <BoneReference>Root</BoneReference>
+                  </Transform>
+                </BoneTransforms>
+              </CompositeKeyFrame>
+            </KeyFrames>
+          </CompositeAnimation>
+        </Animations>
+        <SceneItemBank>
+          <SceneItemBankItem Key="text">
+            <TextItem name="text" fontSource="GLOBAL" fontRef="SmallFont">
+              <Position>
+                <X>640</X>
+                <Y>667</Y>
+              </Position>
+              <Pivot>
+                <X>0.5</X>
+                <Y>1</Y>
+              </Pivot>
+              <IsPivotRelative>True</IsPivotRelative>
+              <Scale>
+                <X>1</X>
+                <Y>1</Y>
+              </Scale>
+              <Opacity>127</Opacity>
+              <Layer>3</Layer>
+              <Visible>True</Visible>
+              <Text>LOADING</Text>
+              <Scale>
+                <X>1</X>
+                <Y>1</Y>
+              </Scale>
+              <Tint>255,255,255,127</Tint>
+              <Components />
+              <LinkPoints />
+              <Mounts />
+            </TextItem>
+          </SceneItemBankItem>
+        </SceneItemBank>
+        <RootBone>
+          <Name>Root</Name>
+          <SceneItem>text</SceneItem>
+          <InheritPosition>True</InheritPosition>
+          <InheritScale>True</InheritScale>
+          <InheritRotation>True</InheritRotation>
+          <InheritVisibility>True</InheritVisibility>
+          <Interpolate>True</Interpolate>
+          <ChildBones />
+        </RootBone>
+        <AutoPlay>True</AutoPlay>
+      </CompositeEntityData>
+      <Components />
+      <LinkPoints />
+      <Mounts />
+    </CompositeEntity>
+    <TextItem name="MusicNameText" fontSource="GLOBAL" fontRef="BigFont">
+      <Position>
+        <X>50</X>
+        <Y>48</Y>
+      </Position>
+      <Scale>
+        <X>1</X>
+        <Y>1</Y>
+      </Scale>
+      <Opacity>255</Opacity>
+      <Layer>2</Layer>
+      <Visible>True</Visible>
+      <Text>Debug Text</Text>
+      <Scale>
+        <X>1</X>
+        <Y>1</Y>
+      </Scale>
+      <Tint>255,255,255,255</Tint>
+      <MaxWidthAutoScale>1180</MaxWidthAutoScale>
+      <Components />
+      <LinkPoints />
+      <Mounts />
+    </TextItem>
+    <TextItem name="CurrentLoadingStatusText" fontSource="GLOBAL" fontRef="SmallFont">
+      <Position>
+        <X>50</X>
+        <Y>140</Y>
+      </Position>
+      <Scale>
+        <X>1</X>
+        <Y>1</Y>
+      </Scale>
+      <Opacity>255</Opacity>
+      <Layer>2</Layer>
+      <Visible>True</Visible>
+      <Text>Debug Text</Text>
+      <Scale>
+        <X>1</X>
+        <Y>1</Y>
+      </Scale>
+      <Tint>255,255,255,255</Tint>
+      <MaxWidthAutoScale>1180</MaxWidthAutoScale>
+      <Components />
+      <LinkPoints />
+      <Mounts />
+    </TextItem>
+    <CompositeEntity name="TempoTextEntity">
+      <Position>
+        <X>1230</X>
+        <Y>242</Y>
+      </Position>
+      <Scale>
+        <X>0.66</X>
+        <Y>0.66</Y>
+      </Scale>
+      <Opacity>128</Opacity>
+      <Layer>3</Layer>
+      <Visible>True</Visible>
+      <CompositeEntityData>
+        <Animations>
+          <CompositeAnimation Name="Idle">
+            <LerpLastFrameWithFirst>True</LerpLastFrameWithFirst>
+            <SmoothInterpolation>True</SmoothInterpolation>
+            <Speed>1</Speed>
+            <Life>-1</Life>
+            <AutoPlay>True</AutoPlay>
+            <KeyFrames>
+              <CompositeKeyFrame Name="New keyFrame" Duration="30">
+                <BoneTransforms>
+                  <Transform>
+                    <Opacity>0</Opacity>
+                    <BoneReference>Root</BoneReference>
+                  </Transform>
+                </BoneTransforms>
+              </CompositeKeyFrame>
+            </KeyFrames>
+          </CompositeAnimation>
+          <CompositeAnimation Name="Show">
+            <SmoothInterpolation>True</SmoothInterpolation>
+            <Speed>1</Speed>
+            <LoopMax>1</LoopMax>
+            <Life>-1</Life>
+            <AutoPlay>True</AutoPlay>
+            <KeyFrames>
+              <CompositeKeyFrame Name="Hidden" Duration="20">
+                <BoneTransforms>
+                  <Transform>
+                    <Opacity>0</Opacity>
+                    <BoneReference>Root</BoneReference>
+                  </Transform>
+                </BoneTransforms>
+              </CompositeKeyFrame>
+              <CompositeKeyFrame Name="Visible" Duration="1">
+                <BoneTransforms>
+                  <Transform>
+                    <Opacity>255</Opacity>
+                    <BoneReference>Root</BoneReference>
+                  </Transform>
+                </BoneTransforms>
+              </CompositeKeyFrame>
+            </KeyFrames>
+          </CompositeAnimation>
+        </Animations>
+        <SceneItemBank>
+          <SceneItemBankItem Key="text">
+            <TextItem name="text" fontSource="GLOBAL" fontRef="SmallFont">
+              <Position>
+                <X>1230</X>
+                <Y>242</Y>
+              </Position>
+              <Pivot>
+                <X>1</X>
+                <Y>0.5</Y>
+              </Pivot>
+              <IsPivotRelative>True</IsPivotRelative>
+              <Scale>
+                <X>0.66</X>
+                <Y>0.66</Y>
+              </Scale>
+              <Opacity>0</Opacity>
+              <Layer>3</Layer>
+              <Visible>True</Visible>
+              <Text>Tempo: 80 BPM</Text>
+              <Scale>
+                <X>0.66</X>
+                <Y>0.66</Y>
+              </Scale>
+              <Tint>255,255,255,0</Tint>
+              <Components />
+              <LinkPoints />
+              <Mounts />
+            </TextItem>
+          </SceneItemBankItem>
+        </SceneItemBank>
+        <RootBone>
+          <Name>Root</Name>
+          <SceneItem>text</SceneItem>
+          <InheritPosition>True</InheritPosition>
+          <InheritScale>True</InheritScale>
+          <InheritRotation>True</InheritRotation>
+          <InheritVisibility>True</InheritVisibility>
+          <Interpolate>True</Interpolate>
+          <ChildBones />
+        </RootBone>
+        <AutoPlay>True</AutoPlay>
+      </CompositeEntityData>
+      <Components />
+      <LinkPoints />
+      <Mounts />
+    </CompositeEntity>
+    <CompositeEntity name="SyncTextEntity">
+      <Position>
+        <X>50</X>
+        <Y>242</Y>
+      </Position>
+      <Scale>
+        <X>1</X>
+        <Y>1</Y>
+      </Scale>
+      <Opacity>255</Opacity>
+      <Layer>3</Layer>
+      <Visible>True</Visible>
+      <CompositeEntityData>
+        <Animations>
+          <CompositeAnimation Name="Idle">
+            <LerpLastFrameWithFirst>True</LerpLastFrameWithFirst>
+            <SmoothInterpolation>True</SmoothInterpolation>
+            <Speed>1</Speed>
+            <Life>-1</Life>
+            <AutoPlay>True</AutoPlay>
+            <KeyFrames>
+              <CompositeKeyFrame Name="New keyFrame" Duration="30">
+                <BoneTransforms>
+                  <Transform>
+                    <Opacity>0</Opacity>
+                    <BoneReference>Label</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>272</X>
+                      <Y>0</Y>
+                    </Position>
+                    <Opacity>0</Opacity>
+                    <BoneReference>Text</BoneReference>
+                  </Transform>
+                </BoneTransforms>
+              </CompositeKeyFrame>
+            </KeyFrames>
+          </CompositeAnimation>
+          <CompositeAnimation Name="Show">
+            <SmoothInterpolation>True</SmoothInterpolation>
+            <Speed>1</Speed>
+            <LoopMax>1</LoopMax>
+            <Life>-1</Life>
+            <AutoPlay>True</AutoPlay>
+            <KeyFrames>
+              <CompositeKeyFrame Name="Hidden" Duration="20">
+                <BoneTransforms>
+                  <Transform>
+                    <Opacity>0</Opacity>
+                    <BoneReference>Label</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>272</X>
+                      <Y>0</Y>
+                    </Position>
+                    <Opacity>0</Opacity>
+                    <BoneReference>Text</BoneReference>
+                  </Transform>
+                </BoneTransforms>
+              </CompositeKeyFrame>
+              <CompositeKeyFrame Name="Hidden" Duration="20">
+                <BoneTransforms>
+                  <Transform>
+                    <Opacity>0</Opacity>
+                    <BoneReference>Label</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>272</X>
+                      <Y>0</Y>
+                    </Position>
+                    <Opacity>0</Opacity>
+                    <BoneReference>Text</BoneReference>
+                  </Transform>
+                </BoneTransforms>
+              </CompositeKeyFrame>
+              <CompositeKeyFrame Name="Visible" Duration="1">
+                <BoneTransforms>
+                  <Transform>
+                    <Opacity>255</Opacity>
+                    <BoneReference>Label</BoneReference>
+                  </Transform>
+                  <Transform>
+                    <Position>
+                      <X>272</X>
+                      <Y>0</Y>
+                    </Position>
+                    <Opacity>255</Opacity>
+                    <BoneReference>Text</BoneReference>
+                  </Transform>
+                </BoneTransforms>
+              </CompositeKeyFrame>
+            </KeyFrames>
+          </CompositeAnimation>
+        </Animations>
+        <SceneItemBank>
+          <SceneItemBankItem Key="text">
+            <TextItem name="text" fontSource="GLOBAL" fontRef="SmallFont">
+              <Position>
+                <X>322</X>
+                <Y>242</Y>
+              </Position>
+              <Pivot>
+                <X>0</X>
+                <Y>0.5</Y>
+              </Pivot>
+              <IsPivotRelative>True</IsPivotRelative>
+              <Scale>
+                <X>1</X>
+                <Y>1</Y>
+              </Scale>
+              <Opacity>0</Opacity>
+              <Layer>3</Layer>
+              <Visible>True</Visible>
+              <Text>Tempo</Text>
+              <Scale>
+                <X>1</X>
+                <Y>1</Y>
+              </Scale>
+              <Tint>255,255,255,0</Tint>
+              <Components />
+              <LinkPoints />
+              <Mounts />
+            </TextItem>
+          </SceneItemBankItem>
+          <SceneItemBankItem Key="label">
+            <TextItem name="label" fontSource="GLOBAL" fontRef="SmallFont">
+              <Position>
+                <X>50</X>
+                <Y>242</Y>
+              </Position>
+              <Pivot>
+                <X>0</X>
+                <Y>0.5</Y>
+              </Pivot>
+              <IsPivotRelative>True</IsPivotRelative>
+              <Scale>
+                <X>1</X>
+                <Y>1</Y>
+              </Scale>
+              <Opacity>0</Opacity>
+              <Layer>3</Layer>
+              <Visible>True</Visible>
+              <Text>Synchronization method: </Text>
+              <Scale>
+                <X>1</X>
+                <Y>1</Y>
+              </Scale>
+              <Tint>255,255,255,0</Tint>
+              <Components />
+              <LinkPoints />
+              <Mounts />
+            </TextItem>
+          </SceneItemBankItem>
+        </SceneItemBank>
+        <RootBone>
+          <Name>Label</Name>
+          <SceneItem>label</SceneItem>
+          <InheritPosition>True</InheritPosition>
+          <InheritScale>True</InheritScale>
+          <InheritRotation>True</InheritRotation>
+          <InheritVisibility>True</InheritVisibility>
+          <Interpolate>True</Interpolate>
+          <ChildBones>
+            <Bone>
+              <Name>Text</Name>
+              <SceneItem>text</SceneItem>
+              <InheritPosition>True</InheritPosition>
+              <InheritScale>True</InheritScale>
+              <InheritRotation>True</InheritRotation>
+              <InheritVisibility>True</InheritVisibility>
+              <Interpolate>True</Interpolate>
+              <ChildBones />
+            </Bone>
+          </ChildBones>
+        </RootBone>
+        <AutoPlay>True</AutoPlay>
+      </CompositeEntityData>
+      <Components />
+      <LinkPoints />
+      <Mounts />
+    </CompositeEntity>
+    <CompositeEntity name="ContinueTextEntity">
+      <Position>
+        <X>640</X>
+        <Y>665</Y>
+      </Position>
+      <Scale>
+        <X>1</X>
+        <Y>1</Y>
+      </Scale>
+      <Opacity>255</Opacity>
+      <Layer>2</Layer>
+      <Visible>True</Visible>
+      <CompositeEntityData>
+        <Animations>
+          <CompositeAnimation Name="Idle">
+            <LerpLastFrameWithFirst>True</LerpLastFrameWithFirst>
+            <SmoothInterpolation>True</SmoothInterpolation>
+            <Speed>1</Speed>
+            <Life>-1</Life>
+            <AutoPlay>True</AutoPlay>
+            <KeyFrames>
+              <CompositeKeyFrame Name="On" Duration="16">
+                <BoneTransforms>
+                  <Transform>
+                    <Opacity>255</Opacity>
+                    <BoneReference>Label</BoneReference>
+                  </Transform>
+                </BoneTransforms>
+              </CompositeKeyFrame>
+              <CompositeKeyFrame Name="Off" Duration="16">
+                <BoneTransforms>
+                  <Transform>
+                    <Opacity>128</Opacity>
+                    <BoneReference>Label</BoneReference>
+                  </Transform>
+                </BoneTransforms>
+              </CompositeKeyFrame>
+            </KeyFrames>
+          </CompositeAnimation>
+        </Animations>
+        <SceneItemBank>
+          <SceneItemBankItem Key="text">
+            <TextItem name="text" fontSource="GLOBAL" fontRef="SmallFont">
+              <Position>
+                <X>640</X>
+                <Y>665</Y>
+              </Position>
+              <Pivot>
+                <X>0.5</X>
+                <Y>1</Y>
+              </Pivot>
+              <IsPivotRelative>True</IsPivotRelative>
+              <Scale>
+                <X>1</X>
+                <Y>1</Y>
+              </Scale>
+              <Opacity>203</Opacity>
+              <Layer>2</Layer>
+              <Visible>True</Visible>
+              <Text>[ press any key/button to continue ]</Text>
+              <Scale>
+                <X>1</X>
+                <Y>1</Y>
+              </Scale>
+              <Tint>255,255,255,203</Tint>
+              <Components />
+              <LinkPoints />
+              <Mounts />
+            </TextItem>
+          </SceneItemBankItem>
+        </SceneItemBank>
+        <RootBone>
+          <Name>Label</Name>
+          <SceneItem>text</SceneItem>
+          <InheritPosition>True</InheritPosition>
+          <InheritScale>True</InheritScale>
+          <InheritRotation>True</InheritRotation>
+          <InheritVisibility>True</InheritVisibility>
+          <Interpolate>True</Interpolate>
+          <ChildBones />
+        </RootBone>
+        <AutoPlay>True</AutoPlay>
+      </CompositeEntityData>
+      <Components />
+      <LinkPoints />
+      <Mounts />
+    </CompositeEntity>
+    <CompositeEntity name="TotalObstaclesTextEntity">
+      <Position>
+        <X>50</X>
+        <Y>322</Y>
+      </Position>
+      <Scale>
+        <X>1</X>
+        <Y>1</Y>
+      </Scale>
+      <Opacity>255</Opacity>
+      <Layer>3</Layer>
+      <Visible>True</Visible>
+      <CompositeEntityData>
+        <Animations>
+          <CompositeAnimation Name="Idle">
+            <LerpLastFrameWithFirst>True</LerpLastFrameWithFirst>
+            <SmoothInterpolation>True</SmoothInterpolation>
+            <Speed>1</Speed>
+            <Life>-1</Life>
+            <AutoPlay>True</AutoPlay>
+            <KeyFrames>
+              <CompositeKeyFrame Name="New keyFrame" Duration="30">
+                <BoneTransforms>
+                  <Transform>
+                    <Opacity>0</Opacity>
+                    <BoneReference>Root</BoneReference>
+                  </Transform>
+                </BoneTransforms>
+              </CompositeKeyFrame>
+            </KeyFrames>
+          </CompositeAnimation>
+          <CompositeAnimation Name="Show">
+            <SmoothInterpolation>True</SmoothInterpolation>
+            <Speed>1</Speed>
+            <LoopMax>1</LoopMax>
+            <Life>-1</Life>
+            <AutoPlay>True</AutoPlay>
+            <KeyFrames>
+              <CompositeKeyFrame Name="Hidden" Duration="20">
+                <BoneTransforms>
+                  <Transform>
+                    <Opacity>0</Opacity>
+                    <BoneReference>Root</BoneReference>
+                  </Transform>
+                </BoneTransforms>
+              </CompositeKeyFrame>
+              <CompositeKeyFrame Name="Visible" Duration="1">
+                <BoneTransforms>
+                  <Transform>
+                    <Opacity>255</Opacity>
+                    <BoneReference>Root</BoneReference>
+                  </Transform>
+                </BoneTransforms>
+              </CompositeKeyFrame>
+            </KeyFrames>
+          </CompositeAnimation>
+        </Animations>
+        <SceneItemBank>
+          <SceneItemBankItem Key="text">
+            <TextItem name="text" fontSource="GLOBAL" fontRef="SmallFont">
+              <Position>
+                <X>50</X>
+                <Y>322</Y>
+              </Position>
+              <IsPivotRelative>True</IsPivotRelative>
+              <Scale>
+                <X>1</X>
+                <Y>1</Y>
+              </Scale>
+              <Opacity>0</Opacity>
+              <Layer>3</Layer>
+              <Visible>True</Visible>
+              <Text>Tempo: 80 BPM</Text>
+              <Scale>
+                <X>1</X>
+                <Y>1</Y>
+              </Scale>
+              <Tint>255,255,255,0</Tint>
+              <Components />
+              <LinkPoints />
+              <Mounts />
+            </TextItem>
+          </SceneItemBankItem>
+        </SceneItemBank>
+        <RootBone>
+          <Name>Root</Name>
+          <SceneItem>text</SceneItem>
+          <InheritPosition>True</InheritPosition>
+          <InheritScale>True</InheritScale>
+          <InheritRotation>True</InheritRotation>
+          <InheritVisibility>True</InheritVisibility>
+          <Interpolate>True</Interpolate>
+          <ChildBones />
+        </RootBone>
+        <AutoPlay>True</AutoPlay>
+      </CompositeEntityData>
+      <Components />
+      <LinkPoints />
+      <Mounts />
+    </CompositeEntity>
+    <CompositeEntity name="TrackProfileTextEntity">
+      <Position>
+        <X>50</X>
+        <Y>427</Y>
+      </Position>
+      <Scale>
+        <X>1</X>
+        <Y>1</Y>
+      </Scale>
+      <Opacity>255</Opacity>
+      <Layer>3</Layer>
+      <Visible>True</Visible>
+      <CompositeEntityData>
+        <Animations>
+          <CompositeAnimation Name="Idle">
+            <LerpLastFrameWithFirst>True</LerpLastFrameWithFirst>
+            <SmoothInterpolation>True</SmoothInterpolation>
+            <Speed>1</Speed>
+            <Life>-1</Life>
+            <AutoPlay>True</AutoPlay>
+            <KeyFrames>
+              <CompositeKeyFrame Name="New keyFrame" Duration="30">
+                <BoneTransforms>
+                  <Transform>
+                    <Opacity>0</Opacity>
+                    <BoneReference>Root</BoneReference>
+                  </Transform>
+                </BoneTransforms>
+              </CompositeKeyFrame>
+            </KeyFrames>
+          </CompositeAnimation>
+          <CompositeAnimation Name="Show">
+            <SmoothInterpolation>True</SmoothInterpolation>
+            <Speed>1</Speed>
+            <LoopMax>1</LoopMax>
+            <Life>-1</Life>
+            <AutoPlay>True</AutoPlay>
+            <KeyFrames>
+              <CompositeKeyFrame Name="Hidden" Duration="20">
+                <BoneTransforms>
+                  <Transform>
+                    <Opacity>0</Opacity>
+                    <BoneReference>Root</BoneReference>
+                  </Transform>
+                </BoneTransforms>
+              </CompositeKeyFrame>
+              <CompositeKeyFrame Name="Visible" Duration="1">
+                <BoneTransforms>
+                  <Transform>
+                    <Opacity>255</Opacity>
+                    <BoneReference>Root</BoneReference>
+                  </Transform>
+                </BoneTransforms>
+              </CompositeKeyFrame>
+            </KeyFrames>
+          </CompositeAnimation>
+        </Animations>
+        <SceneItemBank>
+          <SceneItemBankItem Key="text">
+            <TextItem name="text" fontSource="GLOBAL" fontRef="SmallFont">
+              <Position>
+                <X>50</X>
+                <Y>427</Y>
+              </Position>
+              <IsPivotRelative>True</IsPivotRelative>
+              <Scale>
+                <X>1</X>
+                <Y>1</Y>
+              </Scale>
+              <Opacity>0</Opacity>
+              <Layer>3</Layer>
+              <Visible>True</Visible>
+              <Text>Track Profile:</Text>
+              <Scale>
+                <X>1</X>
+                <Y>1</Y>
+              </Scale>
+              <Tint>255,255,255,0</Tint>
+              <Components />
+              <LinkPoints />
+              <Mounts />
+            </TextItem>
+          </SceneItemBankItem>
+        </SceneItemBank>
+        <RootBone>
+          <Name>Root</Name>
+          <SceneItem>text</SceneItem>
+          <InheritPosition>True</InheritPosition>
+          <InheritScale>True</InheritScale>
+          <InheritRotation>True</InheritRotation>
+          <InheritVisibility>True</InheritVisibility>
+          <Interpolate>True</Interpolate>
+          <ChildBones />
+        </RootBone>
+        <AutoPlay>True</AutoPlay>
+      </CompositeEntityData>
+      <Components />
+      <LinkPoints />
+      <Mounts />
+    </CompositeEntity>
+  </SceneItems>
+  <Templates />
+</IceScene>

@@ -1,0 +1,8 @@
+<IceScene>
+  <Assets />
+  <Components>
+    <MelodyEscape.SceneComponents.PauseMenuComponent />
+  </Components>
+  <SceneItems />
+  <Templates />
+</IceScene>

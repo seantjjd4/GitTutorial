@@ -1,0 +1,70 @@
+<IceScene>
+  <Assets>
+    <Material name="Controller" location="Hud/controller.png" />
+    <Material name="LightsInfo" location="Hud/lights_info.png" />
+    <Material name="Help" location="Hud/help.png" areas_definition="Hud/help_sprites.xml" />
+  </Assets>
+  <Components>
+    <MelodyEscape.SceneComponents.OptionsMenuComponent />
+  </Components>
+  <SceneItems />
+  <Templates>
+    <Sprite name="GUIController" materialSource="LOCAL" materialRef="Controller">
+      <Position>
+        <X>100</X>
+        <Y>100</Y>
+      </Position>
+      <Scale>
+        <X>1</X>
+        <Y>1</Y>
+      </Scale>
+      <Opacity>255</Opacity>
+      <IsTemplate>True</IsTemplate>
+      <Layer>5</Layer>
+      <Visible>True</Visible>
+      <Tint>255,255,255,255</Tint>
+      <BlendingType>Alpha</BlendingType>
+      <Components />
+      <LinkPoints />
+      <Mounts />
+    </Sprite>
+    <Sprite name="Help" materialSource="LOCAL" materialRef="Help" materialArea="1">
+      <Position>
+        <X>100</X>
+        <Y>100</Y>
+      </Position>
+      <Scale>
+        <X>1</X>
+        <Y>1</Y>
+      </Scale>
+      <Opacity>255</Opacity>
+      <IsTemplate>True</IsTemplate>
+      <Layer>5</Layer>
+      <Visible>True</Visible>
+      <Tint>255,255,255,255</Tint>
+      <BlendingType>Alpha</BlendingType>
+      <Components />
+      <LinkPoints />
+      <Mounts />
+    </Sprite>
+    <Sprite name="GUILightsInfo" materialSource="LOCAL" materialRef="LightsInfo">
+      <Position>
+        <X>100</X>
+        <Y>100</Y>
+      </Position>
+      <Scale>
+        <X>1</X>
+        <Y>1</Y>
+      </Scale>
+      <Opacity>255</Opacity>
+      <IsTemplate>True</IsTemplate>
+      <Layer>5</Layer>
+      <Visible>True</Visible>
+      <Tint>255,255,255,255</Tint>
+      <BlendingType>Alpha</BlendingType>
+      <Components />
+      <LinkPoints />
+      <Mounts />
+    </Sprite>
+  </Templates>
+</IceScene>

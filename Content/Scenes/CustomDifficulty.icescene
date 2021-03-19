@@ -1,0 +1,8 @@
+<IceScene>
+  <Assets />
+  <Components>
+    <MelodyEscape.SceneComponents.CustomDifficultyComponent />
+  </Components>
+  <SceneItems />
+  <Templates />    
+</IceScene>

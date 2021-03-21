@@ -21,8 +21,8 @@ var MyMenu = Framework.exClass(Framework.GameMainMenu , {
 		//Animation Sprite會用到的圖片資源        
         var photoLink = 
         [               
-            define.imagePath + 'image1.png',
-            define.imagePath + 'image2.png',
+            define.imagePath + 'yellow-background.jpg',
+            define.imagePath + 'blue-background.jpg',
             define.imagePath + 'image3.png',
             define.imagePath + 'image4.png',
             define.imagePath + 'image5.png'

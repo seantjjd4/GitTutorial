@@ -44,6 +44,7 @@ var loadGameEnd;
         { src: 'game_sample/js/define.js', lookFor: 'define' },
         { src: 'game_sample/js/myMenu.js', lookFor: 'MyMenu' },
         { src: 'game_sample/js/character.js', lookFor: 'Character' },
+        { src: 'game_sample/js/character_practice.js', lookFor: 'Character1' },
         { src: 'game_sample/js/background.js', lookFor: 'Background' },
         { src: 'game_sample/js/myGameLevel1.js', lookFor: 'MyGame' },
         { src: 'game_sample/js/mainGame.js'}

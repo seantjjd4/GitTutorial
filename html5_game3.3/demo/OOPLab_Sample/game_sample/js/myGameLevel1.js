@@ -11,7 +11,7 @@
         
         this.background = new Background();
         this.background.load();
-        this.rootScene.attach(this.background);
+        
 
 
         this.rotation = 0;
@@ -20,13 +20,6 @@
 
         this.isStop = false;
         this.isPlayed = false;
-
-        this.pic = new Framework.Sprite(define.imagePath + 'blue-background.jpg')
-        this.pic.position = {
-            x : 0,
-            y : 0
-        }
-        this.rootScene.attach(this.pic);
         
 
         this.clock = new Framework.Sprite(define.imagePath + 'clock.png');
@@ -38,7 +31,7 @@
 
         characterPosition = {x: 0, y: -1138 * this.clock.scale};
         this.secondHand = new Framework.Sprite(define.imagePath + 'secondHand.jpg');
-        this.firen = new Character(define.imagePath + 'firen.png', {position: characterPosition, run: {from: 20, to: 22}, beHit: {from:30, to: 35}, hit: {from: 10, to: 13}});
+        this.firen = new Character1(define.imagePath + 'run.png', {position: characterPosition, scale: 0.1, run: {from: 1, to: 8}, beHit: {from: 1, to: 8}, hit: {from: 1, to: 8}});
         this.freeze = new Character(define.imagePath + 'freeze.png', {position: characterPosition, scale: 1, run: {from: 29, to: 27}, beHit: {from:39, to: 35}, hit: {from: 19, to: 16}});
 
         this.clockCenter = new Framework.Scene();
@@ -66,6 +59,7 @@
 
 
         this.secondHandRotationRate = 0.3;
+        this.rootScene.attach(this.background);
         this.wholeClock.attach(this.clock);
         this.clockCenter.attach(this.secondHand);
         this.clockCenter.attach(this.firen.sprite);
@@ -150,11 +144,6 @@
 
         this.isPlayHit = this.firen.collide(this.freeze)
 
-        this.position.x ++;
-        this.rotation ++;
-        this.pic.position = this.position;
-        this.pic.rotation = this.rotation;
-
     },
 
     draw:function(parentCtx){
@@ -167,8 +156,6 @@
         parentCtx.textBaseline = 'top';
         parentCtx.textAlign = 'center';
         parentCtx.fillText('Click Me', this.rectPosition.x + 130, this.rectPosition.y, 260);
-
-        //this.pic.draw()
 
 
     },

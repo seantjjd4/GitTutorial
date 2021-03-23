@@ -7,31 +7,14 @@ var Ball = function () {
             set:function(newValue){
                 this.pic.position=newValue;
             },
-        });/*
-        Object.defineProperty(this,'scale',{
-            get:function(){
-                this.component.scale;
-            },
-            set:function(newValue){
-                this.component.scale=newValue;
-            },
         });
-        Object.defineProperty(this,'rotation',{
-            get:function(){
-                this.component.rotation;
-            },
-            set:function(newValue){
-                this.component.rotation=newValue;
-            },
-        });*/
+
         this.init=function(sprite){
             this.pic=new Framework.Sprite(define.imagePath+sprite); 
         };
         this.update=function(){
-            this.pic.position.x-=10;
-            if(this.pic.position.x<400){
-                    this.pic.position.x=1600;
-            }
+            this.pic.position.x=-Date.now()%1200+1600;
+
         };
         this.draw=function(){
             this.pic.draw();

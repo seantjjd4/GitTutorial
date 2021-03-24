@@ -42,7 +42,8 @@ var loadGameEnd;
     var listScript = 
     [
         { src: 'game_sample/js/define.js', lookFor: 'define' },
-        { src: 'game_sample/js/MyBox2D.js', lookFor: 'MyBox2D' },
+        { src: 'game_sample/js/menu.js', lookFor: 'Menu' },
+        { src: 'game_sample/js/level1.js', lookFor: 'Level1' },
         { src: 'game_sample/js/Character.js', lookFor: 'Character' },        
         { src: 'game_sample/js/Ball.js', lookFor: 'Ball' },        
         { src: 'game_sample/js/mainGame.js'},

@@ -1,4 +1,4 @@
-var MyBox2D = Framework.Class(Framework.Level, {
+var Level1 = Framework.Class(Framework.Level, {
 		load : function () {
 			this.ball=new Array();
 			for(i=0;i<4;i++){
@@ -37,7 +37,7 @@ var MyBox2D = Framework.Class(Framework.Level, {
 
 		click: function(e){
 			for(i=0;i<this.ball[0].length;i++){
-				if(this.ball[0][i].position.x<0){//代表這顆不在畫面內
+				if(this.ball[0][i].position.x < 0){//代表這顆不在畫面內
 					this.ball[0][i].start();
 					break;
 				}

@@ -1,5 +1,4 @@
 var Character = function () {
-     this.pic;
         Object.defineProperty(this,'position',{
             get:function(){
                 return this.pic.position;

@@ -1,5 +1,4 @@
 var Ball = function () {
-     this.pic;
         Object.defineProperty(this,'position',{
             get:function(){
                 return this.pic.position;
@@ -8,20 +7,16 @@ var Ball = function () {
                 this.pic.position=newValue;
             },
         });
-        Object.defineProperty(this,'run',{
-            get:function(){
-                return this.pic.run;
-            },
-            set:function(newValue){
-                this.pic.run=newValue;
-            },
-        });
+        this.start=function(){
+                this.now=Date.now()+1400;
+        }
 
         this.init=function(sprite){
             this.pic=new Framework.Sprite(define.imagePath+sprite); 
         };
         this.update=function(){
-                this.pic.position.x=this.pic.run?-Date.now()%1400+1600:-999;
+                var tmp=this.now-Date.now()
+                this.pic.position.x=tmp>-100?tmp+300:-999;
         };
         this.draw=function(){
             this.pic.draw();

@@ -18,7 +18,9 @@ var Level1 = Framework.Class(Framework.Level, {
 			this.character.scale=0.6
 			this.character.run();
 
-
+			beatsCounter=0;
+            this.sheet=[0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3];
+            this.tempo=[0,2,4,6,8,10,12,14,16,18,20,22,24,26,28,30];
 
 
 		},
@@ -36,19 +38,16 @@ var Level1 = Framework.Class(Framework.Level, {
 
 
 		click: function(e){
-			for(i=0;i<this.ball[0].length;i++){
-				if(this.ball[0][i].position.x < 0){//代表這顆不在畫面內
-					this.ball[0][i].start();
-					break;
-				}
-			}
+			beatsCounter=0;
+			this.startTime=Date.now();
 		},//測試能不能把球拿出來跑,之後會把整個click註解掉
 
         keydown:function(e){
-        	if(e.key==='S'){
-        		console.log("S");
-        		//這裡準備要寫如何判定按下跟實際值的差,正在思考怎麼樣的算法會比較不吃效能。
-        		//如果時間來不及可能就隨便寫了。
+
+			var timePassed=Date.now()-this.startTime;
+
+			if(e.key==='S'){
+                console.log(timePassed);
         	}
         },
 
@@ -59,6 +58,22 @@ var Level1 = Framework.Class(Framework.Level, {
 					this.ball[i][j].update();
 				}
 			}//這邊4跟5的寫法看起來很髒,之後再改掉
+
+			var timePassed=Date.now()-this.startTime;
+
+			if (timePassed>this.tempo[beatsCounter]* 750 ){//之後會弄個bpm的const。這個*750的動作應該要在init時做完,否則影響遊戲順暢。
+				var dirc=this.sheet[beatsCounter];
+				beatsCounter++;
+
+	    		for(i=0;i<this.ball[dirc].length;i++){//這個for的功能是丟出一個球,dirc是球的方向
+		    		if(this.ball[dirc][i].position.x<0){//代表第i顆不在畫面內
+			    		this.ball[dirc][i].start();
+			    		           console.log(timePassed);
+				    	break;
+				    }
+		    	}
+
+			}
 
 			//console.log(Date.now());
 		},

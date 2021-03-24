@@ -60,7 +60,10 @@ var Menu = Framework.exClass(Framework.GameMainMenu ,{
     },
 
     click : function (e) {
-        Framework.Game.goToNextLevel();
+        if (e.x > this.menu.position.x - 630 && e.x < this.menu.position.x-550 && e.y > this.menu.position.y + 100 && e.y < this.menu.position.y + 130){
+            Framework.Game.goToNextLevel();
+        }
+
     },
 
     draw : function() {

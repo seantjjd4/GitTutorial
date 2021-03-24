@@ -2,7 +2,7 @@ var Character = function () {
      this.pic;
         Object.defineProperty(this,'position',{
             get:function(){
-                this.pic.position;
+                return this.pic.position;
             },
             set:function(newValue){
                 this.pic.position=newValue;
@@ -10,7 +10,7 @@ var Character = function () {
         });
         Object.defineProperty(this,'scale',{
             get:function(){
-                this.pic.scale;
+                return this.pic.scale;
             },
             set:function(newValue){
                 this.pic.scale=newValue;
@@ -18,14 +18,14 @@ var Character = function () {
         });
         Object.defineProperty(this,'rotation',{
             get:function(){
-                this.pic.rotation;
+                return this.pic.rotation;
             },
             set:function(newValue){
                 this.pic.rotation=newValue;
             },
         });
 
-        this.init=function(sprite,box2D){
+        this.init=function(sprite){
             this.pic=new Framework.AnimationSprite({url:define.imagePath+sprite, col:3 , row:3 , loop:true , speed:2}); 
         };
         this.run = function() {

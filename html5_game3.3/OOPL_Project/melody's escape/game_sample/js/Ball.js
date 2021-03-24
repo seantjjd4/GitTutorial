@@ -2,10 +2,18 @@ var Ball = function () {
      this.pic;
         Object.defineProperty(this,'position',{
             get:function(){
-                this.pic.position;
+                return this.pic.position;
             },
             set:function(newValue){
                 this.pic.position=newValue;
+            },
+        });
+        Object.defineProperty(this,'run',{
+            get:function(){
+                return this.pic.run;
+            },
+            set:function(newValue){
+                this.pic.run=newValue;
             },
         });
 
@@ -13,8 +21,7 @@ var Ball = function () {
             this.pic=new Framework.Sprite(define.imagePath+sprite); 
         };
         this.update=function(){
-            this.pic.position.x=-Date.now()%1200+1600;
-
+                this.pic.position.x=this.pic.run?-Date.now()%1400+1600:-999;
         };
         this.draw=function(){
             this.pic.draw();

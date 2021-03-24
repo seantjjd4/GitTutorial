@@ -59,7 +59,7 @@ var Menu = Framework.exClass(Framework.GameMainMenu ,{
         this.rootScene.update();
     },
 
-    click : function (e) {
+    click : function (e) {  //play的位置，之後可以創建物件比較好確定位置
         if (e.x > this.menu.position.x - 630 && e.x < this.menu.position.x-550 && e.y > this.menu.position.y + 100 && e.y < this.menu.position.y + 130){
             Framework.Game.goToNextLevel();
         }

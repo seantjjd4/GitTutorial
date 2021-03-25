@@ -6,7 +6,7 @@ var Level1 = Framework.Class(Framework.Level, {
 				for(j=0;j<5;j++){
 					this.ball[i][j]=new Ball();
 					this.ball[i][j].init('ball'+i.toString()+'.png');
-					this.ball[i][j].position={x:-300,y:500};
+					this.ball[i][j].position={x:-999,y:500};
 				}
 			}//這邊4跟5的寫法看起來很髒,之後再改掉
 
@@ -39,6 +39,9 @@ var Level1 = Framework.Class(Framework.Level, {
 
 		click: function(e){
 			beatsCounter=0;
+			
+			hitsQueue=[];//這是一個用來存畫面上的ball的queue。
+
 			this.startTime=Date.now();
 		},//測試能不能把球拿出來跑,之後會把整個click註解掉
 
@@ -47,7 +50,7 @@ var Level1 = Framework.Class(Framework.Level, {
 			var timePassed=Date.now()-this.startTime;
 
 			if(e.key==='S'){
-                console.log(timePassed);
+                console.log(hitsQueue[0].position.x);
         	}
         },
 
@@ -59,20 +62,28 @@ var Level1 = Framework.Class(Framework.Level, {
 				}
 			}//這邊4跟5的寫法看起來很髒,之後再改掉
 
-			var timePassed=Date.now()-this.startTime;
+            if(this.startTime>0){
+		    	var timePassed=Date.now()-this.startTime;
 
-			if (timePassed>this.tempo[beatsCounter]* 750 ){//之後會弄個bpm的const。這個*750的動作應該要在init時做完,否則影響遊戲順暢。
-				var dirc=this.sheet[beatsCounter];
-				beatsCounter++;
+		    	if (timePassed>this.tempo[beatsCounter]* 750 ){//之後會弄個bpm的const。這個*750的動作應該要在init時做完,否則影響遊戲順暢。
+	    			dirc=this.sheet[beatsCounter];
+	    			beatsCounter++;
 
-	    		for(i=0;i<this.ball[dirc].length;i++){//這個for的功能是丟出一個球,dirc是球的方向
-		    		if(this.ball[dirc][i].position.x<0){//代表第i顆不在畫面內
-			    		this.ball[dirc][i].start();
-			    		           console.log(timePassed);
+	        		for(i=0;i<this.ball[dirc].length;i++){//這個for的功能是丟出一個球,dirc是球的方向
+		        		if(this.ball[dirc][i].position.x<0){//代表第i顆不在畫面內
+		    	    		this.ball[dirc][i].start();
+		    	    		hitsQueue.push(this.ball[dirc][i]);
 				    	break;
-				    }
+		    		    }
+		        	}
+
 		    	}
 
+                if(hitsQueue.length>0)
+			        if(hitsQueue[0].position.x!=-999&&hitsQueue[0].position.x<this.character.position.x-50){
+			        	console.log("Too late");
+			        	hitsQueue.shift().position={x:-999,y:500};//不能直接寫.position.x=-999
+		        	}
 			}
 
 			//console.log(Date.now());

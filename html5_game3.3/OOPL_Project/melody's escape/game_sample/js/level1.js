@@ -24,8 +24,9 @@ var Level1 = Framework.Class(Framework.Level, {
         this.character.run();
 
         beatsCounter = 0;
-        this.sheet = [0, 1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3];
-        this.tempo = [0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30];
+        this.sheet = [0, 1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3,0, 1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+        this.tempo = [0,2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,38,40,42,44,46,48,50,52,54,56,58,60,62,63,64,65,66,67,69,71,72,73,74,75,77,79,80,81,82,83,85,87,88,89,90,91,93];
+        //這邊間隔2是指一拍(4分音符),間隔1指半拍,間隔4指2拍,以此類推。
         this.combo = 0;
         this.maxCombo = 0;
 
@@ -48,7 +49,13 @@ var Level1 = Framework.Class(Framework.Level, {
         this.combo = 0;
         hitsQueue = [];
         //這是一個用來存畫面上的ball的方向與編號的queue,裡面的成員都是陣列[dirc,number]
-
+        this.audio = new Framework.Audio({
+            song:{
+                mp3: define.musicPath + 'flower_dance_120bpm.mp3',
+            }
+        });
+        //播放時, 需要給name, 其餘參數可參考W3C
+        setTimeout(( () => this.audio.play({name: 'song', loop: false})),1100);
         this.startTime = Date.now();
     },
     //測試能不能把球拿出來跑,之後會把整個click註解掉
@@ -59,18 +66,24 @@ var Level1 = Framework.Class(Framework.Level, {
         if (e) {//這邊判定還需要修改,不然遊戲還沒開始時亂按會跳錯
             var comingBall=this.ball[hitsQueue[0][0]][[hitsQueue[0][1]]];
             const keyConv=['S','D','A','W'];
-            if (comingBall.position.x < this.character.position.x + 150&&e.key===keyConv[hitsQueue[0][0]]) {
+            if (comingBall.position.x < this.character.position.x + 150) {
                 //150到-50是判定的range,手感跟原本遊戲差很多...待持續優化
                 //keyConv[hitsQueue[0][0]]是來的這顆球的方向
-                this.combo++;
-                console.log(this.combo);
                 comingBall.position = {
-                       x: -999,
-                       y: 500
+                            x: -999,
+                            y: 500
                 };
-                hitsQueue.shift();
-                if (this.combo > this.maxCombo) {
-                   this.maxCombo = this.combo;
+                if(e.key===keyConv[hitsQueue[0][0]]){
+                    this.combo++;
+                    console.log(this.combo);
+                    hitsQueue.shift();
+                    if (this.combo > this.maxCombo) {
+                        this.maxCombo = this.combo;
+                    }
+                    //依照原本的遊戲,不管有沒有按對,應該都要把當前這顆移除掉。
+                }else{
+                    this.combo = 0;
+                    console.log("Error");
                 }
              }else{
                 this.combo = 0;
@@ -90,8 +103,9 @@ var Level1 = Framework.Class(Framework.Level, {
         if (this.startTime > 0) {
             var timePassed = Date.now() - this.startTime;
 
-            if (timePassed > this.tempo[beatsCounter] * 750) {
-                //之後會弄個bpm的const。這個*750的動作應該要在init時做完,否則影響遊戲順暢。
+            if (timePassed > this.tempo[beatsCounter] * 250) {
+                //之後會弄個bpm的const。這個this.tempo全部*250的動作應該要在init時做完,否則影響遊戲順暢。
+                //bpm是beats per minutes,一首120bpm的歌的8分音符應該是1秒2拍,1拍0.5秒,半拍則是250ms。
                 dirc = this.sheet[beatsCounter];
                 beatsCounter++;
 

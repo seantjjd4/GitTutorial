@@ -70,20 +70,23 @@ var Menu = Framework.exClass(Framework.GameMainMenu ,{
     },
 
 
-    mousemove : function(e) {        
-        if (e.x > this.menu.position.x - 630 && e.x < this.menu.position.x-550 && e.y > this.menu.position.y + 100 && e.y < this.menu.position.y + 130) {
-            this.isTouch = true;
-        }else {
-            this.isTouch = false;
+    mousemove : function(e) {
+        if(this.menu){//不加這個if的話,載入完成前偶爾會跳錯
+            if (e.x > this.menu.position.x - 630 && e.x < this.menu.position.x-550 && e.y > this.menu.position.y + 100 && e.y < this.menu.position.y + 130) {
+                this.isTouch = true;
+            }else {
+                this.isTouch = false;
+            }
         }
     },
 
 
     click : function (e) {  //play的位置，之後可以創建物件比較好確定位置
-        if (e.x > this.menu.position.x - 630 && e.x < this.menu.position.x-550 && e.y > this.menu.position.y + 100 && e.y < this.menu.position.y + 130){
-            Framework.Game.goToNextLevel();
+        if(this.menu){
+            if (e.x > this.menu.position.x - 630 && e.x < this.menu.position.x-550 && e.y > this.menu.position.y + 100 && e.y < this.menu.position.y + 130){
+                Framework.Game.goToNextLevel();
+            }
         }
-
     },
 
     draw : function() {

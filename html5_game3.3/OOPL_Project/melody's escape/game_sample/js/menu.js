@@ -38,7 +38,16 @@ var Menu = Framework.exClass(Framework.GameMainMenu ,{
             define.imagePath + 'menu2.png',
             define.imagePath + 'menu1.png'
         ];
+        this.playButton = new Framework.Sprite(define.imagePath + 'play-button.png');
         this.menu = new Framework.AnimationSprite({url: menuLink, loop: true, speed: 8}); //目測速度差不多，但還是有差，不知道如何設定
+
+
+        this.playButton.position = {             
+            x: Framework.Game.getCanvasWidth() / 2 - 592,
+            y: Framework.Game.getCanvasHeight() / 2 + 112
+        }
+
+        this.playButton.scale = 0.5;
 
         this.menu.position = {
             x: Framework.Game.getCanvasWidth() / 2,
@@ -57,7 +66,18 @@ var Menu = Framework.exClass(Framework.GameMainMenu ,{
 
     update : function() {
         this.rootScene.update();
+        this.playButton.update();
     },
+
+
+    mousemove : function(e) {        
+        if (e.x > this.menu.position.x - 630 && e.x < this.menu.position.x-550 && e.y > this.menu.position.y + 100 && e.y < this.menu.position.y + 130) {
+            this.isTouch = true;
+        }else {
+            this.isTouch = false;
+        }
+    },
+
 
     click : function (e) {  //play的位置，之後可以創建物件比較好確定位置
         if (e.x > this.menu.position.x - 630 && e.x < this.menu.position.x-550 && e.y > this.menu.position.y + 100 && e.y < this.menu.position.y + 130){
@@ -67,7 +87,9 @@ var Menu = Framework.exClass(Framework.GameMainMenu ,{
     },
 
     draw : function() {
-
+        if (this.isTouch){
+            this.playButton.draw();
+        }
     },
 
 });

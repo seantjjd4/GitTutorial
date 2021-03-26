@@ -13,7 +13,7 @@ var Ball = function () {
         }
 
         this.init=function(sprite){
-            this.pic=new Framework.Sprite(define.imagePath+sprite); 
+            this.pic=new Framework.Sprite(define.imagePath+sprite);
         };
         this.update=function(){
                 if (this.now>0){

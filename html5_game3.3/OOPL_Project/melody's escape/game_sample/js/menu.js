@@ -53,6 +53,7 @@ var Menu = Framework.exClass(Framework.GameMainMenu ,{
             x: Framework.Game.getCanvasWidth() / 2,
             y: Framework.Game.getCanvasHeight() / 2
         };
+
         this.menu.scale = 0.48;  //符合我的螢幕大小，不知道合不合你的
 
         this.rootScene.attach(this.menu);
@@ -72,7 +73,7 @@ var Menu = Framework.exClass(Framework.GameMainMenu ,{
 
     mousemove : function(e) {
         if(this.menu){//不加這個if的話,載入完成前偶爾會跳錯
-            if (e.x > this.menu.position.x - 630 && e.x < this.menu.position.x-550 && e.y > this.menu.position.y + 100 && e.y < this.menu.position.y + 130) {
+            if (e.x > 167 && e.x < 251 && e.y > 550 && e.y < 580) {
                 this.isTouch = true;
             }else {
                 this.isTouch = false;
@@ -83,9 +84,12 @@ var Menu = Framework.exClass(Framework.GameMainMenu ,{
 
     click : function (e) {  //play的位置，之後可以創建物件比較好確定位置
         if(this.menu){
-            if (e.x > this.menu.position.x - 630 && e.x < this.menu.position.x-550 && e.y > this.menu.position.y + 100 && e.y < this.menu.position.y + 130){
+            if (e.x > 167 && e.x < 251 && e.y > 550 && e.y < 580){
                 Framework.Game.goToNextLevel();
             }
+        }
+        if (e){
+            console.log(e.x,e.y);
         }
     },
 

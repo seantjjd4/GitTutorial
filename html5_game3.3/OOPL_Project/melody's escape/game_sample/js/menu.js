@@ -67,7 +67,7 @@ var Menu = Framework.exClass(Framework.GameMainMenu ,{
 
     update : function() {
         this.rootScene.update();
-        this.playButton.update();
+        // this.playButton.update();
     },
 
 

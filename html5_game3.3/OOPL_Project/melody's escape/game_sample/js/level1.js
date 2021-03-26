@@ -76,15 +76,15 @@ var Level1 = Framework.Class(Framework.Level, {
                 if(e.key===keyConv[hitsQueue[0][0]]){
                     this.combo++;
                     console.log(this.combo);
-                    hitsQueue.shift();
                     if (this.combo > this.maxCombo) {
                         this.maxCombo = this.combo;
                     }
                     //依照原本的遊戲,不管有沒有按對,應該都要把當前這顆移除掉。
                 }else{
                     this.combo = 0;
-                    console.log("Error");
+                    console.log("Wrong dir");
                 }
+                hitsQueue.shift();
              }else{
                 this.combo = 0;
                 console.log("Error");
@@ -103,7 +103,7 @@ var Level1 = Framework.Class(Framework.Level, {
         if (this.startTime > 0) {
             var timePassed = Date.now() - this.startTime;
 
-            if (timePassed > this.tempo[beatsCounter] * 250) {
+            if (timePassed > this.tempo[beatsCounter] * 500) {
                 //之後會弄個bpm的const。這個this.tempo全部*250的動作應該要在init時做完,否則影響遊戲順暢。
                 //bpm是beats per minutes,一首120bpm的歌的8分音符應該是1秒2拍,1拍0.5秒,半拍則是250ms。
                 dirc = this.sheet[beatsCounter];

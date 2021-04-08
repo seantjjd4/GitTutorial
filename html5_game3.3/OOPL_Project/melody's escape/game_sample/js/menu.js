@@ -39,22 +39,40 @@ var Menu = Framework.exClass(Framework.GameMainMenu ,{
             define.imagePath + 'menu1.png'
         ];
         this.playButton = new Framework.Sprite(define.imagePath + 'play-button.png');
+        this.exitButton = new Framework.Sprite(define.imagePath + 'exit-button.png');
+        this.creditsButton = new Framework.Sprite(define.imagePath + 'credits-button.png');
+        this.helpButton = new Framework.Sprite(define.imagePath + 'help-button.png');
         this.menu = new Framework.AnimationSprite({url: menuLink, loop: true, speed: 8}); //目測速度差不多，但還是有差，不知道如何設定
 
 
         this.playButton.position = {             
-            x: Framework.Game.getCanvasWidth() / 2 - 592,
-            y: Framework.Game.getCanvasHeight() / 2 + 112
+            x: 208,
+            y: 561
         }
 
-        this.playButton.scale = 0.5;
+        this.exitButton.position = {             
+            x: 248,
+            y: 719
+        }
+        this.creditsButton.position = {             
+            x: 230,
+            y: 680
+        }
+        this.helpButton.position = {             
+            x: 287,
+            y: 640
+        }
+
+        this.playButton.scale = 0.9;
+        this.creditsButton.scale = 0.85;
+        this.helpButton.scale = 0.85;
 
         this.menu.position = {
             x: Framework.Game.getCanvasWidth() / 2,
             y: Framework.Game.getCanvasHeight() / 2
         };
 
-        this.menu.scale = 0.48;  //符合我的螢幕大小，不知道合不合你的
+        this.menu.scale = 0.48;  //符合螢幕大小
 
         this.rootScene.attach(this.menu);
         this.menu.start();
@@ -72,11 +90,20 @@ var Menu = Framework.exClass(Framework.GameMainMenu ,{
 
 
     mousemove : function(e) {
-        if(this.menu){//不加這個if的話,載入完成前偶爾會跳錯
-            if (e.x > 167 && e.x < 251 && e.y > 550 && e.y < 580) {
-                this.isTouch = true;
-            }else {
-                this.isTouch = false;
+        if(this.menu){  //不加這個if的話,載入完成前偶爾會跳錯
+            if (e.x > 170 && e.x < 251 && e.y > 550 && e.y < 580) {
+                this.playTouch = true;
+            }else if(e.x > 170 && e.x < 329 && e.y > 710 && e.y < 733) {
+                this.exitTouch = true;
+            }else if(e.x > 170 && e.x < 293 && e.y > 671 && e.y < 692) {
+                this.creditsTouch = true;
+            }else if(e.x > 170 && e.x < 405 && e.y > 630 && e.y < 653) {
+                this.helpTouch = true;
+            }else{
+                this.playTouch = false;
+                this.exitTouch = false;
+                this.creditsTouch = false;
+                this.helpTouch = false;
             }
         }
     },
@@ -84,8 +111,11 @@ var Menu = Framework.exClass(Framework.GameMainMenu ,{
 
     click : function (e) {  //play的位置，之後可以創建物件比較好確定位置
         if(this.menu){
-            if (e.x > 167 && e.x < 251 && e.y > 550 && e.y < 580){
+            if (this.playTouch){
                 Framework.Game.goToNextLevel();
+            }
+            if(this.exitTouch){
+                window.close();
             }
         }
         if (e){
@@ -94,8 +124,17 @@ var Menu = Framework.exClass(Framework.GameMainMenu ,{
     },
 
     draw : function() {
-        if (this.isTouch){
+        if (this.playTouch){
             this.playButton.draw();
+        }
+        if (this.exitTouch){
+            this.exitButton.draw();
+        }
+        if (this.creditsTouch){
+            this.creditsButton.draw();
+        }
+        if (this.helpTouch){
+            this.helpButton.draw();
         }
     },
 

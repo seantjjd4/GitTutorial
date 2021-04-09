@@ -94,17 +94,17 @@ var Level1 = Framework.Class(Framework.Level, {
                     //依照原本的遊戲,不管有沒有按對,應該都要把當前這顆移除掉。
                 }else{
                     this.combo = 0;
-                    if(lifes>0)lifes-=1;
+                    if(lifes>0)lifes-=1; //扣愛心
                     console.log("Wrong dir");
                 }
                 hitsQueue.shift();
              }else{
                 this.combo = 0;
-                if(lifes>0)lifes-=1;
+                if(lifes>0)lifes-=1; //扣愛心
                 console.log("Error");
              }
         }
-        if(e&&keyrConv.includes(e.key)){
+        if(e&&keyrConv.includes(e.key)){   // kick 跟 jog
             var game=this;
             if(e.key==="Right"||e.key==="Up"){
                 this.character.kick(function(){

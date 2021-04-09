@@ -13,6 +13,17 @@ var Level1 = Framework.Class(Framework.Level, {
             }
         }
         //這邊4跟5的寫法看起來很髒,之後再改掉
+        lifes=5;
+        this.heart = new Array();
+        for (i = 0; i < lifes; i++) {
+            this.heart[i]=new Framework.Sprite(define.imagePath+'heart.png');
+            this.heart[i].position = {
+                x: 100+50*i,
+                y: 200
+            };
+        this.heart[i].scale=0.05;
+        }
+
 
         this.character = new Character();
         this.character.init();
@@ -22,7 +33,6 @@ var Level1 = Framework.Class(Framework.Level, {
         };
         this.character.scale =1;
         this.character.jog();
-
         beatsCounter = 0;
         //this.sheet=[0,0,0,0,1,1,1,1,0,0,0,0,1,1,1,1,0,0,0,0,1,1,1,1,0,0,0,0,1,1,1,1,0,0,0,0,1,1,1,1,0,0,0,0,1,1,1,1,0,0,0,0,1,1,1,1,0,0];
         this.sheet = [0, 1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3,0, 1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
@@ -36,7 +46,6 @@ var Level1 = Framework.Class(Framework.Level, {
 
     initialize: function() {
         this.rootScene.attach(this.character.pic);
-
         for (i = 0; i < 4; i++) {
             for (j = 0; j < 5; j++) {
                 this.rootScene.attach(this.ball[i][j].pic);
@@ -85,11 +94,13 @@ var Level1 = Framework.Class(Framework.Level, {
                     //依照原本的遊戲,不管有沒有按對,應該都要把當前這顆移除掉。
                 }else{
                     this.combo = 0;
+                    if(lifes>0)lifes-=1;
                     console.log("Wrong dir");
                 }
                 hitsQueue.shift();
              }else{
                 this.combo = 0;
+                if(lifes>0)lifes-=1;
                 console.log("Error");
              }
         }
@@ -158,6 +169,8 @@ var Level1 = Framework.Class(Framework.Level, {
 
     draw: function(parentCtx) {
         this.rootScene.draw();
+        for(i=0;i<lifes;i++)
+            this.heart[i].draw();
     },
 
 });

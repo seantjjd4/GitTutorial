@@ -110,12 +110,24 @@ var Level1 = Framework.Class(Framework.Level, {
                 this.character.kick(function(){
                     game.character.jog();
                 });
+                this.wall.destroy();
             }
             if(e.key==="Down"){
                 this.character.slide(function(){
                     game.character.jog();
                 });
             }
+
+            if(e.key==="Left"){
+                this.wall=new Wall();
+                this.wall.init();
+                this.wall.position={
+                    x:1400,y:450
+                }
+                this.rootScene.attach(this.wall);
+                this.wall.start();
+            }
+
         }
     },
 

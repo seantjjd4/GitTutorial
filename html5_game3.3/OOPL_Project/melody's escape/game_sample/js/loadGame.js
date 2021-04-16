@@ -46,6 +46,7 @@ var loadGameEnd;
         { src: 'game_sample/js/level1.js', lookFor: 'Level1' },
         { src: 'game_sample/js/Character.js', lookFor: 'Character' },        
         { src: 'game_sample/js/Ball.js', lookFor: 'Ball' },        
+        { src: 'game_sample/js/Wall.js', lookFor: 'Wall' },        
         { src: 'game_sample/js/mainGame.js'},
     ]
 

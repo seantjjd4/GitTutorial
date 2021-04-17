@@ -1,10 +1,10 @@
 var Wall = function() {
     Object.defineProperty(this, 'position', {
         get: function() {
-            return this.pic.position;
+            return this.wall.position;
         },
         set: function(newValue) {
-            this.pic.position = newValue;
+            this.wall.position = newValue;
         },
     });
     this.start = function() {
@@ -14,35 +14,32 @@ var Wall = function() {
     }
 
     this.init = function(sprite) {
-        this.pic = new Framework.AnimationSprite({
-            url: [define.imagePath + 'wall.png', define.imagePath + 'wall1.png', define.imagePath + 'wall2.png', define.imagePath + 'wall3.png', ],
-            loop: false,
-            speed: 2
-        });
-        this.pic.scale=1.5;
-        this.pic.stop();
-    }
-    ;
-    this.destroy = function() {
-        this.isOK = false;
-        this.pic.start({
-             from: 0,
-             to: 3,
-             loop: false,speed:1
-        });
+        this.wall = new Framework.Sprite(define.imagePath + 'wall.png');
+        // this.wall_destroyed = new Framework.AnimationSprite({
+        //     url: [define.imagePath + 'wall.png', define.imagePath + 'wall1.png', define.imagePath + 'wall2.png', define.imagePath + 'wall3.png', ],
+        //     loop: false,
+        //     speed: 2
+        // });
+        this.wall.scale=1.5;
+        // this.wall_destroyed.scale = 1.5;
+        // this.wall.stop();
     };
+
     this.update = function() {
-        if (this.now > 0) {
-            if (this.isOK) {
-                var tmp = this.now - Date.now()
-                this.pic.position.x = tmp + 300;
+        if (this.isOK){
+            if (this.now > 0) {
+                this.now = this.now - Date.now();
+                this.wall.position.x = this.now + 300;
             } else {
-                var tmp = this.now - Date.now()
-                this.pic.position.x++;
+                // this.now = this.now - Date.now();
+                // this.wall_destroyed.position = this.wall.position;
+                // this.wall_destroyed.start({from: 0, to: 3, loop: false,speed:1});
+                this.isOK = false;
             }
         }
     };
     this.draw = function() {
-        this.pic.draw();
+        this.wall.draw();
+        // this.wall_destroyed.draw();
     };
 };

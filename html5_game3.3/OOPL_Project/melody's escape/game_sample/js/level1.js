@@ -129,11 +129,14 @@ var Level1 = Framework.Class(Framework.Level, {
                 });
             }
 
-            if(e.key==="Left"){/*
-                this.wall = new Wall();this.wall.init();
+            if(e.key==="Left"){
+                /*
+                this.wall = new Wall();
+                this.wall.init();
                 this.rootScene.attach(this.wall.wall);
                 
-                this.wall.start();*/
+                this.wall.start();
+                */
                 this.obstacle=new Obstacle();
             }
 

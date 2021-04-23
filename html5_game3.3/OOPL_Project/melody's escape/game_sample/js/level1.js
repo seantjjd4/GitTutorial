@@ -52,7 +52,6 @@ var Level1 = Framework.Class(Framework.Level, {
             }
         }
         //這邊4跟5的寫法看起來很髒,之後再改掉
-
     },
 
     click: function(e) {
@@ -118,12 +117,9 @@ var Level1 = Framework.Class(Framework.Level, {
             }
 
             if(e.key==="Left"){
-                this.wall=new Wall();
-                this.wall.init();
-                this.wall.position = {
-                    x:1400,y:450
-                }
+                this.wall = new Wall();
                 this.rootScene.attach(this.wall);
+                this.wall.init();
                 this.wall.start();
             }
 

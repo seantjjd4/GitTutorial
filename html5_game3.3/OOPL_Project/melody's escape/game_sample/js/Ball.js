@@ -17,8 +17,8 @@ var Ball = function () {
         };
         this.update=function(){
                 if (this.now>0){
-                    var tmp=this.now-Date.now()
-                    this.pic.position.x=tmp+300;
+                    var tmp = this.now - Date.now()
+                    this.pic.position.x = tmp + 300;
                 }
         };
         this.draw=function(){

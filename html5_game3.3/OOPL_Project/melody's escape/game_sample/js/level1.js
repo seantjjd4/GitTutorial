@@ -1,5 +1,16 @@
 var Level1 = Framework.Class(Framework.Level, {
     load: function() {
+
+        this.background = new Framework.Sprite(define.imagePath+'yellow-background.png');
+
+        this.background.position = {
+            x: Framework.Game.getCanvasWidth() / 2,
+            y: Framework.Game.getCanvasHeight() / 2
+        };
+
+        this.background.scale = 0.48; 
+
+
         this.ball = new Array();
         for (i = 0; i < 4; i++) {
             this.ball[i] = new Array();
@@ -41,6 +52,8 @@ var Level1 = Framework.Class(Framework.Level, {
         //這邊間隔2是指一拍(4分音符),間隔1指半拍,間隔4指2拍,以此類推。
         this.combo = 0;
         this.maxCombo = 0;
+        
+        this.rootScene.attach(this.background)
 
     },
 

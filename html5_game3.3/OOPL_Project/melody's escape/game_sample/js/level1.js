@@ -116,11 +116,12 @@ var Level1 = Framework.Class(Framework.Level, {
                 });
             }
 
-            if(e.key==="Left"){
-                this.wall = new Wall();
-                this.rootScene.attach(this.wall);
-                this.wall.init();
-                this.wall.start();
+            if(e.key==="Left"){/*
+                this.wall = new Wall();this.wall.init();
+                this.rootScene.attach(this.wall.wall);
+                
+                this.wall.start();*/
+                this.obstacle=new Obstacle();
             }
 
         }
@@ -176,6 +177,8 @@ var Level1 = Framework.Class(Framework.Level, {
 
     draw: function(parentCtx) {
         this.rootScene.draw();
+        console.log("?");
+        //if(this.obstacle)this.obstacle.myDraw(parentCtx);
         for(i=0;i<lifes;i++)
             this.heart[i].draw();
     },

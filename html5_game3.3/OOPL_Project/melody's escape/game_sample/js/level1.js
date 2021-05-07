@@ -119,6 +119,7 @@ var Level1 = Framework.Class(Framework.Level, {
         if(e&&keyrConv.includes(e.key)){   // kick 跟 jog
             var game=this;
             if(e.key==="Right"||e.key==="Up"){
+                this.wall.kicked();
                 this.character.kick(function(){
                     game.character.jog();
                 });
@@ -130,20 +131,19 @@ var Level1 = Framework.Class(Framework.Level, {
             }
 
             if(e.key==="Left"){
-                /*
+                
                 this.wall = new Wall();
                 this.wall.init();
-                this.rootScene.attach(this.wall.wall);
-                
                 this.wall.start();
-                */
-                this.obstacle=new Obstacle();
+                
+                //this.obstacle=new Obstacle();
             }
 
         }
     },
 
     update: function() {
+        if(this.wall)this.wall.update();
         for (i = 0; i < 4; i++) {
             for (j = 0; j < 5; j++) {
                 this.ball[i][j].update();
@@ -193,10 +193,10 @@ var Level1 = Framework.Class(Framework.Level, {
 
     draw: function(parentCtx) {
         this.rootScene.draw();
-        console.log("?");
         //if(this.obstacle)this.obstacle.myDraw(parentCtx);
         for(i=0;i<lifes;i++)
             this.heart[i].draw();
+        if(this.wall)this.wall.myDraw(parentCtx);
     },
 
 });

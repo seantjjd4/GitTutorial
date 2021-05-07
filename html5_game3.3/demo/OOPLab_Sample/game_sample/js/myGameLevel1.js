@@ -1,4 +1,4 @@
-﻿var MyGame = Framework.Class(Framework.Level , {
+var MyGame = Framework.Class(Framework.Level , {
 
 
 	load: function(){
@@ -147,6 +147,7 @@
     },
 
     draw:function(parentCtx){
+
         this.rootScene.draw();
         //可支援畫各種單純的圖形和字
         parentCtx.fillStyle = (this.secondHandRotationRate > 0)?'green':'red';
@@ -156,7 +157,36 @@
         parentCtx.textBaseline = 'top';
         parentCtx.textAlign = 'center';
         parentCtx.fillText('Click Me', this.rectPosition.x + 130, this.rectPosition.y, 260);
+        
 
+        var f=function(parentCtx,x,y,alpha){
+        parentCtx.save();
+        parentCtx.translate(x,y);
+                parentCtx.beginPath(0);
+                width=85;
+                radius=20;height=50;
+        parentCtx.arc(width - radius, height - radius, radius, 0, Math.PI / 2);
+
+        parentCtx.lineTo(radius, height);
+
+        parentCtx.arc(radius, height - radius, radius, Math.PI / 2, Math.PI);
+
+        parentCtx.lineTo(0, radius);
+
+        parentCtx.arc(radius, radius, radius, Math.PI, Math.PI * 3 / 2);
+
+        parentCtx.lineTo(width - radius, 0);
+
+        parentCtx.arc(width - radius, radius, radius, Math.PI * 3 / 2, Math.PI * 2);
+
+        parentCtx.lineTo(width, height - radius);
+        parentCtx.closePath();
+        parentCtx.fillStyle ="rgba(0,0,0,"+alpha+")";
+        parentCtx.fill();
+        parentCtx.restore();};
+        f(parentCtx,300,200,0.6.toString());
+        f(parentCtx,300,255,0.6.toString());
+        
 
     },
 

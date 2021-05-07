@@ -36,6 +36,9 @@ var Level1 = Framework.Class(Framework.Level, {
         }
 
 
+        this.obstacle=new Array();
+        this.wall=new Array();
+
         this.character = new Character();
         this.character.init();
         this.character.position = {
@@ -45,8 +48,10 @@ var Level1 = Framework.Class(Framework.Level, {
         this.character.scale =1;
         this.character.jog();
         beatsCounter = 0;
-        //this.sheet=[0,0,0,0,1,1,1,1,0,0,0,0,1,1,1,1,0,0,0,0,1,1,1,1,0,0,0,0,1,1,1,1,0,0,0,0,1,1,1,1,0,0,0,0,1,1,1,1,0,0,0,0,1,1,1,1,0,0];
-        this.sheet = [0, 1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3,0, 1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+        //this.sheet_ball=[0,0,0,0,1,1,1,1,0,0,0,0,1,1,1,1,0,0,0,0,1,1,1,1,0,0,0,0,1,1,1,1,0,0,0,0,1,1,1,1,0,0,0,0,1,1,1,1,0,0,0,0,1,1,1,1,0,0];
+        this.sheet_ball = [0, 1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3,0, 1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+        
+        //this.sheet_obstacle=[0, 1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3,0, 1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
         //this.tempo=[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56];
         this.tempo = [0,2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,38,40,42,44,46,48,50,52,54,56,58,60,62,63,64,65,66,67,69,71,72,73,74,75,77,79,80,81,82,83,85,87,88,89,90,91,93];
         //這邊間隔2是指一拍(4分音符),間隔1指半拍,間隔4指2拍,以此類推。
@@ -119,10 +124,12 @@ var Level1 = Framework.Class(Framework.Level, {
         if(e&&keyrConv.includes(e.key)){   // kick 跟 jog
             var game=this;
             if(e.key==="Right"||e.key==="Up"){
-                this.wall.kicked();
+                //this.wall.kicked();
+                delete this.obstacle.pop();
                 this.character.kick(function(){
                     game.character.jog();
                 });
+                console.log(this.obstacle.length);
             }
             if(e.key==="Down"){
                 this.character.slide(function(){
@@ -131,10 +138,10 @@ var Level1 = Framework.Class(Framework.Level, {
             }
 
             if(e.key==="Left"){
-                
-                this.wall = new Wall();
-                this.wall.init();
-                this.wall.start();
+                this.obstacle.unshift(new Obstacle());
+                this.obstacle[0].init();
+                this.obstacle[0].position={x:1600,y:450};
+                this.obstacle[0].start();
                 
                 //this.obstacle=new Obstacle();
             }
@@ -143,7 +150,18 @@ var Level1 = Framework.Class(Framework.Level, {
     },
 
     update: function() {
-        if(this.wall)this.wall.update();
+        if(this.obstacle)
+            for(i=0;i<this.obstacle.length;i++){
+                this.obstacle[i].update();
+                if(this.obstacle[i].position.x<=0)delete this.obstacle.pop();
+            }
+        if(this.wall)
+            for(i=0;i<this.wall.length;i++){
+                this.wall[i].update();
+                if(this.wall[i].position.x<=0)delete this.wall.pop();
+            }
+
+
         for (i = 0; i < 4; i++) {
             for (j = 0; j < 5; j++) {
                 this.ball[i][j].update();
@@ -158,7 +176,7 @@ var Level1 = Framework.Class(Framework.Level, {
 
                 //之後會弄個bpm的const。這個this.tempo全部*250的動作應該要在init時做完,否則影響遊戲順暢。
                 //bpm是beats per minutes,一首120bpm的歌的8分音符應該是1秒2拍,1拍0.5秒,半拍則是250ms。
-                dirc = this.sheet[beatsCounter];
+                dirc = this.sheet_ball[beatsCounter];
                 beatsCounter++;
 
                 for (i = 0; i < this.ball[dirc].length; i++) {
@@ -196,7 +214,10 @@ var Level1 = Framework.Class(Framework.Level, {
         //if(this.obstacle)this.obstacle.myDraw(parentCtx);
         for(i=0;i<lifes;i++)
             this.heart[i].draw();
-        if(this.wall)this.wall.myDraw(parentCtx);
+        if(this.obstacle)
+            for(i=0;i<this.obstacle.length;i++)this.obstacle[i].myDraw(parentCtx);
+        if(this.wall)
+            for(i=0;i<this.wall.length;i++)this.wall[i].myDraw(parentCtx);
     },
 
 });

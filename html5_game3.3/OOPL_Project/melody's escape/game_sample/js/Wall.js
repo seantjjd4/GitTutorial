@@ -35,7 +35,7 @@ var Wall = function() {
     };
     this.myDraw=function(parentCtx){
         //console.log("@");
-        var CTXdraw=function(parentCtx,x,y,alpha){
+        let CTXdraw=function(parentCtx,x,y,alpha){
         parentCtx.save();
         parentCtx.translate(x,y);
                 parentCtx.beginPath(0);

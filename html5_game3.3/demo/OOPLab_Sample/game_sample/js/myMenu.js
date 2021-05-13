@@ -21,16 +21,12 @@ var MyMenu = Framework.exClass(Framework.GameMainMenu , {
 		//Animation Sprite會用到的圖片資源        
         var photoLink = 
         [               
-            define.imagePath + 'yellow-background.jpg',
-            define.imagePath + 'blue-background.jpg',
-            define.imagePath + 'image3.png',
-            define.imagePath + 'image4.png',
-            define.imagePath + 'image5.png'
+            define.imagePath + 'yellow-background.jpg'
         ];
 
         this.scrollBar = new Framework.Sprite(define.imagePath + 'scrollBar.png');
         this.rightArrow = new Framework.Sprite(define.imagePath + 'rightArrow.png');
-        this.photo = new Framework.AnimationSprite({url: photoLink, loop: true, speed: 0.05});
+        this.photo = new Framework.AnimationSprite({url: photoLink, loop: true, speed: 10});
 		
 		this.isTouchArrow = false;
         this.previousTouch = { x: 0, y: 0 };
@@ -89,9 +85,16 @@ var MyMenu = Framework.exClass(Framework.GameMainMenu , {
         this.scrollBar.update();
     },
 
-    draw: function(parentCtx) { 
+    draw: function(ctx) { 
         //this.rootScene.draw();一定要在第一行
-        this.rootScene.draw(parentCtx);
+        this.rootScene.draw(ctx);
+        let tmp=Date.now()%1000;
+        if(tmp<300){
+            let circle = new Path2D();
+            circle.arc(400, 300, 100+tmp, 0, 2 * Math.PI);
+            ctx.fillStyle='rgba(0,255,0,'+(0.2-tmp/2000).toString()+')';
+            ctx.fill(circle);
+        }
         
     },
 

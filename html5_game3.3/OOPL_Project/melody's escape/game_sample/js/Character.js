@@ -57,7 +57,7 @@ var Character = function () {
         }
         this.slide=function(finishPlaying){
             this.pic.start({ from: 13, to:18, loop: false,finishPlaying:finishPlaying });
-        }
+        }        
         this.update=function(){
                 
         }

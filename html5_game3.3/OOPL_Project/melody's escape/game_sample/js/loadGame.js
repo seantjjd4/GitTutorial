@@ -41,6 +41,7 @@ var loadGameEnd;
     //才會繼續loading下一個檔案, 如果沒有需要lookFor, 則以空字串代表
     var listScript = 
     [
+        { src: 'game_sample/js/Over.js', lookFor: 'Over' },
         { src: 'game_sample/js/define.js', lookFor: 'define' },
         { src: 'game_sample/js/menu.js', lookFor: 'Menu' },
         { src: 'game_sample/js/level1.js', lookFor: 'Level1' },

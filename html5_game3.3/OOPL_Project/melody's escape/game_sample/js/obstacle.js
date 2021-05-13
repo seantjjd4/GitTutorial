@@ -7,6 +7,8 @@ var Obstacle= function () {
         this.init=function(){
             this.now=0;
             this.position={x:1600,y:700};
+            this.alhpa=1;
+            this.passed=1;
         };
         this.update=function(){
                 if (this.now>0){
@@ -32,13 +34,13 @@ var Obstacle= function () {
         parentCtx.arc(width - radius, radius, radius, Math.PI * 3 / 2, Math.PI * 2);
         parentCtx.lineTo(width, height - radius);
         parentCtx.closePath();
-        parentCtx.fillStyle ="rgba(0,0,0,1)";
+        parentCtx.fillStyle ="black";
         parentCtx.fill();
         parentCtx.restore();};
         if(this.position.x>0)CTXdraw(parentCtx,this.position.x,this.position.y);
         }
         
         this.draw=function(){
-            this.pic.draw();
+
         };
 };

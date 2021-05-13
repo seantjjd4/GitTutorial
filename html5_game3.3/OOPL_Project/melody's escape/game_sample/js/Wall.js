@@ -4,12 +4,12 @@ var Wall = function() {
         
         //還沒被踢
         this.now = Date.now() + 1400;
-        console.log("wall make");
     }
 
     this.init = function() {
-        this.position={x:500,y:450};
+        this.position={x:1600,y:450};
         this.alpha=1.0;
+        this.passed=1;
     };
 
     this.update = function() {
@@ -29,9 +29,9 @@ var Wall = function() {
         }
     };
     this.kicked = function() {
-        this.isOK=false;
-        console.log(this.position);
-        this.now=Date.now()-this.position.x;
+        setTimeout(( () => {this.isOK=false;
+        this.now=Date.now()-this.position.x;}),400);
+        
     };
     this.myDraw=function(parentCtx){
         //console.log("@");
@@ -54,19 +54,18 @@ var Wall = function() {
         parentCtx.fill();
         parentCtx.restore();};
         
-        for(i=0;i<6;i++){
-            
+        for(let i=0;i<6;i++){//bug找超久...不用let i會整個當掉卡死且不能多個
+            if(this.alpha>0)
             if(this.isOK){
                 CTXdraw(parentCtx,this.position.x,this.position.y+60*i,this.alpha.toString());
             }
             else{
-                if(this.alpha>0)CTXdraw(parentCtx,this.position.x,this.position.y+60*i+300*(this.alpha**2-this.alpha*(1-0.2*i)),this.alpha.toString());
+                if(this.alpha>0)CTXdraw(parentCtx,this.position.x,this.position.y+60*i+600*(this.alpha-1)*(this.alpha-0.2*i),this.alpha.toString());
             }
         }
     }
     this.draw = function() {
-        if(this.isOK)
-            this.wall.draw();
+        //if(this.isOK)
         // this.wall_destroyed.draw();
     };
 };

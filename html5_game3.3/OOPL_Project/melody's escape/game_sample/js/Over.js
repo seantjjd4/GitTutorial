@@ -6,7 +6,7 @@ var Over = Framework.Class(Framework.Level, {
             this.heart[i]=new Framework.Sprite(define.imagePath+'heart.png');
             this.heart[i].position = {
                 x: 1000+125*i,
-                y: 300
+                y: 310
             };
             this.heart[i].scale=0.1;
         }
@@ -64,7 +64,7 @@ var Over = Framework.Class(Framework.Level, {
         parentCtx.textAlign = 'right';
         parentCtx.font = '50pt Microsoft YaHei';
         parentCtx.fillText(maxCombo,800,350);
-        parentCtx.fillText('Relaxing', 1600,500);
+        parentCtx.fillText('Relaxing', 1500,500);
     },
 
 });

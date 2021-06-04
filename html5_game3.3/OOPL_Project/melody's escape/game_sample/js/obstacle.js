@@ -9,6 +9,7 @@ var Obstacle= function () {
             this.position={x:1600,y:700};
             this.alhpa=1;
             this.passed=1;
+            this.width=50;
         };
         this.update=function(){
                 if (this.now>0){
@@ -19,12 +20,12 @@ var Obstacle= function () {
         this.myDraw=function(parentCtx){
 
                 
-        let CTXdraw=function(parentCtx,x,y){
+        let CTXdraw=function(parentCtx,x,y,width,height){
 
         parentCtx.save();
         parentCtx.translate(x,y);
                 parentCtx.beginPath(0);
-                width=50;radius=20;height=100;
+                radius=20
         parentCtx.arc(width - radius, height - radius, radius, 0, Math.PI / 2);
         parentCtx.lineTo(radius, height);
         parentCtx.arc(radius, height - radius, radius, Math.PI / 2, Math.PI);
@@ -37,7 +38,7 @@ var Obstacle= function () {
         parentCtx.fillStyle ="black";
         parentCtx.fill();
         parentCtx.restore();};
-        if(this.position.x>0)CTXdraw(parentCtx,this.position.x,this.position.y);
+        CTXdraw(parentCtx,this.position.x,this.position.y,this.width,150);
         }
         
         this.draw=function(){

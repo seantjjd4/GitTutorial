@@ -191,7 +191,9 @@ var MyGame = Framework.Class(Framework.Level , {
     },
 
     keydown:function(e, list){
+        console.log(e);
         Framework.DebugInfo.Log.warning(e.key);
+        
         if(e.key === 'Numpad +' || e.key === '=') {
             this.secondHandRotationRate += 0.05;
         }
@@ -227,6 +229,10 @@ var MyGame = Framework.Class(Framework.Level , {
         //又要減少Duplicated code, 故在Touch事件被觸發時, 去Trigger Mouse事件
         this.click({ x: e.touches[0].clientX, y: e.touches[0].clientY });
     },
+
+     keyup:function(e){
+         console.log(e);
+     },
 
     click: function (e) {
 

@@ -30,7 +30,7 @@ var Wall = function() {
     };
     this.kicked = function() {
         setTimeout(( () => {this.isOK=false;
-        this.now=Date.now()-this.position.x;}),400);
+        this.now=Date.now()-this.position.x;}),200);
         
     };
     this.myDraw=function(parentCtx){

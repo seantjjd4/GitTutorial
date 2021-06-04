@@ -35,12 +35,18 @@ var Character = function () {
                 define.imagePath + 'jog5.png',
                 define.imagePath + 'jog6.png',
                 define.imagePath + 'jog7.png',
-                define.imagePath + 'kick.png',
                 define.imagePath + 'kick1.png',
                 define.imagePath + 'kick2.png',
                 define.imagePath + 'kick3.png',
                 define.imagePath + 'kick4.png',
                 define.imagePath + 'kick5.png',
+                define.imagePath + 'kick6.png',
+                define.imagePath + 'kick7.png',
+                define.imagePath + 'kick8.png',
+                define.imagePath + 'kick9.png',
+                define.imagePath + 'kick10.png',
+                define.imagePath + 'kick11.png',
+                define.imagePath + 'kick12.png',
                 define.imagePath + 'slide.png',
                 define.imagePath + 'slide1.png',
                 define.imagePath + 'slide2.png',
@@ -50,13 +56,16 @@ var Character = function () {
             ],loop:true , speed:2}); 
         };
         this.jog = function() {
-            this.pic.start({ from: 0, to:7, loop: true });
+            this.pic.scale=1;
+            this.pic.start({ from: 0, to:7, loop: true,speed:2 });
         };
         this.kick=function(finishPlaying){
-            this.pic.start({ from: 7, to:13, loop: false,finishPlaying:finishPlaying });
+            this.pic.scale=0.5;
+            this.pic.start({ from: 7, to:19, loop: false,finishPlaying:finishPlaying,speed:12 });
         }
         this.slide=function(finishPlaying){
-            this.pic.start({ from: 13, to:18, loop: false,finishPlaying:finishPlaying });
+            this.pic.scale=1;
+            this.pic.start({ from: 20, to:31, loop: false,finishPlaying:finishPlaying,speed:2});
         }        
         this.update=function(){
                 

@@ -176,6 +176,9 @@ var Level1 = Framework.Class(Framework.Level, {
         }
     },
 
+    keyup:function(e){
+        
+    },
     update: function() {
 
         if(Date.now()-this.startTime >10000||(lifes==0&&this.startTime >0)){
@@ -195,7 +198,7 @@ var Level1 = Framework.Class(Framework.Level, {
                             if(this.obstacle[i].passed&&this.obstacle[i].position.x<this.character.position.x + 350)
                             console.log("!");
 
-                if(this.obstacle[i].position.x<=0||this.obstacle[i].alpha<=0)
+                if(this.obstacle[i].position.x<=-1000||this.obstacle[i].alpha<=0)
                     delete this.obstacle.pop();
             }
 
@@ -215,9 +218,10 @@ var Level1 = Framework.Class(Framework.Level, {
                 else this.obstacle.unshift(new Obstacle());
                 this.obstacle[0].init();
                 this.obstacle[0].dirc=this.sheet_obstacle[this.obstacleCouner];
-                if(this.obstacle[0].dirc==1) this.obstacle[0].position.y=450;
+                if(this.obstacle[0].dirc==1||this.obstacle[0].dirc==3) this.obstacle[0].position.y=450;
                 this.obstacle[0].start();
 
+                this.obstacle[0].width=70;
                 this.obstacleCouner++;
             }
             if (timePassed >= this.tempo_ball[this.ballCounter] * 500) {

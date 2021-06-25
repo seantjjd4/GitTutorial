@@ -9,7 +9,8 @@ var Obstacle= function () {
             this.position={x:1600,y:700};
             this.alhpa=1;
             this.passed=1;
-            this.width=50;
+            this.width=70;
+            this.thick=150;
         };
         this.update=function(){
                 if (this.now>0){
@@ -38,7 +39,7 @@ var Obstacle= function () {
         parentCtx.fillStyle ="black";
         parentCtx.fill();
         parentCtx.restore();};
-        CTXdraw(parentCtx,this.position.x,this.position.y,this.width,150);
+        CTXdraw(parentCtx,this.position.x,this.position.y,this.width,this.thick);
         }
         
         this.draw=function(){

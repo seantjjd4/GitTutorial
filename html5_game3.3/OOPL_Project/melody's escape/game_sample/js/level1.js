@@ -2,7 +2,7 @@ var Level1 = Framework.Class(Framework.Level, {
     load: function() {
         this.hitSpark={time:0,dirc:""};
         this.background = new Framework.Sprite(define.imagePath+'yellow-background.png');
-
+        songname="little star";
         this.background.position = {
             x: Framework.Game.getCanvasWidth() / 2,
             y: Framework.Game.getCanvasHeight() / 2
@@ -41,6 +41,7 @@ var Level1 = Framework.Class(Framework.Level, {
 
         this.obstacle=new Array();
 
+        this.startTime=0;
         this.character = new Character();
         this.character.init();
         this.character.position = {
@@ -55,12 +56,23 @@ var Level1 = Framework.Class(Framework.Level, {
         //this.sheet_ball = [0, 1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3,0, 1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
         
 
-        this.sheet_ball=[0,1,2,3];
-        this.sheet_obstacle=[0,1,2];
-        this.tempo_ball = [0,4,8,12];
-        this.tempo_obstacle=[2,6,10];
+        this.sheet_ball=[
 
+        ];
 
+        this.sheet_obstacle=[4,5,3,9
+
+        ];
+
+        this.tempo_ball = [
+
+        ];
+
+        this.tempo_obstacle=[
+        0,4,8,16
+
+        ];
+        this.hold_on="";
         
         //this.sheet_obstacle=[0, 1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3,0, 1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
         //this.tempo_ball=[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56];
@@ -68,10 +80,19 @@ var Level1 = Framework.Class(Framework.Level, {
         //這邊間隔2是指一拍(4分音符),間隔1指半拍,間隔4指2拍,以此類推。
         this.combo = 0;
         maxCombo = 0;
-        
-        
-        
-
+        this.ballCounter = 0;
+        this.obstacleCouner = 0;
+        hitsQueue = [];
+        hits=0;
+        ERR=0;
+        TOOLATE=0;
+        setTimeout((()=>this.audio = new Framework.Audio({
+            song:{
+                mp3: define.musicPath + 'star.mp3',
+            }
+        })),1000);
+        this.isStart=0;
+            setTimeout((()=>this.startTime = Date.now()),4000);
     },
 
     initialize: function() {
@@ -87,19 +108,13 @@ var Level1 = Framework.Class(Framework.Level, {
     },
 
     click: function(e) {
-        this.ballCounter = 0;
-        this.obstacleCouner = 0;
-        this.combo = 0;
-        hitsQueue = [];
+
         //這是一個用來存畫面上的ball的方向與編號的queue,裡面的成員都是陣列[dirc,number]
-        this.audio = new Framework.Audio({
-            song:{
-                mp3: define.musicPath + 'star.mp3',
-            }
-        });
+
         //播放時, 需要給name, 其餘參數可參考W3C
-        setTimeout(( () => this.audio.play({name: 'song', loop: false})),1100);
-        this.startTime = Date.now();
+        
+        
+        
     },
     //測試能不能把球拿出來跑,之後會把整個click註解掉
 
@@ -108,7 +123,7 @@ var Level1 = Framework.Class(Framework.Level, {
         var timePassed = Date.now() - this.startTime;
         const keyConv=['S','D','A','W'];
         const keyrConv=['Down','Right','Left','Up'];
-        if (e&&keyConv.includes(e.key)) {
+        if (e&&keyConv.includes(e.key)&&hitsQueue.length>0) {
             var comingBall=this.ball[hitsQueue[0][0]][[hitsQueue[0][1]]];
             if (comingBall.position.x < this.character.position.x + 150) {
                 //150到-50是判定的range,手感跟原本遊戲差很多...待持續優化
@@ -119,23 +134,24 @@ var Level1 = Framework.Class(Framework.Level, {
                 };
                 if(e.key===keyConv[hitsQueue[0][0]]){
                     this.combo++;
+                    hits++;
                     console.log(this.combo);
                     this.hitSpark={time:200+Date.now(),dirc:e.key};
-                    if (this.combo > maxCombo) {
-                        maxCombo = this.combo;
-                    }
+
                     //依照原本的遊戲,不管有沒有按對,應該都要把當前這顆移除掉。
                 }else{
                     this.combo = 0;
                     if(lifes>0)lifes-=1; //扣愛心
                     console.log("Wrong dir");
-                    this.toast={time:Date.now()+500,str:"Wrong dir"};
+                    this.toast={time:Date.now()+500,str:"Error"};
+                    ERR++
                 }
                 hitsQueue.shift();
              }else{
                 this.combo = 0;
                 if(lifes>0)lifes-=1; //扣愛心
                 this.toast={time:Date.now()+500,str:"Error"};
+                ERR++
              }
         }
         if(e&&keyrConv.includes(e.key)){   // kick 跟 jog
@@ -143,16 +159,18 @@ var Level1 = Framework.Class(Framework.Level, {
             for(i=this.obstacle.length-1;i>=0;i--){
                 if(this.obstacle[i].passed)break;
             }
-            if(this.obstacle[i].passed&&this.obstacle[i].position.x<this.character.position.x + 350){
+            if(this.obstacle[i] &&this.obstacle[i].passed&&this.obstacle[i].position.x<this.character.position.x + 350){
                 this.combo+=2;
+                hits+=2;
                 this.obstacle[i].passed=0;
-                if(this.obstacle[i].dirc==0&&e.key==="Up"){
+                if(this.obstacle[i].dirc<1&&e.key==="Up"){
                     this.character.kick(function(){
                         game.character.jog();
                     });
                 }
                 else if(this.obstacle[i].dirc==1&&e.key==="Down"){
-                    this.character.slide(function(){
+
+                    this.character.slide(0,function(){
                         game.character.jog();
                     });
                 }
@@ -161,27 +179,88 @@ var Level1 = Framework.Class(Framework.Level, {
                     this.character.kick(function(){
                         game.character.jog();
                     });
+                }
+                else if(this.obstacle[i].dirc==3&&e.key==="Down"){
+                    this.hold_on="Down";
+                    this.character.position={x:this.character.position.x,y:this.character.position.y+50};
+                    setTimeout(( () =>game.hold_on="" ),this.obstacle[i].holdTime-1500);
+                    this.character.slide(this.obstacle[i].holdTime,function(){
+                        game.character.position={x:game.character.position.x,y:game.character.position.y-50};
+                        game.character.jog();
+                    });
 
                 }
+                else if(this.obstacle[i].dirc==4&&e.key==="Left"){
+                    this.hold_on="Left";
+                    setTimeout(( () =>game.hold_on="" ),this.obstacle[i].holdTime-1500);
+                    this.character.glide(this.obstacle[i].holdTime,function(){
+                        game.character.position={x:game.character.position.x,y:game.character.position.y-50};
+                        game.character.jog();
+                    });
+
+                }
+                else if(this.obstacle[i].dirc==5&&e.key==="Right"){
+                    this.hold_on="Right";
+                    //this.character.position={x:this.character.position.x,y:this.character.position.y+50};
+                    setTimeout(( () =>game.hold_on="" ),this.obstacle[i].holdTime-1500);
+                    this.character.jump(this.obstacle[i].holdTime,function(){
+                        game.character.position={x:game.character.position.x,y:game.character.position.y-50};
+                        game.character.jog();
+                    });
+
+                }                
                 else{
                     this.combo = 0;
                     if(lifes>0)lifes-=1; //扣愛心
                     this.toast={time:Date.now()+500,str:"Error"};
+                    ERR++
+                    this.obstacle[i].passed=0;
+                    let game=this;
+                    if(this.obstacle[i].dirc>0&&this.obstacle[i].dirc<=3||this.obstacle[i].dirc==5){
+                        this.character.back(function(){
+                            game.character.jog();
+                        });
+                    }else if(this.obstacle[i].dirc==0){
+                        this.character.falldown(function(){
+                            game.character.jog();
+                        });
+                    }else if(this.obstacle[i].dirc==-1||this.obstacle[i].dirc==4){
+                        setTimeout(( () =>                        this.character.falldown(function(){
+                            game.character.jog();
+                        }) ),200);
+                    }
                 }
                 console.log(this.combo);
 
 
+            }
+            else{
+                    this.combo = 0;
+                    if(lifes>0)lifes-=1; //扣愛心
+                    this.toast={time:Date.now()+500,str:"Error"};
+                    ERR++;
             }
 
         }
     },
 
     keyup:function(e){
-        
+        if(e){
+             if(this.hold_on===e.key){
+                this.combo = 0;
+                if(lifes>0)lifes-=1; //扣愛心
+                this.toast={time:Date.now()+500,str:"Released"};
+             }
+        }
     },
     update: function() {
-
-        if(Date.now()-this.startTime >10000||(lifes==0&&this.startTime >0)){
+        if (this.combo > maxCombo) maxCombo = this.combo; 
+        if(this.startTime>0&&this.isStart==0&&Date.now()-this.startTime>1100){
+            this.audio.play({name: 'song', loop: false});
+            this.isStart=1;
+        }
+//||(lifes==0&&this.startTime >0) 密技
+        if(this.startTime>0&&(Date.now()-this.startTime >10000)){
             this.audio.stopAll();
             Framework.Game.goToLevel("over");
         }
@@ -189,16 +268,30 @@ var Level1 = Framework.Class(Framework.Level, {
             for(i=0;i<this.obstacle.length;i++){
                 this.obstacle[i].update();
                 if(this.obstacle[i].passed&&(this.obstacle[i].position.x<=this.character.position.x+150)){
+                    TOOLATE++;
                     console.log("Too late");
                     this.toast={time:Date.now()+500,str:"Too late"};
                     if(lifes>0)lifes-=1;
                     this.combo = 0;
                     this.obstacle[i].passed=0;
+                    let game=this;
+                    if(this.obstacle[i].dirc>0&&this.obstacle[i].dirc<=3||this.obstacle[i].dirc==5){
+                        this.character.back(function(){
+                            game.character.jog();
+                        });
+                    }else if(this.obstacle[i].dirc==0){
+                        this.character.falldown(function(){
+                            game.character.jog();
+                        });
+                    }else if(this.obstacle[i].dirc==-1||this.obstacle[i].dirc==4){
+                        setTimeout(( () =>                        this.character.falldown(function(){
+                            game.character.jog();
+                        }) ),200);
+                    }
                 }
-                            if(this.obstacle[i].passed&&this.obstacle[i].position.x<this.character.position.x + 350)
-                            console.log("!");
+                    if(this.obstacle[i].passed&&this.obstacle[i].position.x<this.character.position.x + 350)console.log("!");//打擊判定有效時給的提示功能
 
-                if(this.obstacle[i].position.x<=-1000||this.obstacle[i].alpha<=0)
+                if(this.obstacle[i].position.x<=-3000||this.obstacle[i].alpha<=0)
                     delete this.obstacle.pop();
             }
 
@@ -213,15 +306,28 @@ var Level1 = Framework.Class(Framework.Level, {
 
         if (this.startTime > 0) {
             let timePassed = Date.now() - this.startTime;
-            if (timePassed-200 >= this.tempo_obstacle[this.obstacleCouner] * 500) {
-                if(this.sheet_obstacle[this.obstacleCouner]==2)this.obstacle.unshift(new Wall());
-                else this.obstacle.unshift(new Obstacle());
-                this.obstacle[0].init();
-                this.obstacle[0].dirc=this.sheet_obstacle[this.obstacleCouner];
-                if(this.obstacle[0].dirc==1||this.obstacle[0].dirc==3) this.obstacle[0].position.y=450;
-                this.obstacle[0].start();
-
-                this.obstacle[0].width=70;
+            if (timePassed-150 >= this.tempo_obstacle[this.obstacleCouner] * 500) {
+                if(this.sheet_obstacle[this.obstacleCouner]!=9){
+                    if(this.sheet_obstacle[this.obstacleCouner]==2)this.obstacle.unshift(new Wall());
+                    else if(this.sheet_obstacle[this.obstacleCouner]==-1)this.obstacle.unshift(new Gap());
+                    else this.obstacle.unshift(new Obstacle());
+                    this.obstacle[0].init();
+                    this.obstacle[0].dirc=this.sheet_obstacle[this.obstacleCouner];
+                    if(this.obstacle[0].dirc==1||this.obstacle[0].dirc==3) this.obstacle[0].position.y=450;
+                    if(this.obstacle[0].dirc>2){
+                        this.obstacle[0].holdTime=500*(this.tempo_obstacle[this.obstacleCouner+1]-this.tempo_obstacle[this.obstacleCouner]);
+                        this.obstacle[0].width=this.obstacle[0].holdTime/2-300;
+                        if(this.obstacle[0].dirc==4){
+                            this.obstacle[0].thick=50;
+                            this.obstacle[0].position={x:1600,y:770};
+                        }
+                        if(this.obstacle[0].dirc==5){
+                            this.obstacle[0].thick=50;
+                            this.obstacle[0].position={x:1600,y:570};
+                        }
+                    }
+                    this.obstacle[0].start();
+                }
                 this.obstacleCouner++;
             }
             if (timePassed >= this.tempo_ball[this.ballCounter] * 500) {
@@ -247,6 +353,7 @@ var Level1 = Framework.Class(Framework.Level, {
                 var comingBall=this.ball[hitsQueue[0][0]][[hitsQueue[0][1]]];
                 if (comingBall.position.x != -999 && comingBall.position.x < this.character.position.x - 50) {
                     console.log("Too late");
+                    TOOLATE++;
                     this.toast={time:Date.now()+500,str:"Too late"};
                     if(lifes>0)lifes-=1;
                     this.combo = 0;
@@ -267,6 +374,13 @@ var Level1 = Framework.Class(Framework.Level, {
 
     draw: function(parentCtx) {
         this.rootScene.draw();
+        parentCtx.fillStyle ='black';
+        parentCtx.fillRect(0,810,1600,90);
+        
+
+
+
+
         //if(this.obstacle)this.obstacle.myDraw(parentCtx);
         parentCtx.fillStyle ='white';
         parentCtx.font="20px Verdana";

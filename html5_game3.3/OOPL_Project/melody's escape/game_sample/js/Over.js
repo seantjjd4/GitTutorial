@@ -20,7 +20,9 @@ var Over = Framework.Class(Framework.Level, {
     },
 
     click: function(e) {
-
+        if (e){
+            Framework.Game.goToLevel('menu');
+        }
     },
 
     keydown: function(e) {
@@ -55,16 +57,24 @@ var Over = Framework.Class(Framework.Level, {
         parentCtx.fillText('Hit:',110,560);
         parentCtx.fillText('Too late:',110,610);
         parentCtx.fillText('Error:',110,660);
+        parentCtx.textAlign='right';
+        parentCtx.fillText(ERR,350,660);
+        parentCtx.fillText(hits,350,560);
+        parentCtx.fillText(TOOLATE,350,610);
 
         parentCtx.font = '80pt Microsoft YaHei';
 
 
         parentCtx.textAlign = 'center';
-        parentCtx.fillText('(Song Title)', 800,50);
+        parentCtx.fillText(songname, 800,50);
         parentCtx.textAlign = 'right';
         parentCtx.font = '50pt Microsoft YaHei';
         parentCtx.fillText(maxCombo,800,350);
-        parentCtx.fillText('Relaxing', 1500,500);
+        parentCtx.fillText(maxCombo*100+hits*120-ERR*50-TOOLATE*50,800,250);
+        parentCtx.fillText('Relaxing', 1600,500);
+        parentCtx.textAlign = 'center';
+        parentCtx.font = '28pt Microsoft YaHei';
+        parentCtx.fillText('[ press any key/button to continue ]', 800,800);
     },
 
 });

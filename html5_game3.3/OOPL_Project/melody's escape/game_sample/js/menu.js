@@ -68,7 +68,10 @@ var Menu = Framework.exClass(Framework.GameMainMenu ,{
     },
 
     initialize : function() {
-
+        level_relax = false;
+        level_midium = false;
+        level_intense = false;
+        level_overload = false;
     },
 
     update : function() {
@@ -79,10 +82,9 @@ var Menu = Framework.exClass(Framework.GameMainMenu ,{
 
     mousemove : function(e) {
         if(this.menu){  //不加這個if的話,載入完成前偶爾會跳錯
-            if (e.x > 170 && e.x < 260 && e.y > 540 && e.y < 563) {
+            if (e.x > 170 && e.x < 260 && e.y > 538 && e.y < 565) {
                 this.playTouch = true;
-                console.log(this.difficulty);
-            }else if(e.x > 170 && e.x < 370 && e.y > 700 && e.y < 723) {
+            }else if(e.x > 170 && e.x < 370 && e.y > 698 && e.y < 725) {
                 this.exitTouch = true;
             }else{
                 this.playTouch = false;
@@ -90,12 +92,22 @@ var Menu = Framework.exClass(Framework.GameMainMenu ,{
             }
             
             if (this.difficulty){
-                if (e.x > 662 && e.x < 750 && e.y > 730 && e.y < 753){
+                if (e.x > 662 && e.x < 750 && e.y > 728 && e.y < 755){
                     this.backTouch = true;
-                }else if (e.x > 662 && e.x < 840 && e.y > 540 && e.y < 563){
+                }else if (e.x > 662 && e.x < 840 && e.y > 538 && e.y < 565){
                     this.relaxTouch = true;
-                }else{
+                }else if (e.x > 662 && e.x < 797 && e.y > 578 && e.y < 605){
+                    this.midiumTouch = true;
+                }else if (e.x > 662 && e.x < 817 && e.y > 618 && e.y < 645){
+                    this.intenseTouch = true;
+                }else if (e.x > 662 && e.x < 840 && e.y > 658 && e.y < 685){
+                    this.overloadTouch = true;
+                }
+                else{
                     this.relaxTouch = false;
+                    this.midiumTouch = false;
+                    this.intenseTouch = false;
+                    this.overloadTouch = false;
                     this.backTouch = false;
                 }
                 
@@ -108,17 +120,31 @@ var Menu = Framework.exClass(Framework.GameMainMenu ,{
         if(this.menu){
             if (this.playTouch){
                 this.difficulty = true;
-                console.log(this.difficulty);
                 // Framework.Game.goToNextLevel();
             }
             else if(this.exitTouch){
                 window.close();
             }
-            else if (this.difficulty){
+
+            if (this.difficulty){
                 if (this.backTouch){
                     this.difficulty = false;
+                    this.backTouch = false;
                 }
-                if (this.relaxTouch){
+                else if (this.relaxTouch){
+                    level_relax = true;
+                    Framework.Game.goToNextLevel();
+                }
+                else if (this.midiumTouch){
+                    level_midium = true;
+                    Framework.Game.goToNextLevel();
+                }
+                else if (this.intenseTouch){
+                    level_intense = true;
+                    Framework.Game.goToNextLevel();
+                }
+                else if (this.overloadTouch){
+                    level_overload = true;
                     Framework.Game.goToNextLevel();
                 }
             }
@@ -163,12 +189,6 @@ var Menu = Framework.exClass(Framework.GameMainMenu ,{
             parentCtx.strokeRect(621,500,300,280);
             parentCtx.fillStyle = 'rgb(43,78,129)';
             parentCtx.fillRect(625,504,293,273);
-            parentCtx.fillStyle = 'rgb(126,150,150)';
-            parentCtx.font = '28pt monospace';
-            parentCtx.fillText('RELAXING',662,560);
-            parentCtx.fillText('MEDIUM',662,600);
-            parentCtx.fillText('INTENSE',662,640);
-            parentCtx.fillText('OVERLOAD',662,680);
 
             if (this.relaxTouch){
                 parentCtx.fillStyle = 'rgb(255,255,255)';
@@ -178,6 +198,36 @@ var Menu = Framework.exClass(Framework.GameMainMenu ,{
                 parentCtx.fillStyle = 'rgb(126,150,150)';
                 parentCtx.font = '28pt monospace';
                 parentCtx.fillText('RELAXING',662,560);
+            }
+
+            if (this.midiumTouch){
+                parentCtx.fillStyle = 'rgb(255,255,255)';
+                parentCtx.font = '28pt monospace';
+                parentCtx.fillText('MIDIUM',662,600);
+            }else{
+                parentCtx.fillStyle = 'rgb(126,150,150)';
+                parentCtx.font = '28pt monospace';
+                parentCtx.fillText('MIDIUM',662,600);
+            }
+
+            if (this.intenseTouch){
+                parentCtx.fillStyle = 'rgb(255,255,255)';
+                parentCtx.font = '28pt monospace';
+                parentCtx.fillText('INTENSE',662,640);
+            }else{
+                parentCtx.fillStyle = 'rgb(126,150,150)';
+                parentCtx.font = '28pt monospace';
+                parentCtx.fillText('INTENSE',662,640);
+            }
+
+            if (this.overloadTouch){
+                parentCtx.fillStyle = 'rgb(255,255,255)';
+                parentCtx.font = '28pt monospace';
+                parentCtx.fillText('OVERLOAD',662,680);
+            }else{
+                parentCtx.fillStyle = 'rgb(126,150,150)';
+                parentCtx.font = '28pt monospace';
+                parentCtx.fillText('OVERLOAD',662,680);
             }
 
             if (this.backTouch){

@@ -74,7 +74,7 @@ var Over = Framework.Class(Framework.Level, {
         parentCtx.fillText('Relaxing', 1600,500);
         parentCtx.textAlign = 'center';
         parentCtx.font = '28pt Microsoft YaHei';
-        parentCtx.fillText('[ press any key/button to continue ]', 800,800);
+        parentCtx.fillText('[ click to continue ]', 800,800);
     },
 
 });

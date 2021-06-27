@@ -9,16 +9,19 @@ var Gap= function () {
             this.position={x:1600,y:810};
             this.passed=1;
             this.width=250;
+            this.arrow=new Framework.Sprite(define.imagePath+'arrow.png');
+            this.arrow.position={x:1600,y:870};
         };
         this.update=function(){
                 if (this.now>0){
                     var tmp = this.now - Date.now();
                     this.position.x = tmp + 300;
+                    this.arrow.position.x=this.position.x-220;
                 }                
         };
         this.myDraw=function(parentCtx){
 
-                
+        this.arrow.draw();
         
 
         let CTXdraw=function(parentCtx,x,y,width,height){

@@ -71,7 +71,7 @@ var Over = Framework.Class(Framework.Level, {
         parentCtx.font = '50pt Microsoft YaHei';
         parentCtx.fillText(maxCombo,800,350);
         parentCtx.fillText(maxCombo*100+hits*120-ERR*50-TOOLATE*50,800,250);
-        parentCtx.fillText('Relaxing', 1600,500);
+        parentCtx.fillText(Difficulty, 1600,500);
         parentCtx.textAlign = 'center';
         parentCtx.font = '28pt Microsoft YaHei';
         parentCtx.fillText('[ click to continue ]', 800,800);

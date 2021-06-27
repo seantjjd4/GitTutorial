@@ -87,19 +87,21 @@ var Choice = Framework.Class(Framework.Level , {
         if (this.song1){
             Framework.Game.goToLevel('level1');
         }
-        // else if (this.song2){
-        //     Framework.Game.goToLevel('level2');
-        // }else if (this.song3){
-        //     Framework.Game.goToLevel('level3');
-        // }else if (this.song4){
-        //     Framework.Game.goToLevel('level4');
-        // }else if (this.song5){
-        //     Framework.Game.goToLevel('level5');
-        // }else if (this.song6){
-        //     Framework.Game.goToLevel('level6');
-        // }else if (this.song7){
-        //     Framework.Game.goToLevel('level7');
-         //}
+        else if (this.song2){
+             Framework.Game.goToLevel('level5');
+        }
+        else if (this.song3){
+             Framework.Game.goToLevel('level2');
+        }
+        else if (this.song4){
+             Framework.Game.goToLevel('level6');
+        }else if (this.song5){
+             Framework.Game.goToLevel('level3');
+         }else if (this.song6){
+             Framework.Game.goToLevel('level7');
+         }else if (this.song7){
+             Framework.Game.goToLevel('level4');
+         }
          else if (this.song8){
              Framework.Game.goToLevel('level8');
          }
@@ -135,8 +137,8 @@ var Choice = Framework.Class(Framework.Level , {
             parentCtx.fillStyle = 'rgb(255,255,255)';
             parentCtx.font = '18pt monospace';
             parentCtx.fillStyle = 'rgb(200,200,200)';
-            parentCtx.fillText('little star.mp3', 80,110);
-            parentCtx.fillText('dcdcdcdcdcdcdcdcd.mp3', 80,150);
+            parentCtx.fillText('faded.mp3', 80,110);
+            parentCtx.fillText('king.mp3', 80,150);
 
             if (this.song1){
                 parentCtx.strokeStyle = 'rgb(200,200,200)';
@@ -152,8 +154,8 @@ var Choice = Framework.Class(Framework.Level , {
             parentCtx.fillStyle = 'rgb(255,255,255)';
             parentCtx.font = '18pt monospace';
             parentCtx.fillStyle = 'rgb(200,200,200)';
-            parentCtx.fillText('fefefefefefe.mp3', 80,110);
-            parentCtx.fillText('ghghghghghgh.mp3', 80,150);
+            parentCtx.fillText('faded.mp3', 80,110);
+            parentCtx.fillText('king.mp3', 80,150);
 
             if (this.song3){
                 parentCtx.strokeStyle = 'rgb(200,200,200)';
@@ -169,8 +171,8 @@ var Choice = Framework.Class(Framework.Level , {
             parentCtx.fillStyle = 'rgb(255,255,255)';
             parentCtx.font = '18pt monospace';
             parentCtx.fillStyle = 'rgb(200,200,200)';
-            parentCtx.fillText('ijijijijijiji.mp3', 80,110);
-            parentCtx.fillText('klklklklklkl.mp3', 80,150);
+            parentCtx.fillText('faded.mp3', 80,110);
+            parentCtx.fillText('king.mp3', 80,150);
 
             if (this.song5){
                 parentCtx.strokeStyle = 'rgb(200,200,200)';
@@ -186,8 +188,8 @@ var Choice = Framework.Class(Framework.Level , {
             parentCtx.fillStyle = 'rgb(255,255,255)';
             parentCtx.font = '18pt monospace';
             parentCtx.fillStyle = 'rgb(200,200,200)';
-            parentCtx.fillText('nmnmnmnmnmn.mp3', 80,110);
-            parentCtx.fillText('KING.mp3', 80,150);
+            parentCtx.fillText('faded.mp3', 80,110);
+            parentCtx.fillText('king.mp3', 80,150);
 
             if (this.song7){
                 parentCtx.strokeStyle = 'rgb(200,200,200)';

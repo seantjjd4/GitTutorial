@@ -1,16 +1,16 @@
-var Level1 = Framework.Class(Framework.Level, {
+var Level6 = Framework.Class(Framework.Level, {
     load: function() {
         this.hitSpark={time:0,dirc:""};
         this.background = new Framework.Sprite(define.imagePath+'yellow-background.png');
-        songname="faded";
+        songname="king";
         this.background.position = {
             x: Framework.Game.getCanvasWidth() / 2,
             y: Framework.Game.getCanvasHeight() / 2
         };
-
+        Difficulty="Midium";
         this.transparent=new Framework.Sprite(define.imagePath+'transparent.png');
         this.transparent.position={x:1,y:1};
-        Difficulty="Relaxing";
+
         this.background.scale = 0.48; 
         this.toast={time:0,str:""};
 
@@ -56,25 +56,68 @@ var Level1 = Framework.Class(Framework.Level, {
         //this.sheet_ball = [0, 1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3,0, 1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
         
 
-        this.sheet_ball=[0,0,0,0,2,2,2,2,
-        1,1,1,1,0,0,0,0,3,3,3,3,2,2,2,2,1,1,1,1,2,2,2,2,0,0,0,0,2,2,2,2,1,1,1
+        this.sheet_ball=[0,0,0,
+        1,1,1,1,2,2,2,2,
+        3,3,3,3,
+        0,0,0,0,1,1,1,2,2,2,2,
+        3,3,3,
+        1,1,1,1,
+        0,0,0,2,2,2,2,
+        3,3,3,3,
+        2,2,2,
+        0,0,0,0,
+        1,1,1,1,
+        0,0,0,0,1,1,1,1,2,2,2,2,3,3,3,3,0,0,0,0,1,1,1,1,2,2,2,2,3,3,3,3,0,0,0,2,2,2,1,1
+        ];
+
+        this.sheet_obstacle=[3,9,
+        2,2,2,2,1,1,1,1,
+        5,4,
+        5,4,
+        5,5,5,9,
+        0,0,0,0,-1,-1,1,
+        3,9,
+        -1,-1,-1,-1,
+        2,2,2,
+        0,0,0,0,
+        1,1,1,
+        2,2,2,2,
+        -1,-1,-1,-1,//206
+        0,0,0,0,1,1,1,1,2,2,2,2,-1,-1,-1,-1,0,0,0,0,1,1,1,1,2,2,2,2,-1,-1,-1,-1,0,0,0,2,2,2,1,1
+
 
         ];
 
-        this.sheet_obstacle=[0,5,5,5,5,9,-1
-,-1,0,1,2,-1,0,1,2,-1,0,1,2,-1,0,1,2,-1,0,1,2,-1,0,1,2,-1,0,1,2,-1,0,1,2
+        this.tempo_ball = [0,2,4,
+        8,12,16,20,24,28,32,36,
+        68,69,70,71,
+        72,76,80,84,88,92,96,100,101,102,103,
+        108,109,110,
+        112,116,120,124,
+        128,132,136,140,141,142,143,
+        144,148,152,156,
+        160,164,168,
+        176,180,184,188,
+        192,196,200,204,
+        208,212,216,220,224,228,232,236,240,244,248,252,256,260,264,268,272,276,280,284,288,292,296,300,304,308,312,316,320,324,328,332,336,340,344,348,352,356,360,364
+
+
         ];
 
-        this.tempo_ball = [0,4,8,12,16,20,24,28,
-        52,60,68,76,84,92,100,108,116,124,132,140,148,156,164,172,180,188,196,204,212,220,228,236,244,252,260,268,276,284,292,300,308,316
-
-
-        ];
-
-        this.tempo_obstacle=[30,
-        32,36,40,44,48,//9
-        56,64,72,80,88,96,104,112,120,128,136,144,152,160,168,176,184,192,200,208,216,224,232,240,248,256,264,272,280,288,296,304,312
-
+        this.tempo_obstacle=[6,7,
+        10,14,18,22,26,30,34,38,
+        40,44,
+        48,52,
+        56,60,64,68,
+        74,78,82,86,90,94,98,
+        104,108,
+        114,118,122,126,
+        130,134,138,
+        146,150,154,158,
+        162,166,170,
+        178,182,186,190,
+        194,198,202,206,
+        210,214,218,222,226,230,234,238,242,246,250,254,258,262,266,270,274,278,282,286,290,294,298,302,306,310,314,318,322,326,330,334,338,342,346,350,354,358,362,368
         ];
         this.hold_on="";
         
@@ -92,8 +135,8 @@ var Level1 = Framework.Class(Framework.Level, {
         ERR=0;
         TOOLATE=0;
         setTimeout((()=>this.audio = new Framework.Audio({
-            faded:{
-                mp3: define.musicPath + 'faded.mp3',
+            king:{
+                mp3: define.musicPath + 'KING.mp3',
             }
         })),1000);
         this.isStart=0;
@@ -262,12 +305,12 @@ var Level1 = Framework.Class(Framework.Level, {
     },
     update: function() {
         if (this.combo > maxCombo)  maxCombo = this.combo;
-        if(this.startTime>0&&this.isStart==0&&Date.now()-this.startTime>1100){
-            this.audio.play({name: 'faded', loop: false});
+        if(this.startTime>0&&this.isStart==0&&Date.now()-this.startTime>900){
+            this.audio.play({name: 'king', loop: false});
             this.isStart=1;
         }
 //||(lifes==0&&this.startTime >0) 密技
-        if(this.startTime>0&&(Date.now()-this.startTime >110000)||(lifes==0&&this.startTime >0&&this.invincible==0)){
+        if(this.startTime>0&&(Date.now()-this.startTime >138000)||(lifes==0&&this.startTime >0&&this.invincible==0)){
             this.audio.stopAll();
             Framework.Game.goToLevel("over");
         }
@@ -313,7 +356,7 @@ var Level1 = Framework.Class(Framework.Level, {
 
         if (this.startTime > 0) {
             let timePassed = Date.now() - this.startTime;
-            if (timePassed-150 >= this.tempo_obstacle[this.obstacleCouner] * 333) {
+            if (timePassed-150 >= this.tempo_obstacle[this.obstacleCouner] * 361) {
                 if(this.sheet_obstacle[this.obstacleCouner]!=9){
                     if(this.sheet_obstacle[this.obstacleCouner]==2)this.obstacle.unshift(new Wall());
                     else if(this.sheet_obstacle[this.obstacleCouner]==-1)this.obstacle.unshift(new Gap());
@@ -337,7 +380,7 @@ var Level1 = Framework.Class(Framework.Level, {
                 }
                 this.obstacleCouner++;
             }
-            if (timePassed >= this.tempo_ball[this.ballCounter] * 333) {
+            if (timePassed >= this.tempo_ball[this.ballCounter] * 361) {
 
                 //之後會弄個bpm的const。這個this.tempo_ball全部*250的動作應該要在init時做完,否則影響遊戲順暢。
                 //bpm是beats per minutes,一首120bpm的歌的8分音符應該是1秒2拍,1拍0.5秒,半拍則是250ms。

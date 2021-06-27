@@ -10,6 +10,10 @@ var Wall = function() {
         this.position={x:1600,y:450};
         this.alpha=1.0;
         this.passed=1;
+
+        this.arrow=new Framework.Sprite(define.imagePath+'arrow.png');
+        this.arrow.position={x:1600,y:870};
+        this.arrow.rotation=90;
     };
 
     this.update = function() {
@@ -19,6 +23,8 @@ var Wall = function() {
             var tmp = this.now - Date.now();
             if (this.now > 0) {
                 this.position.x = tmp + 300;
+                this.arrow.position.x=this.position.x-220;
+
             }
         }
         else{
@@ -58,6 +64,7 @@ var Wall = function() {
             if(this.alpha>0)
             if(this.isOK){
                 CTXdraw(parentCtx,this.position.x,this.position.y+60*i,this.alpha.toString());
+                this.arrow.draw();
             }
             else{
                 if(this.alpha>0)CTXdraw(parentCtx,this.position.x,this.position.y+60*i+600*(this.alpha-1)*(this.alpha-0.2*i),this.alpha.toString());

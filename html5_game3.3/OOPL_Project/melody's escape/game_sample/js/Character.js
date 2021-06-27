@@ -104,8 +104,8 @@ var Character = function () {
                 define.imagePath + 'jump6.png',
                 define.imagePath + 'jump7.png',
                 define.imagePath + 'jump8.png',
-                define.imagePath + 'jump9.png'//77
-
+                define.imagePath + 'jump9.png',//77
+                define.imagePath+'arrow.png'
 
             ],loop:true , speed:2}); 
         };

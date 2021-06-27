@@ -13,7 +13,7 @@ var Level8 = Framework.Class(Framework.Level, {
 
         this.background.scale = 0.48; 
         this.toast={time:0,str:""};
-
+        Difficulty="Overload";
         this.ball = new Array();
         for (i = 0; i < 4; i++) {
             this.ball[i] = new Array();
@@ -56,13 +56,15 @@ var Level8 = Framework.Class(Framework.Level, {
         //this.sheet_ball = [0, 1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3,0, 1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
         
 
+
         this.sheet_ball=[0,0,1,1,1,1,2,2,0,0,2,2,0,0,2,2,0,0,2,2,0,0,
         1,1,1,3,3,3,3,2,3,1,0,
         3,2,3,1,1,1,
         1,0,1,2,2,2,  
         3,2,3,1,1,1,
         1,0,1,2,3,0,0,0,
-        3,2,3,3,3
+        3,2,3,3,3,
+        3,3,3,0,1,1,0,2,1,2,0,0,1,2,1,2,2,1,3,0,0,3,3,1,0,2,2,3,0,2,0,3,1,1,3,1,1,0,2,0,2,0,0,2,1,1,1,2,2,1,1,2,0,3,0,2,1,0,2,2,2,0,1,1,2,0,1,3,2,0,0,2,3,1,0,2,2,3,1,0,0,1,0,1,0,1,1,2,1,0,3,2,1,2,1,3,3,2,2,3,0,1,3,2,1,1,3,3,1,3,1,3,3,0,3,3,2,1,1,2,0,0,3,1,1,0,3,3,0,3,2,2,0,2
         ];
 
         this.sheet_obstacle=[4,9,2,2,1,1,0,0,2,2,0,0,2,2,0,0,2,2,
@@ -71,7 +73,7 @@ var Level8 = Framework.Class(Framework.Level, {
         2,2,2,
         1,1,1,
         -1,-1,-1,4,9,
-        0
+        0,0,-1,1,2,-1,0,1,1,2,-1,0,0,-1,0,0,2,2,-1,2,-1,2,0,1,0,2,2,0,0,0,-1,1,0,0,2,0,0,-1,1,0,2,2,0,-1,2,1,1,0,0,1,1,2,1,2,-1,2,2,0,1,2,-1,2,-1,-1,1,0,2
         ];
 
         this.tempo_ball = [0,2,4,4.5,5,5.5,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,38,
@@ -80,7 +82,8 @@ var Level8 = Framework.Class(Framework.Level, {
         80,82,84,86,86.7,87.4,
         88,90,92,94,94.7,95.4,
         96,98,100,102,103,108,109,110,
-        111,113,113.7,114.4
+        111,113,113.7,114.4,
+        120,121,123,124,126,127,129,130,132,133,135,136,138,139,141,142,144,145,147,148,150,151,153,154,156,157,159,160,162,163,165,166,168,169,171,172,174,175,177,178,180,181,183,184,186,187,189,190,192,193,195,196,198,199,201,202,204,205,207,208,210,211,213,214,216,217,219,220,222,223,225,226,228,229,231,232,234,235,237,238,240,241,243,244,246,247,249,250,252,253,255,256,258,259,261,262,264,265,267,268,270,271,273,274,276,277,279,280,282,283,285,286,288,289,291,292,294,295,297,298,300,301,303,304,306,307,309,310,312,313,315,316,318,319
 
 
         ];
@@ -91,7 +94,7 @@ var Level8 = Framework.Class(Framework.Level, {
         81,83,85,
         89,91,93,
         97,99,101,104,108,
-        112
+        112,122,125,128,131,134,137,140,143,146,149,152,155,158,161,164,167,170,173,176,179,182,185,188,191,194,197,200,203,206,209,212,215,218,221,224,227,230,233,236,239,242,245,248,251,254,257,260,263,266,269,272,275,278,281,284,287,290,293,296,299,302,305,308,311,314,317
 
         ];
         this.hold_on="";
@@ -116,6 +119,7 @@ var Level8 = Framework.Class(Framework.Level, {
         })),1000);
         this.isStart=0;
             setTimeout((()=>this.startTime = Date.now()),4000);
+        this.invincible=0;
     },
 
     initialize: function() {
@@ -142,6 +146,7 @@ var Level8 = Framework.Class(Framework.Level, {
     //測試能不能把球拿出來跑,之後會把整個click註解掉
 
     keydown: function(e) {
+        if(e.key==='H')this.invincible=1;
 
         var timePassed = Date.now() - this.startTime;
         const keyConv=['S','D','A','W'];
@@ -283,7 +288,7 @@ var Level8 = Framework.Class(Framework.Level, {
             this.isStart=1;
         }
 //||(lifes==0&&this.startTime >0) 密技
-        if(this.startTime>0&&(Date.now()-this.startTime >43000)){
+        if(this.startTime>0&&(Date.now()-this.startTime >138000)||(lifes==0&&this.startTime >0&&this.invincible==0)){
             this.audio.stopAll();
             Framework.Game.goToLevel("over");
         }
@@ -329,7 +334,7 @@ var Level8 = Framework.Class(Framework.Level, {
 
         if (this.startTime > 0) {
             let timePassed = Date.now() - this.startTime;
-            if (timePassed-150 >= this.tempo_obstacle[this.obstacleCouner] * 364) {
+            if (timePassed-150 >= this.tempo_obstacle[this.obstacleCouner] * 361) {
                 if(this.sheet_obstacle[this.obstacleCouner]!=9){
                     if(this.sheet_obstacle[this.obstacleCouner]==2)this.obstacle.unshift(new Wall());
                     else if(this.sheet_obstacle[this.obstacleCouner]==-1)this.obstacle.unshift(new Gap());
@@ -339,7 +344,7 @@ var Level8 = Framework.Class(Framework.Level, {
                     if(this.obstacle[0].dirc==1||this.obstacle[0].dirc==3) this.obstacle[0].position.y=450;
                     if(this.obstacle[0].dirc>2){
                         this.obstacle[0].holdTime=500*(this.tempo_obstacle[this.obstacleCouner+1]-this.tempo_obstacle[this.obstacleCouner]);
-                        this.obstacle[0].width=this.obstacle[0].holdTime/2-300;
+                        this.obstacle[0].width=this.obstacle[0].holdTime/4;
                         if(this.obstacle[0].dirc==4){
                             this.obstacle[0].thick=50;
                             this.obstacle[0].position={x:1600,y:770};
@@ -353,7 +358,7 @@ var Level8 = Framework.Class(Framework.Level, {
                 }
                 this.obstacleCouner++;
             }
-            if (timePassed >= this.tempo_ball[this.ballCounter] * 364) {
+            if (timePassed >= this.tempo_ball[this.ballCounter] * 361) {
 
                 //之後會弄個bpm的const。這個this.tempo_ball全部*250的動作應該要在init時做完,否則影響遊戲順暢。
                 //bpm是beats per minutes,一首120bpm的歌的8分音符應該是1秒2拍,1拍0.5秒,半拍則是250ms。

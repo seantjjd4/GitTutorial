@@ -41,6 +41,7 @@ var Menu = Framework.exClass(Framework.GameMainMenu ,{
         // this.playButton = new Framework.Sprite(define.imagePath + 'play-button.png');
         // this.exitButton = new Framework.Sprite(define.imagePath + 'exit-button.png');
         this.howToPlay = new Framework.Sprite(define.imagePath + 'howToPlay.png');
+        this.credits = new Framework.Sprite(define.imagePath + 'credits.png');
         this.menu = new Framework.AnimationSprite({url: menuLink, loop: true, speed: 8}); //目測速度差不多，但還是有差，不知道如何設定
 
         this.menu.position = {
@@ -55,7 +56,11 @@ var Menu = Framework.exClass(Framework.GameMainMenu ,{
             y: Framework.Game.getCanvasHeight() / 2
         };
         this.howToPlay.scale = 0.9;
-
+        this.credits.position = {
+            x: Framework.Game.getCanvasWidth() / 2,
+            y: Framework.Game.getCanvasHeight() / 2
+        };
+        this.credits.scale = 1.0;
         this.rootScene.attach(this.menu);
         this.menu.start();
 
@@ -82,14 +87,14 @@ var Menu = Framework.exClass(Framework.GameMainMenu ,{
             }else if(e.x > 170 && e.x < 420 && e.y > 578 && e.y < 605) {
                 this.howTouch = true;
             }else if(e.x > 170 && e.x < 370 && e.y > 618 && e.y < 645) {
-                this.creditTouch = true;
+                this.creditsTouch = true;
             }else if(e.x > 170 && e.x < 370 && e.y > 698 && e.y < 725) {
                 this.exitTouch = true;
             }
             else {
                 this.playTouch = false;
                 this.howTouch = false;
-                this.creditTouch = false;
+                this.creditsTouch = false;
                 this.exitTouch = false;
             }
             
@@ -124,10 +129,13 @@ var Menu = Framework.exClass(Framework.GameMainMenu ,{
                 this.difficulty = true;
                 // Framework.Game.goToNextLevel();
             }else if (this.howTouch){
-                this.how = true;
+                this.howShown = true;
                 
                 this.menuStatus = false;
-                console.log(this.menuStatus);
+            }else if (this.creditsTouch){
+                this.creditsShown = true;
+
+                this.menuStatus = false;
             }
             else if(this.exitTouch){
                 window.close();
@@ -155,9 +163,13 @@ var Menu = Framework.exClass(Framework.GameMainMenu ,{
                     Framework.Game.goToNextLevel();
                 }
             }
-        }else if(this.how){
-            this.how = false;
+        }else if(this.howShown){
+            this.howShown = false;
             
+            this.menuStatus = true;
+        }else if(this.creditsShown){
+            this.creditsShown = false;
+
             this.menuStatus = true;
         }
         
@@ -167,7 +179,8 @@ var Menu = Framework.exClass(Framework.GameMainMenu ,{
     },
 
     draw : function(parentCtx) {
-        if(this.how)this.howToPlay.draw();
+        if(this.howShown)this.howToPlay.draw();
+        if(this.creditsShown)this.credits.draw();
         if (this.menuStatus){
             parentCtx.strokeStyle = 'rgb(203,209,223)';
             parentCtx.lineWidth = 4;
@@ -194,7 +207,7 @@ var Menu = Framework.exClass(Framework.GameMainMenu ,{
                 parentCtx.font = '28pt monospace';
                 parentCtx.fillText('HOW TO PLAY',170,600);
             }
-            if (this.creditTouch){
+            if (this.creditsTouch){
                 parentCtx.fillStyle = 'rgb(255,255,255)';
                 parentCtx.font = '28pt monospace';
                 parentCtx.fillText('CREDITS',170,640);
